@@ -1,4 +1,3 @@
 #!/bin/sh
 ( cd cgi-bin && ./fix-permissions )
 ( cd htdocs && ./fix-permissions )
-( cd twiki && ./fix-permissions )

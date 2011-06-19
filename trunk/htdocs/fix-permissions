@@ -1,14 +1,8 @@
 #!/bin/sh
 
-CHANGE_PATH=`dirname $0`
-[ ! -z "$CHANGE_PATH" ] && cd $CHANGE_PATH
+CHANGE_PATH=`dirname "$0"`
+[ -n "$CHANGE_PATH" ] && cd "$CHANGE_PATH"
 
 chmod -R a+rX .
-chmod -R a+rwX faq/ twiki/ yat/
-chmod a+rwX novyny/icon
-chmod a+r,a-wX novyny/icon/*
-chmod a+rwx novyny/icon/CVS
-chmod a+rw,a-x novyny/[0-9]*
-chmod a+rwX Guestbook
-chmod a+rwX novyny
-chmod a+rwX po-share/*
+chmod -R a+rwX yabbfiles/Attachments
+#chmod a+rwX po-share/*
