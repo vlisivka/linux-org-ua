@@ -1,0 +1,20 @@
+$SmilieURL[0] = "exclamation.gif";
+$SmilieCode[0] = ":exclamation";
+$SmilieDescription[0] = "Exclaim";
+$SmilieLinebreak[0] = "";
+
+$SmilieURL[1] = "question.gif";
+$SmilieCode[1] = ":question";
+$SmilieDescription[1] = "Questioning";
+$SmilieLinebreak[1] = "";
+
+$smiliestyle = "1";
+$showadded = "2";
+$showsmdir = "2";
+$detachblock = "1";
+$winwidth = "400";
+$winheight = "400";
+$popback = "#FFFFFF";
+$poptext = "#000000";
+
+1;
