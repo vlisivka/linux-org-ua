@@ -1,0 +1,87 @@
+body {
+	color: #62686F;
+}
+.category {
+}
+.board {
+}
+.thread {
+	border: 1px solid #444;
+	background-color: #CCD;
+	margin: 3em 0;
+	padding: 4px;
+}
+.thread>.title {
+	border: 1px solid #BCD;
+	background-color: #69c;
+	font-weight: bold;
+	color: white;
+	padding: 2px;
+}
+.thread>.title a {
+	color: inherit;
+	font: inherit;
+}
+.thread>.title>.icon {
+	float:left;
+	max-width: 3%
+}
+.thread>.title>.subject {
+	width: 97%;
+	margin-left: 3%;
+}
+.thread>.title>.mark {
+	float: right;
+}
+.post {
+	padding: 4px;
+	margin: 0.5em 0;
+}
+.post>.title {
+	border: #888;
+	padding: 2px;
+	background-color: #9BD; 
+	color: white;
+	font-weight: bold;
+}
+.post>.title a {
+	color: inherit;
+	font: inherit;
+}
+.post>.title>.icon {
+	max-width: 3%;
+	margin: 0 3px;
+	float: left;
+}
+.post>.title>.num {
+	font-size: 2em;
+	margin-right: 1em;
+	margin-left: 0.1em;
+	float: left;
+}
+.post>.title>.subject {
+}
+.post>.attachment {
+	border-top: 1px dotted #888;
+	background-color: inherit;
+	padding: 2px;
+	background-color: #DDE3EB;
+}
+.post>.message {
+	padding: 4px;
+	background-color: #FEFEFE;
+}
+.icon {
+	border: none;
+	align: center;
+}
+#markreadsubmit {
+	width: 100%;
+}
+.error {
+	border: 1px solid red;
+	padding: 1em;
+}
+.error>.title {
+	font-weight: bold;
+}

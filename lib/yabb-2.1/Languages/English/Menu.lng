@@ -1,0 +1,102 @@
+###############################################################################
+# Image.lng (Image text/images definitions)                                   #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+$englishlngver = 'YaBB 2.1 $Revision: 1.1 $';
+
+if (!$language){$language = $lang;}
+
+%img_txt =(
+'2' => "Admin",
+'27' => "View Profile",
+'31' => "Remove",
+'33' => "Start new topic",
+'34' => "Login",
+'34a' => "Update Session",
+'54' => "Remove",
+'55' => "Remove Selected",
+'63' => "Moderators",
+'66' => "Modify",
+'69' => "Email",
+'70' => "My Favorites",
+'71' => "Add to Favorites",
+'72' => "Remove from Favorites",
+'79' => "Edit Profile",
+'97' => "Register",
+'103' => "Home",
+'104' => "Lock/Unlock",
+'105' => "Last Post",
+'108' => "Logout",
+'119' => "Help",
+'121' => "Remove",
+'131' => "Notify of replies",
+'132' => "Move",
+'137' => "Admin:",
+'144' => "Personal Message",
+'145' => "Quote",
+'146' => "Reply",
+'146a' => "Register to Reply",
+'182' => "Search",
+'183' => "Set Search Parameters",
+'300' => "Mark Topics as Read",
+'316' => "Inbox",
+'320' => "Outbox",
+'321' => "New Message",
+'322' => "Receive New Messages",
+'323' => "Preferences",
+'331' => "Members",
+'412' => "Empty PM BOX",
+'418' => "Notification",
+'452' => "Mark ALL Posts As Read",
+'465' => "Print",
+'467' => "Profile",
+'515' => "WWW",
+'686' => "online",
+'687' => "offline",
+'707' => "Send Topic",
+'781' => "Sticky",
+'465' => "Print",
+'620' => "Split",
+'621' => "Splice",
+'620a' => "Split this thread starting with this message as the first one of a new topic thread",
+'621a' => "Splice this thread onto an existing thread",
+'622' => "Hide",
+'623' => "Collapse",
+'624' => "Expand",
+'625' => "Add to My Favorites",
+'626' => "Remove from My Favorites",
+'627' => "Mark as Unread",
+);
+
+%img_polltxt = (
+'1' => "Create Poll",
+'2' => "Add Poll",
+'20' => "Open",
+'21' => "Close",
+'27' => "Remove",
+'33' => "View Votes",
+'39' => "Modify",
+'43' => "Remove Vote"
+);
+
+%img_imtxt = (
+'32' => "Mark all as Read",
+'42' => "Buddylist",
+'46' => "Storage"
+);
+
+require "$vardir/Menu$MenuType.def";
+
+1;

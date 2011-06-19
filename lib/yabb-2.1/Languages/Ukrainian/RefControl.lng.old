@@ -1,0 +1,210 @@
+################################################################################
+###############################################################################
+## RefControl.lng (Referer Control text definitions)                           #
+# RefControl.lng (Referer Control text definitions)                           #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%refexpl_txt = (
+%refexpl_txt = (
+#'activate',"Allow user account activation after pre-registration",
+'activate',"Allow user account activation after pre-registration",
+#'next',"Next Topic",
+'next',"Next Topic",
+#'prev',"Previous Topic",
+'prev',"Previous Topic",
+#'collapse_cat' => "Collapse one category (toggle)",
+'collapse_cat' => "Collapse one category (toggle)",
+#'collapse_all' => "Collapse all categories (toggle)",
+'collapse_all' => "Collapse all categories (toggle)",
+#'dereferer',"Referrer Cloaking used",
+'dereferer',"Referrer Cloaking used",
+#'login' => "Log In entry screen",
+'login' => "Log In entry screen",
+#'login2' => "Process Log In credentials",
+'login2' => "Process Log In credentials",
+#'logout' => "Log Out",
+'logout' => "Log Out",
+#'lock' => "Lock a topic",
+'lock' => "Lock a topic",
+#'lockpoll' => "Lock a poll",
+'lockpoll' => "Lock a poll",
+#'display' => "Display a message in a thread",
+'display' => "Display a message in a thread",
+#'deletemultimessages' => "Delete Multiple PM messages",
+'deletemultimessages' => "Delete Multiple PM messages",
+#'messageindex' => "Display Message index",
+'messageindex' => "Display Message index",
+#'pages' => "Display further pages in the Message index",
+'pages' => "Display further pages in the Message index",
+#'modify' => "Modify a message",
+'modify' => "Modify a message",
+#'modify2' => "Process and save a modified or delete a message",
+'modify2' => "Process and save a modified or delete a message",
+#'movethread' => "Move a Topic",
+'movethread' => "Move a Topic",
+#'movethread2' => "Process and save Move Topic results",
+'movethread2' => "Process and save Move Topic results",
+#'markasread' => "Mark a thread as read",
+'markasread' => "Mark a thread as read",
+#'markallasread' => "Mark all messages as read",
+'markallasread' => "Mark all messages as read",
+#'ml' => "Show Memberlist",
+'ml' => "Show Memberlist",
+#'mlall' => "Show Memberlist unsorted",
+'mlall' => "Show Memberlist unsorted",
+#'multiadmin' => "Enter Multi Admin mode",
+'multiadmin' => "Enter Multi Admin mode",
+#'multidel' => "Delete multiple messages",
+'multidel' => "Delete multiple messages",
+#'markims' => "Mark all PM messages as read",
+'markims' => "Mark all PM messages as read",
+#'mailto',"Send an email to a user",
+'mailto',"Send an email to a user",
+#'post' => "Post a Reply or New Message",
+'post' => "Post a Reply or New Message",
+#'post2' => "Process and save a Reply or New Message",
+'post2' => "Process and save a Reply or New Message",
+#'print' => "Print a message/page",
+'print' => "Print a message/page",
+#'profile' => "Enter/show a User Profile screen",
+'profile' => "Enter/show a User Profile screen",
+#'profile2' => "Process and save User Profile",
+'profile2' => "Process and save User Profile",
+#'profileContacts' => "Enter User Profile Contact information",
+'profileContacts' => "Enter User Profile Contact information",
+#'profileContacts2' => "Process and save User Profile Contact information",
+'profileContacts2' => "Process and save User Profile Contact information",
+#'profileOptions' => "Enter User Profile Options",
+'profileOptions' => "Enter User Profile Options",
+#'profileOptions2' => "Process and save User Profile Options",
+'profileOptions2' => "Process and save User Profile Options",
+#'profileIM' => "Enter User Profile PM settings",
+'profileIM' => "Enter User Profile PM settings",
+#'profileIM2' => "Process and save User Profile PM settings",
+'profileIM2' => "Process and save User Profile PM settings",
+#'profileAdmin' => "Enter User Profile Administrative settings",
+'profileAdmin' => "Enter User Profile Administrative settings",
+#'profileAdmin2' => "Process and save User Profile Administrative settings",
+'profileAdmin2' => "Process and save User Profile Administrative settings",
+#'register' => "Enter New User Registration entry screen",
+'register' => "Enter New User Registration entry screen",
+#'register2' => "Process and save New User registration",
+'register2' => "Process and save New User registration",
+#'reminder' => "Enter \"Forgot my Password\" entry screen",
+'reminder' => "Enter \"Forgot my Password\" entry screen",
+#'reminder2' => "Process and execute \"Forgot my Password\" request",
+'reminder2' => "Process and execute \"Forgot my Password\" request",
+#'removethread' => "Remove a thread",
+'removethread' => "Remove a thread",
+#'recent' => "Show recent posts",
+'recent' => "Show recent posts",
+#'reorderboards' => "Enter Board Management",
+'reorderboards' => "Enter Board Management",
+#'reorderboards2' => "Process and save changes in the board settings",
+'reorderboards2' => "Process and save changes in the board settings",
+#'revalidatesession',"Revalidate an Admin Session screen",
+'revalidatesession',"Revalidate an Admin Session screen",
+#'revalidatesession2',"Process Admin Session Revalidation",
+'revalidatesession2',"Process Admin Session Revalidation",
+#'im' => "Show PM message index",
+'im' => "Show PM message index",
+#'imoutbox' => "Show PM Outbox",
+'imoutbox' => "Show PM Outbox",
+#'imstorage' => "Show PM Storage",
+'imstorage' => "Show PM Storage",
+#'imtostore' => "Save a PM message in storage",
+'imtostore' => "Save a PM message in storage",
+#'imremove' => "Remove a PM message",
+'imremove' => "Remove a PM message",
+#'imsend' => "Post a new PM message",
+'imsend' => "Post a new PM message",
+#'imsend2' => "Process and save a new PM message",
+'imsend2' => "Process and save a new PM message",
+#'imshow' => "Show a PM message",
+'imshow' => "Show a PM message",
+#'imgroups' => "Enter PM Post Group screen",
+'imgroups' => "Enter PM Post Group screen",
+#'imprint' => "Print a PM message",
+'imprint' => "Print a PM message",
+#'imcb' => "Personal Message Call Back",
+'imcb' => "Personal Message Call Back",
+#'icqpager' => "Enter ICQ Pager screen",
+'icqpager' => "Enter ICQ Pager screen",
+#'notify' => "Enter Notification screen",
+'notify' => "Enter Notification screen",
+#'notify2' => "Process and Save Notification settings",
+'notify2' => "Process and Save Notification settings",
+#'notify3' => "Process and Save Thread Notifications",
+'notify3' => "Process and Save Thread Notifications",
+#'notify4' => "Process and Save Board Notifications",
+'notify4' => "Process and Save Board Notifications",
+#'resetpass' => "Reset my password request",
+'resetpass' => "Reset my password request",
+#'sendtopic' => "Enter \"Send topic to a Friend\" entry screen",
+'sendtopic' => "Enter \"Send topic to a Friend\" entry screen",
+#'sendtopic2' => "Process and execute \"Send topic to a Friend\" request",
+'sendtopic2' => "Process and execute \"Send topic to a Friend\" request",
+#'setcensor' => "Enter the Banned Words Editor",
+'setcensor' => "Enter the Banned Words Editor",
+#'setcensor2' => "Process and save Banned Words list",
+'setcensor2' => "Process and save Banned Words list",
+#'search' => "Enter the search screen",
+'search' => "Enter the search screen",
+#'search2' => "Process and execute Search Query",
+'search2' => "Process and execute Search Query",
+#'setreserve' => "Enter the Reserved Words Editor",
+'setreserve' => "Enter the Reserved Words Editor",
+#'setreserve2' => "Process and save Reserved Words list",
+'setreserve2' => "Process and save Reserved Words list",
+#'shownotify' => "Show current Notifications",
+'shownotify' => "Show current Notifications",
+#'sticky' => "Make a thread Sticky (toggle)",
+'sticky' => "Make a thread Sticky (toggle)",
+#'sort' => "Sort Buddy List",
+'sort' => "Sort Buddy List",
+#'showvoters' => "Show Poll details",
+'showvoters' => "Show Poll details",
+#'viewprofile' => "View a User Profile",
+'viewprofile' => "View a User Profile",
+#'usersrecentposts' => "Show User Recent Posts",
+'usersrecentposts' => "Show User Recent Posts",
+#'checkboardpw' => "Check Password access on boards",
+'checkboardpw' => "Check Password access on boards",
+#'validate',"Show graphic validation code",
+'validate',"Show graphic validation code",
+#'vote' => "Submit a vote in a Poll",
+'vote' => "Submit a vote in a Poll",
+#'undovote' => "Undo a Vote in a Poll"
+'undovote' => "Undo a Vote in a Poll"
+#);
+);
+#
+
+#1;
+1;

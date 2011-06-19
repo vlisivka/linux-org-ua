@@ -1,0 +1,164 @@
+################################################################################
+###############################################################################
+## BoardIndex.lng (BoardIndex text definitions)                                #
+# BoardIndex.lng (BoardIndex text definitions)                                #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%boardindex_txt = (
+%boardindex_txt = (
+#'18' => "Index",
+'18' => "Індекс",
+#'20' => "Forum name",
+'20' => "Назва форуму",
+#'21' => "Posts",
+'21' => "Повідомлень",
+#'22' => "Last post",
+'22' => "Останнє повідомлення",
+#'34' => "Login",
+'34' => "Логін",
+#'63' => "Moderators",
+'63' => "Модератори",
+#'63a' => "Moderator Groups",
+'63a' => "Групи модераторів",
+#'141' => "Guests",
+'141' => "Гості",
+#'142' => "Members",
+'142' => "Учасники",
+#'158' => "Users online",
+'158' => "Користувачів на зв'язку",
+#'200' => "Forum Statistics",
+'200' => "Статистика форуму",
+#'201' => "Newest Member",
+'201' => "Найновіший учасник",
+#'235' => "Last Post",
+'235' => "Останнє повідомлення",
+'236' => "Найновіше повідомлення",
+#'298' => "Moderator",
+'298' => "Модератор",
+#'298a' => "Moderator Group",
+'298a' => "Модераторська група",
+#'315' => "Forgot password?",
+'315' => "Забули пароль?",
+#'316' => "Inbox",
+'316' => "Вхідні",
+#'320' => "Outbox",
+'320' => "Вихідні",
+#'330' => "Topics",
+'330' => "Тем",
+#'333' => "New Posts",
+'333' => "Нові повідомлення",
+#'334' => "No New Posts",
+'334' => "Немає нових повідомлень",
+#'470' => "N/A",
+'470' => "н.д.",
+#'470a' => "<i>Ex Member</i>",
+'470a' => "<i>Ex Member</i>",
+'487' => "Зареєстровано",
+#'488' => "Total Members",
+'488' => "учасників",
+#'489' => "Total Posts",
+'489' => "Учасники надіслали",
+#'490' => "Total Topics",
+'490' => "до",
+'524' => "до",
+#'525' => "by",
+'525' => "від",
+#'685' => "Info Center",
+'685' => "Центр інформації",
+#'791' => "View the",
+'791' => "Переглянути",
+#'792' => "10 most recent posts",
+'792' => "10 останніх повідомлень",
+#'793' => "of this forum.",
+'793' => "на цьому форумі.",
+'795' => "Ви маєте",
+#'796' => "Your Personal Messages:",
+'796' => "персональних повідомлень",
+#'797' => "View",
+'797' => "Переглянути",
+'800' => "Найбільше відвідувачів одночасно було",
+'801' => "Найбільше учасників одночасно було",
+'802' => "Найбільше гостей одночасно було",
+#'no_ip' => "No IP Logged",
+'no_ip' => "Немає записаних адрес",
+#'guest_ip' => "Guest IP's",
+'guest_ip' => "Адреси гостей",
+#);
+);
+#
+
+#%boardindex_imtxt = (
+%boardindex_imtxt = (
+#'11' => "You had",
+'11' => "Ви маєте",
+#'12' => "Messages in your",
+'12' => "повідомлень у вашій",
+#'14' => "New messages:",
+'14' => "Нові повідомлення:",
+#'15' => "!\\nWould you like to open PM box",
+'15' => "!\\nЧи ви бажаєте відкрити скриньку приватних повідомлень",
+#'18' => "are allowed!\\nOldest Messages were deleted!\\n\\nDo you want to go to your PM-Box now?",
+'18' => "дозволено!\\nНайстаріші повідомлення видалено!\\n\\nЧи ви бажаєте перейти до вашої скриньки приватних повідомлень зараз?",
+#'24' => "New",
+#'24' => "Нове",
+'24' => "з яких",
+'25' => "нове",
+'26' => "нових",
+#'46' => "Storage",
+'46' => "Сховище",
+#'47' => "them",
+'47' => "їх",
+#'48' => "the message"
+'48' => "повідомлення"
+#);
+);
+#
+
+#%boardindex_exptxt = (
+%boardindex_exptxt = (
+#'1' => "Expand",
+'1' => "Розгорнути",
+#'2' => "Collapse",
+'2' => "Згорнути",
+#'3' => " User category file not found - please try refreshing the board index (back then F5).\n If you receive this message again, please inform an administrator.",
+'3' => " User category file not found - please try refreshing the board index (back then F5).\n If you receive this message again, please inform an administrator.",
+#'4' => " You must be a member to use the collapsible/expandable categories!",
+'4' => " You must be a member to use the collapsible/expandable categories!",
+#'5' => "This category contains new posts.",
+'5' => "Ця категорія не містить нових повідомлень.",
+#'6' => "This category contains no new posts.",
+'6' => "Ця категорія не містить нових повідомлень.",
+#'7' => "The state you specified was invalid. Please go back and try again"
+'7' => "The state you specified was invalid. Please go back and try again"
+#);
+);
+#
+
+#1;
+1;

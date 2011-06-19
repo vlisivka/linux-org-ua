@@ -1,0 +1,15 @@
+#!/bin/sh
+
+CHANGE_PATH=`dirname "$0"`
+[ ! -z "$CHANGE_PATH" ] && cd "$CHANGE_PATH"
+
+chmod -R a+rX .
+chmod -R a+rwX faq/fom-meta faq/item po-tools/share po-tools/log po-share/tmp
+
+
+#For YABB
+chmod -R a+rwX yabb/Variables yabb/Boards yabb/Members yabb/Help \
+yabb/Templates yabb/Languages  yabb/Messages vote/*/*.txt vote/*/ \
+awstats/data yabb/rss >/dev/null 2>/dev/null
+
+chmod a-w,a+r yabb/*/.htaccess

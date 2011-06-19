@@ -1,0 +1,86 @@
+################################################################################
+###############################################################################
+## Notify.lng (Notify text definitions)                                        #
+# Notify.lng (Notify text definitions)                                        #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%notify_txt = (
+%notify_txt = (
+'114' => "або",
+'115' => "Так",
+'116' => "Ні",
+'117' => "Зупинити сповіщення про дописи до цієї теми\?",
+'118' => "Сповіщення про дописи до тем",
+'119' => "Немає...",
+'120' => "від",
+'121' => "Відновити",
+'122' => "Вас сповіщають про відповіді до гілок перелічених нижче.",
+'123' => "Позначте гілку для <b>припинення</b> сповіщень про дописи до неї",
+'124' => "Зберегти зміни",
+'125' => "Сповіщення",
+#'126' => "Do you want a notification Email if someone replies to this board\?",
+'126' => "Чи бажаєте ви отримувати лист, коли хтось надішле відповідь\?", #...
+#'127' => "Topic reply",
+'127' => "Відповідь по темі",
+#'128' => "A reply",
+'128' => "Відповідь",
+#'129' => "has been posted to a topic you are watching.\n\nView it at",
+'129' => "has been posted to a topic you are watching.\n\nView it at",
+#'130' => "Regards,\nThe $mbname team",
+'130' => "Regards,\nThe $mbname team",
+#'131' => "Unless you have specified otherwise, no more mails will be sent until you view the topic",
+'131' => "Unless you have specified otherwise, no more mails will be sent until you view the topic",
+#'132' => "New Threads Only",
+'132' => "Лише нові теми",
+#'133' => "All New Posts",
+'133' => "Всі нові повідомлення",
+#'134' => "Remove",
+'134' => "Видалити",
+#'135' => "In The Board:",
+'135' => "Дошка",
+#'136' => "Board Notification",
+'136' => "Board Notification",
+#'137' => "Would you like to remove, or change the type of notification for this board?",
+#'137' => "Would you like to remove, or change the type of notification for this board?",
+#'138' => "Change notification type",
+#'138' => "Змінити тип оповіщення",
+'137' => "Змінити тип або припинити сповіщення цієї дошки",
+'138' => "Змінити",
+'139' => "Немає...",
+'140' => "Тема",
+'141' => "Вас сповіщають про зміни у перелічених нижче дошках.",
+'142' => "has been posted to a board you are watching.\n\nView it at",
+'143' => "Нова тема",
+'144' => "Обрати усі",
+#);
+);
+#
+
+#1;
+1;

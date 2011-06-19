@@ -1,0 +1,80 @@
+###############################################################################
+# Search.lng (Search text definitions)                                        #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%search_txt = (
+'1' => "This post was made in the last...",
+'2' => "week",
+'3' => "month",
+'4' => "three months",
+'5' => "year",
+'6' => "(all posts)",
+'30' => "on",
+'70' => "Subject",
+'72' => "Message",
+'105' => "Post",
+'107' => "at",
+'109' => "Started by",
+'166' => "Search Results",
+'167' => "End of results",
+'170' => "Sorry, no matches were found",
+'182' => "Search",
+'183' => "Set Search Parameters",
+'186' => "Search for topics started by someone",
+'187' => "Search for topics posted in by someone",
+'189' => "Choose the board(s) to search in",
+'190' => "(Hold down the 'control' or 'apple' key to select more than one)",
+'191' => "Display how many results?",
+'191a' => "Display only one result per thread?",
+'224' => "The username field does not accept / in the query string",
+'225' => "The username field does not accept \\ in the query string",
+'236' => "Return",
+'237' => "to the board index.",
+'337' => "This field only accepts numbers from 0-9",
+'343' => "Match all words",
+'344' => "Match any words",
+'345' => "Match as phrase",
+'345a' => "Match partial words",
+'346' => "Search -All- Members only",
+'397' => "The search field does not accept / or \\ in the query string",
+'525' => "by",
+'572' => "Search -All- Guests only",
+'573' => "Fields to Search",
+'574' => "Age since last post",
+'575' => "Min",
+'576' => "Max",
+'577' => "Any poster",
+'578' => "hours",
+'579' => "days",
+'582' => "Search for",
+'583' => "By User",
+'737' => "Check all",
+'754' => "You must specify a search string!",
+);
+
+$display_txt{'889'} = "Edited";
+
+%floodtxt=(
+'1' => "Your Verification Code is",
+'2' => "Activate Automatic Flood Security",
+'3' => "Verification Code",
+'4' => "Verification Code is wrong",
+'5' => "Max messages returned on recent posts by user<br /> <span class=\"small\">-1 will disable this option</span>",
+'6' => "Max messages returned on a search<br /> <span class=\"small\">-1 will disable this option</span>",
+'7' => "The requested number of results is higher then the maximum number allowed by the system.<br />Maximun Search Results Allowed = $maxsearchdisplay",
+'8' => "The search option has been disabled"
+);
+
+1;

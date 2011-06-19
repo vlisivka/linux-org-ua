@@ -1,0 +1,57 @@
+$SectionName = "Topic_Functions";
+
+### Section 1
+#############################################
+$SectionSub1 = "Deleting_a_Topic";
+$SectionBody1 = qq~If you feel a topic is inappropriate, in violation of the member agreement of this forum, causing a problem, or is simply out of place, you have ability to remove the topic or offending posts.
+<p></p>
+<ul><li><u><b>Method 1:</b> Viewing the Topic</u>
+<ul><li>Scroll down to the bottom of the topic and locate your &quot;Moderator Menu&quot;.</li>
+<li>Click on the option titled &quot;Delete&quot;.</li>
+<li>A small popup will then ask you to confirm that you wish to remove this entire topic. Click &quot;OK&quot; to remove or &quot;Cancel&quot; to keep it.</li>
+</ul></li>
+<li><u><b>Method 2:</b> Viewing the Message Index</u>
+<ul><li>At the end of the row for each post, you will have a small checkbox. Check it by clicking on it. Repeat for each topic you wish to remove.</li>
+<li>Once all the topics you want to remove are checked, locate a set of radio buttons titled &quot;Lock/Unlock&quot;, &quot;Sticky&quot;, &quot;Remove&quot; and &quot;Move To:&quot;. Click on the radio for &quot;Remove&quot;.</li>
+<li>Click the button titled &quot;Go&quot;, next to the move drop-down box.</li>
+</ul>
+</li></ul>~;
+#############################################
+
+
+### Section 2
+#############################################
+$SectionSub2 = "Locking_or_Unlocking_a_Topic";
+$SectionBody2 = qq~When you feel a topic can no longer serve a good purpose or you would like to prevent others from adding new posts, the lock/unlock function will provide you with this ability.
+<p></p>
+<ul><li><u><b>Method 1:</b> Viewing the Topic</u>
+<ul><li>Scroll down to the bottom of the topic and locate your &quot;Moderator Menu&quot;.</li>
+<li>Click on the option titled &quot;Lock/Unlock&quot;</li></ul></li>
+<li><u><b>Method 2:</b> Viewing Message Index</u>
+<ul><li>At the end of the row for each post, you will have a small check box. Check it by clicking on it. Repeat for each thread you wish to lock or unlock.</li>
+<li>Locate a set of radio buttons titled &quot;Lock/Unlock&quot;, &quot;Sticky&quot;, &quot;Remove&quot; and &quot;Move To:&quot; at the bottom of the message list. Click on the radio for &quot;Lock/Unlock&quot;.</li>
+<li>Click the button titled &quot;Go&quot;, next to the move drop-down box.</li></ul>
+</li></ul>~;
+#############################################
+
+
+### Section 3
+#############################################
+$SectionSub3 = "Sticky_a_Topic";
+$SectionBody3 = qq~If you feel a topic is very important for everyone who visits the board you moderate, you may turn it into a &quot;Sticky&quot; topic. These topics will then be displayed on top of all other topics. A useful example would be for forum rules.
+<p></p>
+<ul><li><u><b>Method 1:</b> Viewing the Topic</u>
+<ul><li>Scroll down to the bottom of the topic and locate your &quot;Moderator Menu&quot;.</li>
+<li>Click on the option titled &quot;Sticky&quot;</li>
+</ul></li>
+<li><u><b>Method 2:</b> Viewing the Message Index</u>
+<ul><li>At the end of the row for each topic, you will have a small check box. Check it by clicking on it. Repeat for each topic you wish to lock or unlock.</li>
+<li>Locate a set of radio buttons titled &quot;Lock/Unlock&quot;, &quot;Sticky&quot;, &quot;Remove&quot; and &quot;Move To:&quot; at the bottom of the message list. Click on the radio for &quot;Sticky&quot;.</li>
+<li>Click the button titled &quot;Go&quot;, next to the move drop-down box.</li>
+</ul>
+</li></ul>~;
+#############################################
+
+
+
+1;

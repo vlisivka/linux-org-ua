@@ -1,0 +1,27 @@
+
+our %recent_txt = (
+	guest => ' (guest)',
+	ex => ' (ex-member)',
+
+	on      => ' on ',
+	started => 'Author ',
+	posted  => 'From ',
+
+	mark => 'Mark: ',
+	markbutton => 'Mark selected threads as read',
+
+	'err_noguest'    => 'You should register, before you can see, which messages are new...',
+	'err_cantopen'   => 'Cannot open file: ',
+	'err_delattach'  => ': attached file does not exists: ',
+	'err_nonewposts' => 'No new posts',
+
+	'etitle_file' => 'In ',
+	'etitle_sub'  => ', routine ',
+		
+	'newmesg_title'   => 'Unread messages',
+	'nonewmesg_title' => 'No new posts',
+	'recent_title'    => ' most recent posts',
+);
+
+1;
+
