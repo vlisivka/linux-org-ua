@@ -1,0 +1,66 @@
+$SectionName = "Post_Actions";
+
+### Section 1
+#############################################
+$SectionSub1 = "Modifying_a_Post";
+$SectionBody1 = qq~You now have the ability to edit any post on the board(s) you moderate. This function will help you fight spam, remove unwanted language, censor users, add additions and much more. In order to do so, follow the directions below:
+<ul>
+<li><u><b>Modifying a Post</b></u>
+<ul>
+<li>Identify the post you wish to edit.</li>
+<li>In that post, you will see a small menu with &quot;Quote&quot;, &quot;Modify&quot; and &quot;Delete&quot;. Click on the one &nbsp;titled &quot;Modifty&quot;.</li>
+<li>You will then be given access to the edit page where you may make your changes. When you're done, press the button titled &quot;Save&quot;.
+</li></ul></li></ul>
+
+<p>Please note that a small line of text will show on the post stating that you have made an edit. As such, it is advised you also attach a reason to why you made the edit. This lets the admin, other moderators, the poster and the rest of the community know there was an issue. You can use the [edit][/edit] YaBBC tags to add a message about your edit.</p>
+
+<p>This will appear as follows:</p>
+[yabbc][edit]I modified this post and this is why![/edit][/yabbc]~;
+#############################################
+
+
+### Section 2
+#############################################
+$SectionSub2 = "Deleting_a_Post";
+$SectionBody2 = qq~If you believe a post is inappropriate, a violation of the User Agreement or does not belong, you have the option of removing it from the topic, without deleting the entire topic.
+
+<ul><li><u><b>Deleting a Single Post</b></u>
+<ul><li>Identify the post you wish to delete.</li>
+<li>In that post, you will see a small menu with &quot;Quote&quot;, &quot;Modify&quot; and &quot;Delete&quot;. Click on the one titled &quot;Delete&quot;.
+</li></ul></li></ul>
+
+<p>This will <i>instantly</i> remove the offending post.</p>
+
+<br />If there are multiple posts to be removed inside of a single topic, follow these directions to remove them all at once:
+<ul><li><u><b>Deleting Multiple Posts</b></u>
+<ul><li>Identify the posts you wish to delete.</li>
+<li>In each post, <i>next</i> to the &quot;Delete&quot; button, you will find a small check box. Check this box by clicking on it.</li>
+<li>Near the bottom of the page, past all the posts in that topic, you will find your Moderator Menu. Find and click the button titled &quot;Delete Selected&quot;.</li>
+</ul></li></ul>
+
+<p>This will also instantly remove all posts that you have checked.</p>~;
+#############################################
+
+
+### Section 3
+#############################################
+$SectionSub3 = "Splitting_a_Topic";
+$SectionBody3 = qq~In the event that a conversation begins to drift away from the subject, you can maintain order on your board(s) by using the &quot;Split&quot; function. This enables you to move a post and all the posts under it, to a brand new topic where the conversation can continue.
+
+<ul><li><u><b>Splitting a Post</b></u>
+<ul><li>Identify the post you wish to split into to a new topic.</li>
+<li>In that post, you will see a small menu with &quot;Quote, &quot;Modify&quot;, &quot;Split&quot; and &quot;Delete&quot;. Click on the one titled &quot;Split&quot;. Note, this will <i>not</i> show on the first post of a topic.</li>
+</ul></li></ul>
+
+<p>This function will instantly move the post and all the posts under it to a brand new topic. The subject of the post you split is the new topic's subject.</p>~;
+#############################################
+
+
+### Section 4
+#############################################
+$SectionSub4 = "Adding_a_Poll";
+$SectionBody4 = qq~As a moderator, you can now add polls to any topic if you feel one is needed. To do so, fine the &quot;Add Poll&quot; button that's located next to the &quot;Reply&quot; button. Clicking it will bring you to the edit page where you can fill out the form to add a poll.~;
+#############################################
+
+
+1;

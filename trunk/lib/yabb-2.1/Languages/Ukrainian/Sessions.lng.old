@@ -1,0 +1,92 @@
+################################################################################
+###############################################################################
+## Sessions.lng (Sessions text definitions)                                    #
+# Sessions.lng (Sessions text definitions)                                    #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%session_txt = (
+%session_txt = (
+#'1' => "Activate Session ID's",
+'1' => "Activate Session ID's",
+#'2' => "This protects the Administrative Functions based on a three part session key based on IP address",
+'2' => "This protects the Administrative Functions based on a three part session key based on IP address",
+#'3' => "Your Session has expired, as you entered the forum from a different IP address ($user_ip)",
+'3' => "Your Session has expired, as you entered the forum from a different IP address ($user_ip)",
+#'4' => "To check your credentials answer the following question you entered in your profile",
+'4' => "To check your credentials answer the following question you entered in your profile",
+#'5' => "Your session has been revalidated for IP address: $user_ip.",
+'5' => "Your session has been revalidated for IP address: $user_ip.",
+#'6' => "You failed to validate your credentials and are logged out",
+'6' => "You failed to validate your credentials and are logged out",
+#'7' => "You need to fill out an answer to the question asked",
+'7' => "You need to fill out an answer to the question asked",
+#'8' => "Select your Session Revalidation Question here",
+'8' => "Select your Session Revalidation Question here",
+#'9' => "To check your credentials select a question and provide an answer to Revalidate an Admin session",
+'9' => "To check your credentials select a question and provide an answer to Revalidate an Admin session",
+#'9a' => "If you select your password as validation you can leave the field empty.",
+'9a' => "If you select your password as validation you can leave the field empty.",
+#'10' => "You did not select a Session Question in your profile<br />so the only way to check your credentials is your password.",
+'10' => "You did not select a Session Question in your profile<br />so the only way to check your credentials is your password.",
+#'11' => "My password is",
+'11' => "My password is",
+#);
+);
+#
+
+#%sesquest_txt = (
+%sesquest_txt = (
+#'password' => "Use my password as validation",
+'password' => "Use my password as validation",
+#'1' => "My favorite animal is a",
+'1' => "My favorite animal is a",
+#'2' => "The name of my favorite pet is",
+'2' => "The name of my favorite pet is",
+#'3' => "My phone number is",
+'3' => "My phone number is",
+#'4' => "My birthdate is",
+'4' => "My birthdate is",
+#'5' => "My best friend is",
+'5' => "My best friend is",
+#'6' => "I'm in love with",
+'6' => "I'm in love with",
+#'7' => "The person I hate most is",
+'7' => "The person I hate most is",
+#'8' => "My Zip code is",
+'8' => "My Zip code is",
+#'9' => "My favorite sport is",
+'9' => "My favorite sport is",
+#'10' => "My favorite drink is",
+'10' => "My favorite drink is",
+#);
+);
+#
+
+#1;
+1;

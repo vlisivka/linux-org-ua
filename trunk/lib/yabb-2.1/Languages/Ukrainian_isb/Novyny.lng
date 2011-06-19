@@ -1,0 +1,46 @@
+
+%novyny_txt = (
+'from' => 'повідомив:',
+'on' => '',
+
+'logintitle' => 'Реєстрація',
+'boardstitle' => 'Останні повідомлення',
+'imagestitle' => 'Останні малюнки',
+
+'templateerr' => 'На вдається відкрити файл шаблону',
+'threaderr' => '(помилка читання)',
+
+'laston' => ', надісланий ',
+'laston_m' => ', останній надіслано ',
+
+'vote_butt' => 'Голосую',
+
+'login_butt' => 'Увійти',
+'logintip' => 'Логін',
+'passtip' => 'Пароль',
+
+'pages' => 'Сторінки: ',
+);
+
+@novyny_post = (
+'допис',
+'дописи',
+'дописів'
+);
+
+sub plural {
+	my $num = shift;
+	my $tso = $num % 10;
+
+	if (!$tso || ($num % 100 > 20 || $num % 100 < 10)) {
+		if ($tso == 1) {
+			return 0;
+		} elsif ($tso < 5) {
+			return 1;
+		}
+	}
+	return 2;
+}
+
+1;
+

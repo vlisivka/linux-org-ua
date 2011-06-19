@@ -1,0 +1,36 @@
+###############################################################################
+# SplitSplice.lng (Split and Splice text definitions)                         #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%sstxt=(
+'1' => "Split Topic",
+'1a' => "New Topic",
+'2' => "You are not allowed to split this topic; you must be a moderator or administrator to do this.",
+'3' => "Split from",
+'4' => "Use the selection list to choose where to split this thread. The selected reply, and all subsequent replies will be moved to a new thread.",
+'5' => "Off topic replies have been moved to",
+'6' => "This Thread",
+'7' => "by",
+'101' => "Splice Topic",
+'102' => "You are not allowed to splice this topic; you must be a moderator or administrator to do this.",
+'103' => "Splice to",
+'104' => "Use the selection list to choose which thread to move the contents of the current thread to.",
+'105' => "The contents of this thread have been moved",
+'106' => "HERE",
+'107' => "by",
+'108' => "Moved"
+);
+
+1;

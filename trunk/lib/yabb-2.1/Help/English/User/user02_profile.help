@@ -1,0 +1,96 @@
+$SectionName = "Your_Profile";
+
+### Section 1
+#############################################
+$SectionSub1 = "Profile_Overview";
+$SectionBody1 = qq~ YaBB allows you to fill out a profile which tells people about you. You can have your name, age, instant messenger information, personal avatar (picture), and more!
+<p><b>Step 1:</b> To change your profile, click the &quot;Profile&quot; option in the forum menu above. This will bring you to the View Profile page.</p>
+<p><b>Step 2:</b> On your View Profile page, you will see a special link titled &quot;Modify&quot;. Click this link.</p>
+<p><b>Step 3:</b> For security reasons, you will then be asked to enter your password. Do so, then click &quot;Confirm Password&quot;.</p>
+<p>You now have access to all of your account settings and options for this YaBB, divided into four sections: Edit Profile, Contact Information, Options and PM Preferences. For details on each of this, please read on below.</p>~;
+#############################################
+
+
+### Section 2
+#############################################
+$SectionSub2 = "Edit_Profile";
+$SectionBody2 = qq~The Edit Profile section gives you quick access to your basic profile settings for you account on this YaBB forum.
+<p><u><b>Password</b></u>
+<br />If you wish to change your password, you may do so by filling in this box. It is highly recommended that your password be at <i>least</i> 6 characters and use a combination of letters and numbers.</p>
+<p><u><b>Verify Password</b></u> <br /> In order to change your password, YaBB needs to know that you'll remember it. You can do this by entering your new password again in this box.</p>
+<p><u><b>Name</b></u>
+<br />This is your Display Name. This is the name everyone will see throughout this YaBB forum. Most forum systems display the username you login with, but this is not the case with YaBB!</p>
+<p><u><b>Gender</b></u>
+<br />Optional. If you want others to know your gender, you may pick &quot;male&quot; or &quot;female&quot; from this drop-down box. Keep in mind that this forum may have boards with access only allowed to certain genders.</p>
+<p><u><b>Birthday</b></u>
+<br />Optional. If you would like others to see how old you are and have a special icon in your profile on your birthday, please enter it in DD (day), MM (month), YYYY (year) format.</p>
+<p><u><b>Location</b></u>
+<br />Optional. Filling in this box will display where you live, where your from or anything else you choose.</p>~;
+#############################################
+
+
+### Section 3
+#############################################
+$SectionSub3 = "Contact_Information";
+$SectionBody3 = qq~If you would like other members of this YaBB community to be able to contact you, this section will allow you to provide this information in your profile.
+<p><u><b>Email</b></u>
+<br />This must be a valid email address. It is used for system notifications such as a forgotten password, topic notifications, and forum emails.</p>
+<p><u><b>Hide Email from Public</b></u> <br /> Check this box if you do not want other YaBB community members to view your email address. Note: this does not hide it from Admins.</p>
+<p><u><b>ICQ</b></u>
+<br />If you have an ICQ account, you may enter your UIN here.</p>
+<p><u><b>AIM</b></u>
+<br />If you have AOL Instant Messenger (AIM), you may enter your user name here.</p>
+<p><u><b>YIM</b></u>
+<br />If you have Yahoo! Instant Messenger, you may enter your screen name here.</p>
+<p><u><b>MSN</b></u>
+<br />If you have an MSN Messenger address, you may enter it here.</p>
+<p><u><b>Google Talk</b></u>
+<br />If you have Google Talk, you may enter your address here.</p>
+<p><u><b>Website Title</b></u>
+<br />If you have a website, you can enter the title here. This will be the text the URL (below) will attached to.</p>
+<p><u><b>Website URL</b></u>
+<br />Here you can enter the URL to your website. Note, this must be a full URL. (i.e. include http:// )</p>~;
+#############################################
+
+
+### Section 4
+#############################################
+$SectionSub4 = "Options";
+$SectionBody4 = qq~The third section of your YaBB profile allows you to edit forum settings that relate to your account.
+<p><u><b>Personalized Picture</b></u>
+<br />YaBB allows you to define a small picture (called an avatar) that will display under your name next to your posts. This forum has a number of avatars already installed, and you may pick one from the list. If you have your own avatar, please see the option below.</p>
+<p><u><b>I have my own pic</b></u>
+<br />If you have your own avatar and would like to use it on this YaBB, you may enter the URL here.</p>
+<p><u><b>Personal Text</b></u>
+<br />This is a small line of text that will display under your avatar.</p>
+<p><u><b>Signature</b></u>
+<br />Your signature is displayed at the bottom of every post you make and in your profile.</p>
+<p><u><b>Preset Time Format</b></u>
+<br />This option allows you to change how the dates and time are presented to you throughout this YaBB community.</p>
+<p><u><b>Custom Time Format</b></u>
+<br />You may also create a custom time format using the special codes here.</p>
+<p><u><b>Time Offset</b></u>
+<br />Since your time may be different from the server, you can enter your correct time zone to adjust it correctly.</p>
+<p><u><b>Template</b></u>
+<br />If the webmaster of this YaBB forum has other templates installed, you may choose one from this box.</p>
+<p><u><b>Language</b></u>
+<br />Here you can select your native language to view this community in if it is available.</p>~;
+#############################################
+
+
+### Section 5
+#############################################
+$SectionSub5 = "PM_Preferences";
+$SectionBody5 = qq~The final section of the profile gives you the ability to customize how you view and receive personal messages from other community members.
+<p><u><b>Ignorelist</b></u>
+<br />This function allows you to ignore other members and prevents you from viewing any personal messages they send. Additionally, you may disable all PMs by entering a *</p>
+<p><u><b>Notify by e-mail:</b></u>
+<br />If you would like an email when a members sends you a personal message, this options allows you to enable that feature.</p>
+<p><u><b>PM Popup shows PMs in new Window?</b></u>
+<br />If you have PM Popups enabled, checking this box will open your PMs in a new window. Otherwise, it will load in the current one.</p>
+<p><u><b>Enable Personal Message Popup?</b></u>
+<br /> Checking this box will display a small popup window to notify you of any new personal messages.</p>~;
+#############################################
+
+
+1;

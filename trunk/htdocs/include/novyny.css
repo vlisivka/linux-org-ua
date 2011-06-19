@@ -1,0 +1,116 @@
+
+/* Елементи вводу */
+input[type="text"]  { background-color:#FFFFF0; border:1px solid #696969; color:#003366; }
+input[type="radio"] {}
+input[type="button"]{ background-color:#FFFFF0; border:1px solid #696969; color:#003366; }
+input[type="submit"]{ background-color:#FFFFF0; border:1px solid #696969; color:#003366; }
+select{ background:#FFFFF0; color:#003366; }
+textarea{  background-color:#FFFFF0; border:1px solid #696969; color:#003366; }
+
+/* Підсвітка посилань */
+a { text-decoration:inherit; }
+a[name]   { text-decoration:inherit; }
+a:link    { color:#003366; padding:2px; text-decoration:inherit; }
+a:visited { color:#003366; padding:2px; text-decoration:inherit; }
+a:hover    { color:#009000; border:1px solid black; padding:1px; background:#e0f8e0; text-decoration:inherit; }
+/* Не підсвічувати blind links */
+a.blind:hover    { color:#003366; border:inherit; padding:2px; background:inherit; text-decoration:inherit; }
+
+
+body{ margin-top:0px; /* Я не роблю відступу, щоб панелька була приліплена догори */ background:white; color:black; }
+
+
+
+/* Заголовок сторінки */
+.topline{ background-color:#EEEEEE; color:gray; width:100%; border:1px black solid; }
+.toplineform{ display:inline; }
+.orfomsg{ text-align:center; cursor:help; }
+.googlebar{ }
+
+
+/* Логотип (#DDCC77 ?) */
+.logo{ background-color:#ddddff; width:100%; border:1px black solid; border-bottom:none; border-top:none; }
+.themeControls{ padding:0; }
+.logo_text{ font-size:250%; font-weight:600; color:#003366; padding:0; text-align:right; }
+.lou{ font-family:serif; font-variant:small-caps; margin-left:0.5em; margin-right:0.5em; }
+.lou_i{ color:red; font-variant:normal; font-style:italic; font-family:serif; }
+
+
+/* Посилання на інші частини сайту */
+.links{ font-size:smaller; width:100%; color:gray; font-weight:900; background-color:#EEEEEE; border:1px black solid; text-align:center; }
+
+
+/* Голосування */
+.vote{ width:100%; background-color:#EEEEEE; border:1px black solid; margin-top:0.5em; text-align:center; margin-bottom:0.7em; }
+.voteQuestion{ font-weight:600; }
+
+/* Імітація посилання для кнопки голосування */
+input.voteButton      { font:inherit; font-weight:600; color:#003366; padding:2px; background:inherit; border:none; }
+input.voteButton:hover{ font:inherit; font-weight:600; color:#009000; padding:1px; background:#e0f8e0; border:1px solid black; cursor:pointer; }
+
+.voteResultsLink{ font-weight:600; }
+.voteOptions{}
+
+
+/* Заголовки у стовпчику справа чи у RSS */
+.header { border-top:medium dotted black; margin-top:1em; margin-left:0; margin-right:0; margin-bottom:0.7em; text-align:center; font-weight:600; }
+.header a { color:inherit; }
+
+
+/* Список новин */
+.messages{ float:left; width:79%; }
+.message { margin-bottom:0.7em; }
+
+
+
+/* Новина - заголовок (#DDDDEE ?) */
+.msgHeader{ width:100%; color:#000055; background-color:#ddddff; border-right:1px gray solid; font-weight:600; }
+.msgHeader a { color:inherit; }
+.msgIcon{ width:18px; }
+.msgSubject{}
+.msgDate{}
+
+
+/* Новина - тіло */
+.msgBody{ width:100%; background-color:#FFFFCC; color:#006633; border-top:1px gray solid; }
+
+/* Підсвітка посилань у новині при наведені мишки */
+.msgBody a{ text-decoration:inherit; color:inherit; }
+.msgBody:hover a{ text-decoration:underline; color:blue; }
+
+/* Виділення фрагментів коду та цитат */
+.msgBody_code { font-family:fixed; white-space:pre; border:1px solid black; background-color:#eeeeee; }
+.msgBody_quote { border:1px solid black; background-color:#FFFFEE; }
+
+
+/* Новина - підпис */
+.msgFooter{ width:100%; background-color:#FFFFCC; color:black; font-weight:100; border-bottom:1px gray solid; font-weight:600; }
+
+/* Відмічати червоним посилання на відвідані дискусії */
+.msgFooter a:visited { color:#dd0000; }
+
+.msgComments{}
+.msgAuthor{ color:#888888; font-weight:600; }
+
+
+
+/* Стовпчик справа */
+.rightColumnSpacer { padding:0; margin:0; }
+.rightColumn{ font-size:smaller; float:right; width:19%; border:1px solid black; background:#ddddff; margin-left:0.2em; margin-right:0; padding:0.1em; }
+.rightColumn h3 { font-weight:600; color:#003366; font-variant:small-caps; text-align:center; }
+.latestMessage { border:1px dotted black; }
+.thumbnail { }
+.thumbnailImage { }
+.thumbnailTitle { }
+
+/* Список посилань знизу */
+.clearer { clear:both; }
+.bottomLinks{ text-align:center; }
+
+/* Різна технічна інформація внизу */
+.footer { text-align:center; color:gray; }
+.footer a { text-decoration:inherit; }
+.footer a:link    { color:gray; padding:2px; text-decoration:inherit; }
+.footer a:visited { color:gray; padding:2px; text-decoration:inherit; }
+.footer a:link:hover    {}
+.footer a:visited:hover {}

@@ -1,0 +1,51 @@
+###############################################################################
+# Notify.lng (Notify text definitions)                                        #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%notify_txt = (
+'114' => "or",
+'115' => "Yes",
+'116' => "No",
+'117' => "Would you like to deactivate Notification on this topic\?",
+'118' => "Topic Notification",
+'119' => "There are no topics with Notification marked!",
+'120' => "by",
+'121' => "Reset",
+'122' => "You are notified on replies in the following topics.",
+'123' => "Activate checkbox to <b><i>deactivate</i></b> Notification on the Topic!",
+'124' => "Update Notifications",
+'125' => "Notify",
+'126' => "Receive Email notification on replies to this board.",
+'127' => "Topic reply",
+'128' => "A reply",
+'129' => "has been posted to a topic you are watching.\n\nView it at",
+'130' => "Regards,\nThe $mbname team",
+'131' => "Unless you have specified otherwise, no more mails will be sent until you view the topic",
+'132' => "New Topics Only",
+'133' => "All New Posts",
+'134' => "Remove",
+'135' => "Board",
+'136' => "Board Notification",
+'137' => "Change or remove notification for this board.",
+'138' => "Change",
+'139' => "There are no boards with Notification marked!",
+'140' => "Topic",
+'141' => "You are notified on replies in the following boards.",
+'142' => "has been posted to a board you are watching.\n\nView it at",
+'143' => "A new topic",
+'144' => "Check all",
+);
+
+1;

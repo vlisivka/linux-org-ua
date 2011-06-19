@@ -1,0 +1,158 @@
+################################################################################
+###############################################################################
+## Templates.lng                                                               #
+# Templates.lng                                                               #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%templ_txt=(
+%templ_txt=(
+#'1' => "Style Sheet",
+'1' => "Style Sheet",
+#'2' => "Header",
+'2' => "Header",
+#'3' => "Board Index",
+'3' => "Board Index",
+#'4' => "Message Index",
+'4' => "Message Index",
+#'5' => "Threads",
+'5' => "Threads",
+#'6' => "Template Configuration",
+'6' => "Template Configuration",
+#'7' => "Here you can combine elements from different template-set and preview the result.",
+'7' => "Here you can combine elements from different template-set and preview the result.",
+#'8' => "Images",
+'8' => "Images",
+#'9' => "Preview",
+'9' => "Preview",
+#'10' => "Templates",
+'10' => "Templates",
+#'11' => "Configuration",
+'11' => "Configuration",
+#'12' => "Save as",
+'12' => "Save as",
+#'13' => "Save",
+'13' => "Save",
+#'14' => "Delete",
+'14' => "Delete",
+#'15' => "Are you sure you want to delete",
+'15' => "Are you sure you want to delete",
+#'16' => "Not a valid Template Name!",
+'16' => "Not a valid Template Name!",
+#'17' => "For security reasons you are not allowed to delete or change the 'default' template.",
+'17' => "For security reasons you are not allowed to delete or change the 'default' template.",
+#'18' => "Elements",
+'18' => "Elements",
+#'19' => "Here you can change the font-, border- and background colors, and font face and size for the main elements of your forum.",
+'19' => "Here you can change the font-, border- and background colors, and font face and size for the main elements of your forum.",
+#'20' => "Element",
+'20' => "Element",
+#'21' => "Backgr.",
+'21' => "Backgr.",
+#'22' => "Font",
+'22' => "Font",
+#'23' => "Border",
+'23' => "Border",
+#'24' => "Edit",
+'24' => "Edit",
+#'25' => "Body",
+'25' => "Body",
+#'26' => "Container",
+'26' => "Container",
+#'27' => "Seperator",
+'27' => "Seperator",
+#'28' => "Border Color",
+'28' => "Border Color",
+#'29' => "Horizontal Rule",
+'29' => "Horizontal Rule",
+#'30' => "Title Bar (.titlebg)",
+'30' => "Title Bar (.titlebg)",
+#'31' => "Category Bar (.catbg)",
+'31' => "Category Bar (.catbg)",
+#'32' => "Window 1 (.windowbg)",
+'32' => "Window 1 (.windowbg)",
+#'33' => "Window 2 (.windowbg2)",
+'33' => "Window 2 (.windowbg2)",
+#'34' => "Text Field/Button",
+'34' => "Text Field/Button",
+#'34a' => "Text Field (Input)",
+'34a' => "Text Field (Input)",
+#'34b' => "Button (Input)",
+'34b' => "Button (Input)",
+#'35' => "Text Area (Textarea)",
+'35' => "Text Area (Textarea)",
+#'36' => "Select Box (select)",
+'36' => "Select Box (select)",
+#'37' => "Quote",
+'37' => "Quote",
+#'38' => "Code",
+'38' => "Code",
+#'39' => "Highlight",
+'39' => "Highlight",
+#'40' => "This is ",
+'40' => "This is ",
+#'41' => "Color",
+'41' => "Color",
+#'42' => "Font",
+'42' => "Font",
+#'43' => "Solid",
+'43' => "Solid",
+#'44' => "Dashed",
+'44' => "Dashed",
+#'45' => "Dotted",
+'45' => "Dotted",
+#'46' => "Double",
+'46' => "Double",
+#'47' => "Groove",
+'47' => "Groove",
+#'48' => "Ridge",
+'48' => "Ridge",
+#'49' => "Inset",
+'49' => "Inset",
+#'50' => "Outset",
+'50' => "Outset",
+#'51' => "Edit Style Sheet",
+'51' => "Edit Style Sheet",
+#'52' => "Edit Templates",
+'52' => "Edit Templates",
+#'53' => "This is a Quote",
+'53' => "This is a Quote",
+#'54' => "This is Code",
+'54' => "This is Code",
+#'55' => "This is Edit",
+'55' => "This is Edit",
+#'56' => "This is Highlight",
+'56' => "This is Highlight",
+#'64' => "Container (#container)",
+'64' => "Container (#container)",
+#);
+);
+#
+
+#1;
+1;

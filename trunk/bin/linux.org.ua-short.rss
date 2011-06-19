@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="/include/rss-view.xsl"?>
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd" >
+<rss version="0.91">
+<channel>
+ <title>Новини</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny</link>
+ <description></description>
+ <language>uk-ua</language>
+ <copyright>linux.org.ua community</copyright>
+ <managingEditor>vlisivka@gmail.com</managingEditor>
+ <webMaster>vlisivka@gmail.com</webMaster>
+ 
+ <image>
+  <title>linux.org.ua</title>
+  <url>http://linux.org.ua/lambada-icons/linux-org-ua.gif</url>
+  <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny</link>
+  <width>88</width>
+  <height>31</height>
+ </image>
+ 
+<item>
+ <title>Випущено Kile 2.1</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1307773558</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1307773558</guid>
+</item>
+<item>
+ <title>Переведення форуму з KOI8-U на UTF-8</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1307441487</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1307441487</guid>
+</item>
+<item>
+ <title>Випущено Virtaal 0.7.0</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1307083704</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1307083704</guid>
+</item>
+<item>
+ <title>Випущено Mageia 1.0</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1306926066</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1306926066</guid>
+</item>
+<item>
+ <title>Випущено Fedora 15 (Lovelock)</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1306250475</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1306250475</guid>
+</item>
+<item>
+ <title>spell-uk 1.6.5</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1305770996</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1305770996</guid>
+</item>
+<item>
+ <title>GmailTeX 3.0</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1305388645</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1305388645</guid>
+</item>
+<item>
+ <title>LyX 2.0</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1305238426</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1305238426</guid>
+</item>
+<item>
+ <title>Ubuntu перейде на LightDM</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1305212384</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1305212384</guid>
+</item>
+<item>
+ <title>Google Code Jam</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;action=display;num=1304682692</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=novyny;num=1304682692</guid>
+</item>
+</channel>
+</rss>

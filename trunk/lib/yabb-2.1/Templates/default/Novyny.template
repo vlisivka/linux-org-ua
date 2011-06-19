@@ -1,0 +1,110 @@
+# <novyny poll>
+#  <novyny poll question>
+#  <novyny poll variants>
+#   <novyny poll control>
+#   <novyvy poll variant>
+# <novyny pages>
+# <novyny news>
+#  <novyny news icon>
+#  <novyny news topic>
+#  <novyny news message>
+#  <novyny news author>
+#  <novyny news start>
+#  <novyny news replies>
+# <novyny login>
+# <novyny boards>
+#  <novyny board name>
+#  <novyny board topics>
+#   <novyny topic icon>
+#   <novyny topic name>
+# <novyny images>
+#  <novyny img>
+#  <novyny img descr>
+# <novyny foot>
+
+
+$novyny_template = qq~
+	<div id="nypoll">
+		<novyny poll>
+	</div>
+
+	<div class="nysidehead">
+		$novyny_txt{'logintitle'}
+	</div>
+	
+	<div class="nyside">
+		<novyny login>
+	</div>
+
+	<div class="nysidehead">
+		$novyny_txt{'boardstitle'}
+	</div>
+	<novyny boards>
+	
+	<div class="nysidehead">
+		$novyny_txt{'imagestitle'}
+	</div>
+	<novyny images>
+
+	<div class="nypages">
+		<novyny pages>
+	</div>
+	<novyny news>
+
+	<div class="nypages">
+		<novyny pages>
+	</div>
+
+	<div id="nyfoot">
+		<novyny foot>
+	</div>~;
+
+
+$novynynewsitem = qq~
+	<div class="nyitem">
+		<div class="nytopic">
+			<novyny news icon>
+			<novyny news topic>
+		</div>
+		<div class="nymessage">
+			<novyny news message>
+		</div>
+		<div class="nyfooter">
+			$novyny_txt{'from'} <novyny news author> $novyny_txt{'on'} <novyny news start>
+			&nbsp; <novyny news replies>
+		</div>
+	</div>~;
+
+
+$novynyboard = q~
+	<div class="nyside">
+		<div class="nysidebrd">
+			<novyny board name>
+		</div>
+		<novyny board topics>
+	</div>
+~;
+
+$novynyboardtopic = q~
+		<div class="nysidetopic">
+			<novyny topic icon>
+			<novyny topic name>
+		</div>~;
+
+$novynyimage = q~
+	<div class="nyside">
+		<div class="nysideimage">
+			<novyny img>
+			<novyny img descr>
+		</div>
+	</div>~;
+
+
+$novynypoll = qq~<img src="$imagesdir/poll_animated2.gif" alt="*" /> <novyny poll question>: <novyny poll variants>~;
+
+$novynypolloption = q~
+		&nbsp; <novyny poll control> <b><novyny poll variant></b>~;
+
+
+1;
+

@@ -1,0 +1,90 @@
+###############################################################################
+# Guardian. lng (Guardian text definitions)                                   #
+###############################################################################
+# YaBB:              Yet another Bulletin Board                               #
+#                    Open-Source Community Software for Webmasters            #
+# Version:           YaBB 2.1                                                 #
+# Released:          November 5, 2005                                         #
+# Distributed by:    http://www.yabbforum.com                                 #
+# =========================================================================== #
+# Copyright (c) 2000-2005     YaBB (www.yabbforum.com) - All Rights Reserved. #
+# Software by:       The YaBB Development Team                                #
+#                    with assistance from the YaBB community.                 #
+# Sponsored by:      Xnull Internet Media, Inc.- http://www.ximinc.com        #
+#                    Your source for web hosting, web design, and domains.    #
+###############################################################################
+# Переклад: Євген А. Паламарчук (evgen.pal@gmail.com)                         #
+# Дата: 03.11.2005                                                            #
+# --------------------------------------------------------------------------- #
+# Модифікація перекладу під 2.1, доповнення та деякі зміни термінології       #
+# Михайло Даниленко <isbear@ukrpost.net>                                      #
+# Птн Тра 18 04:16:02 EEST 2007                                               #
+###############################################################################
+
+
+$guardianlngver='YaBB 2.1 $Revision: 1.1 $';
+
+%guardian_txt=(
+'main' => "Guardian&trade;",
+'admin' => "Адміністратор Guardian&trade;",
+'setup' => "Налаштування Guardian&trade;",
+'title' => "Ласкаво просимо до Guardian&trade;, вашого вартового при вході на форум",
+'description' => "Guardian&trade; може давати загарбникам відсіч на різних рівнях, в результаті чого підвищиться безпека і зменшиться імовірність зламу форуму.<br /><span class=\"small\">Переліки назв та IP-адрес мають містити один запис у рядку, назви можуть бути неповними.<span>",
+'notify' => "Сповіщати поштою про блокування вторгнення",
+'general' => "Основні параметри",
+'use_guardian' => "Дозволити використання Guardian&trade;",
+'use_htaccess' => "Блокування IP-адрес сервером через .htaccess<br /><span class=\"small\">(працюватиме лише у випадку підтримки цього сервером)</span>",
+'htaccess_add' => "Додавати відловлені IP-адреси в .htaccess<br/><span class=\"small\">(працюватиме лише в разі підтримки цього сервером)</span>",
+'htaccess_added' => "До .htaccess додано IP-адресу. (ви можете вилучити її звідти вручну з центру керування Guardian&trade;)",
+'proxy' => "Блокування proxy",
+'referer' => "Блокування за referer",
+'harvester' => "Блокування інтернет-ботів",
+'request' => "Блокування HTTP-методів",
+'string' => "Блокування стрічки оточення cgi",
+'clike' => "CLIKE Блокування",
+'union' => "UNION Блокування",
+'script' => "Блокування скриптів",
+'proxy_reason' => "Доступ до форуму через proxy-сервер заборонено!",
+'referer_reason' => "Доступ до форуму з цього посилання заборонено!",
+'harvester_reason' => "Цій програмі заборонено доступ до форуму!",
+'request_reason' => "Метод HTTP-запиту не дозволений!",
+'string_reason' => "Ваше посилання містить заборонені слова!",
+'clike_reason' => "Дарма намагаєтесь виконати CLIKE запит. MySQL тут нема.",
+'union_reason' => "Дарма намагаєтесь виконати UNION запит. MySQL тут нема.",
+'script_reason' => "Ви намагаєтеся виконати скрипт, який захований в посиланні чи у даних з форми, а це є погано!",
+'proxy_on' => "Заборонити доступ до форуму через proxy сервери",
+'referer_on' => "Активувати блокування за referer",
+'harvester_on' => "Активувати блокування інтернет-ботів",
+'request_on' => "Активувати блокування методів HTTP",
+'string_on' => "Активувати блокування виразів у стрічці оточення cgi",
+'clike_on' => "Активувати блокування CLIKE (тільки MySQL)?",
+'union_on' => "Активувати блокування UNION (тільки MySQL)?",
+'script_on' => "Активувати блокування скриптів?",
+'proxy_abuse' => "Доступ через proxy",
+'referer_abuse' => "Referer",
+'harvester_abuse' => "Бот",
+'request_abuse' => "Метод запиту HTTP",
+'string_abuse' => "Параметри у посиланні",
+'clike_abuse' => "CLIKE",
+'union_abuse' => "UNION",
+'script_abuse' => "Скриптування",
+'abuse' => "Сповіщення про блокування від Guardian!",
+'abuse_user' => "ID користувача (логін)",
+'abuse_ip' => "IP-адреса",
+'abuse_referer' => "Блоковано за referer",
+'abuse_string' => "Заблоковане слово з оточення",
+'abuse_environment' => "Рядок оточення (параметри)",
+'abuse_form_environment' => "Заблокований скрипт у даних форми",
+'abuse_url_environment' => "Заблокований скрипт у посиланні",
+'abuse_harvester' => "Заблокований інтернет-бот",
+'abuse_request' => "Заблокований HTTP-запит",
+'white_list' => "Дозволити вхід для (білий список)<br /><span class=\"small\">(перелік логінів, IP-адрес та ідентифікаторів proxy)</span>",
+'referer_list' => "Посилання, вхід з яких заборонено (визначається за referer)",
+'harvester_list' => "Блокувати ботів з назвами",
+'request_list' => "Заборонені методи HTTP-запитів<br /><span class=\"small\"><b><u>УВАГА!</u><br />Ніколи не блокуйте методи POST і GET!<br />Ви заблокуєте будь-яку роботу з форумом!</b></span>",
+'string_list' => "Блокувати стрічки параметрів, що містять",
+'htaccess_list' => "Заблоковані IP-адреси або імена доменів<br /><span class=\"small\">(можна вживати символ групування *, один на рядок)</span>",
+'save' => "Зберегти",
+);
+
+1;
