@@ -23,7 +23,7 @@ if (!$post_txt_loaded) {
 }
 LoadLanguage("FA");
 
-$set_subjectMaxLength ||= 50;
+$set_subjectMaxLength ||= 100;
 
 sub ModifyMessage {
 	my ($mfn);

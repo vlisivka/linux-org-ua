@@ -22,7 +22,7 @@ LoadLanguage("Display");
 LoadLanguage("FA");
 require "$sourcedir/Notify.pl";
 
-$set_subjectMaxLength ||= 50;
+$set_subjectMaxLength ||= 100;
 
 sub Post {
 	if ($iamguest && $enable_guestposting == 0) { &fatal_error($post_txt{'165'}); }
