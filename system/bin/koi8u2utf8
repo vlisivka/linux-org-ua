@@ -1,0 +1,12 @@
+#!/bin/bash
+set -ue
+
+for I in "$@"
+do
+  [ -f "$I" ] || continue
+  echo "$I"
+  iconv -f KOI8-U -t UTF-8 <"$I" >"$I.utf8"
+  chown --reference="$I" -- "$I.utf8"
+  chmod --reference="$I" -- "$I.utf8"
+  mv -f -- "$I.utf8" "$I"
+done
