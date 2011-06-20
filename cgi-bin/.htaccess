@@ -1,6 +1,5 @@
 <IfModule mod_env.c>
 SetEnv LANG uk_UA.UTF-8
-SetEnv PERL5OPTS " -Mopen=:utf8,:std -Mutf8 -CSAD "
 </IfModule>
 DefaultLanguage uk
 
