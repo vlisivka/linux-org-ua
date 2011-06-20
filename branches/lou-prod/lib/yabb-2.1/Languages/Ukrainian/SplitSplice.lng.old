@@ -1,0 +1,72 @@
+################################################################################
+###############################################################################
+## SplitSplice.lng (Split and Splice text definitions)                         #
+# SplitSplice.lng (Split and Splice text definitions)                         #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%sstxt=(
+%sstxt=(
+#'1' => "Split Topic",
+'1' => "Split Topic",
+#'1a' => "New Topic",
+'1a' => "New Topic",
+#'2' => "You are not allowed to split this topic; you must be a moderator or administrator to do this.",
+'2' => "You are not allowed to split this topic; you must be a moderator or administrator to do this.",
+#'3' => "Split from",
+'3' => "Split from",
+#'4' => "Use the selection list to choose where to split this thread. The selected reply, and all subsequent replies will be moved to a new thread.",
+'4' => "Use the selection list to choose where to split this thread. The selected reply, and all subsequent replies will be moved to a new thread.",
+#'5' => "Off topic replies have been moved to",
+'5' => "Off topic replies have been moved to",
+#'6' => "This Thread",
+'6' => "This Thread",
+#'7' => "by",
+'7' => "by",
+#'101' => "Splice Topic",
+'101' => "Splice Topic",
+#'102' => "You are not allowed to splice this topic; you must be a moderator or administrator to do this.",
+'102' => "You are not allowed to splice this topic; you must be a moderator or administrator to do this.",
+#'103' => "Splice to",
+'103' => "Splice to",
+#'104' => "Use the selection list to choose which thread to move the contents of the current thread to.",
+'104' => "Use the selection list to choose which thread to move the contents of the current thread to.",
+#'105' => "The contents of this thread have been moved",
+'105' => "The contents of this thread have been moved",
+#'106' => "HERE",
+'106' => "HERE",
+#'107' => "by",
+'107' => "by",
+#'108' => "Moved"
+'108' => "Moved"
+#);
+);
+#
+
+#1;
+1;

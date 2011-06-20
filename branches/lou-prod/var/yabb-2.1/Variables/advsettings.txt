@@ -1,0 +1,72 @@
+###############################################################################
+# AdvSettings.txt                                                             #
+###############################################################################
+
+########## In-Thread Multi Delete ##########
+
+$mdadmin = 1;
+$mdglobal = 1;
+$mdmod = 1;
+$adminbin = 0;                                                        # Skip recycle bin step for admins and delete directly
+
+########## Moderation Update ##########
+
+$adminview = 3;                                                       # Multi-admin settings for Administrators: 0=none, 1=icons 2=single checkbox 3=multiple checkboxes
+$gmodview = 3;                                                        # Multi-admin settings for Global Moderators: 0=none, 1=icons 2=single checkbox 3=multiple checkboxes
+$modview = 3;                                                         # Multi-admin settings for Moderators: 0=none, 1=icons 2=single checkbox 3=multiple checkboxes
+
+########## Advanced Memberview Plus ###########
+
+$showallgroups = 1;
+$OnlineLogTime = 10;                                                  ######### Polls ###########
+
+$numpolloptions = 12;                                                 # Number of poll options
+$maxpq = 120;                                                         # Maximum Allowed Characters in a Poll Qestion?
+$maxpo = 100;                                                         # Maximum Allowed Characters in a Poll Option?
+$maxpc = 1000;                                                        # Maximum Allowed Characters in a Poll Comment?
+$useraddpoll = 1;                                                     # Allow users to add polls to existing threads? (1 = yes)
+$ubbcpolls = 1;                                                       # Allow UBBC tags and smilies in polls? (1 = yes)
+
+########## Advanced Instant Message Box ############
+
+$numposts = 1;                                                        # Number of posts required to send Instant Messages
+$imspam = off;                                                        # Percent of Users a user is a allowed to send a message at once
+$numibox = 20;                                                        # Number of maximum Messages in the IM-Inbox
+$numobox = 20;                                                        # Number of maximum Messages in the IM-Outbox
+$numstore = 20;                                                       # Number of maximum Messages in the Storage box
+$enable_imlimit = 0;                                                  # Set to 1 to enable limitation of incoming and outgoing im messages
+$imtext = qq~Welcome to my boards~;
+$sendname = "admin";
+$imsubject = "Hey Hey :)";
+$send_welcomeim = 0;                                                  ######### Topic Summary Cutter #############
+
+$cutamount  = "15";                                                   # Number of posts to list in topic summary
+$tsreverse = 1;                                                       # Reverse Topic Summaries (So most recent is first
+
+############## Time Lock ###################
+
+$tlnomodflag = 1;                                                     # Set to 1 limit time users may modify posts
+$tlnomodtime = 2;                                                     # Time limit on modifying posts (days)
+$tlnodelflag = 1;                                                     # Set to 1 limit time users may delete posts
+$tlnodeltime = 7;                                                     # Time limit on deleting posts (days)
+$tllastmodflag = 1;                                                   # Set to 1 allow users to modify posts up to the specified time limit w/o showing "last Edit" message
+$tllastmodtime = 30;                                                  # Time limit to modify posts w/o triggering "last Edit" message (in minutes)
+
+########## File Attachment Settings ##########
+
+$limit = 500;                                                         # Set to the maximum number of kilobytes an attachment can be. Set to 0 to disable the file size check.
+$dirlimit = 100000;                                                   # Set to the maximum number of kilobytes the attachment directory can hold. Set to 0 to disable the directory size check.
+$overwrite = 0;                                                       # Set to 0 to auto rename attachments if they exist, 1 to overwrite them or 2 to generate an error if the file exists already.
+@ext = qw(jpg jpeg gif png svg zip gz bz2 rpm deb pdf);               # The allowed file extensions for file attachements. Variable should be set in the form of "jpg bmp gif" and so on.
+$checkext = 1;                                                        # Set to 1 to enable file extension checking, set to 0 to allow all file types to be uploaded
+$amdisplaypics = 1;                                                   # Set to 1 to display attached pictures in posts, set to 0 to only show a link to them.
+$allowattach = 1;                                                     # Set to 1 to allow file attaching, set to 0 to disable file attaching.
+$allowguestattach = 0;                                                # Set to 1 to allow guests to upload attachments, 0 to disable guest attachment uploading.
+
+############# Error Logger #################
+
+$elmax  = "50";                                                       # Max number of log entries before rotation
+$elenable = 1;                                                        # allow for error logging
+$elrotate = 1;                                                        # Allow for log rotation
+
+1;

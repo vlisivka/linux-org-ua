@@ -1,0 +1,51 @@
+/* Green'ish colours styles */
+
+/*
+with the styleswitcher in this theme we mainly need to override/modify 
+those attributes which influence colours, like color, background-color 
+and background-image.. although it's possible to alter any other rule here,
+lets keep these alternative stylesheets relatively small and easy to work with.
+------------------------------------------------------------------[important note] */
+
+body { }
+
+#butgr { border:1px dashed black; }
+
+/* Заголовок сторінки */
+.topline{ }
+
+/* Логотип */
+.logo{ background-color:#00CC99; }
+.logo_text{ color:black; }
+.lou{ }
+.lou_i{ }
+
+/* Посилання на інші частини сайту */
+.links{ }
+
+/* Заголовки у стовпчику справа чи у RSS */
+.header { border:none; background-color:black; color:#00CC99; }
+
+/* Список новин */
+.messages{ }
+.message { }
+
+/* Новина - заголовок */
+.msgHeader{ background-color:#00CC99; }
+.msgIcon{ }
+.msgSubject{ }
+.msgDate{ }
+
+
+/* Новина - тіло */
+.msgBody{ }
+
+/* Виділення фрагментів коду та цитат */
+.msgBody_code { }
+.msgBody_quote { }
+
+/* Новина - підпис */
+.msgFooter{ }
+
+.msgComments{ }
+.msgAuthor{ }

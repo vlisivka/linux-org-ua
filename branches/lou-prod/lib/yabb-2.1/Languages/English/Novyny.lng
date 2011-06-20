@@ -1,0 +1,39 @@
+
+%novyny_txt = (
+'from' => 'from:',
+'on' => 'on',
+
+'logintitle' => 'Login',
+'boardstitle' => 'Last active threads',
+'imagestitle' => 'Last attached images',
+
+'templateerr' => 'Can\'t open template',
+'threaderr' => '(error)',
+
+'laston' => ', sent on ',
+'laston_m' => ', last sent on ',
+
+'vote_butt' => 'Vote!',
+
+'login_butt' => 'Enter',
+'logintip' => 'Login',
+'passtip' => 'Password',
+
+'pages' => 'Pages: ',
+);
+
+@novyny_post = (
+'post',
+'posts',
+);
+
+sub plural {
+	my $num = shift;
+	if ($num == 1) {
+		return 0;
+	}
+	return 1;
+}
+
+1;
+

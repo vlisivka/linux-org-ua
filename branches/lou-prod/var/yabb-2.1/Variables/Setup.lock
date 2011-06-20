@@ -1,0 +1,1 @@
+This is a lockfile for the Setup Utility.\nIt prevents it being run again after it has been run once.\nDelete this file if you want to run the Setup Utility again.

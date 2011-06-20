@@ -1,0 +1,9 @@
+
+%cyabbc_txt = (
+'flood' => 'Flood',
+'flame' => 'Flame',
+'offtop' => 'Offtopic',
+);
+
+1;
+

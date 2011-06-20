@@ -1,0 +1,8 @@
+#!/bin/sh
+
+CHANGE_PATH=`dirname "$0"`
+[ -n "$CHANGE_PATH" ] && cd "$CHANGE_PATH"
+
+chmod -R a+rX .
+chmod -R a+rwX yabbfiles/Attachments
+#chmod a+rwX po-share/*

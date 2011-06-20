@@ -1,0 +1,125 @@
+
+/* ::::: http://trinixy.ru/templates/trinixyru/css/style.css ::::: */
+
+html, body { margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat; height: 100%; font-size: 11px; font-family: tahoma,sans,verdana; color: rgb(0, 0, 0); text-align: center; }
+table { border: 0px none ; border-collapse: collapse; }
+table td { padding: 0px; }
+.category { font-size: 12px; font-family: tahoma,sans,verdana; }
+.category a { color: rgb(75, 149, 221); text-decoration: none; }
+.category a:hover { text-decoration: underline; }
+.speedbar { font-size: 11px; font-family: tahoma,sans,verdana; }
+.speedbar a { color: rgb(75, 149, 221); text-decoration: none; }
+.speedbar a:hover { text-decoration: underline; }
+.slink { font-size: 11px; font-family: tahoma,sans,verdana; }
+.slink a:active, .slink a:visited, .slink a:link { color: rgb(244, 193, 84); text-decoration: none; }
+.slink a:hover { color: rgb(244, 193, 84); text-decoration: underline; }
+.copy { color: rgb(136, 136, 136); font-size: 11px; font-family: tahoma,sans,verdana; }
+.skin { font-size: 11px; font-family: tahoma,sans,verdana; padding-left: 10px; }
+select { font-size: 11px; font-family: tahoma,sans,verdana; }
+.copy a:active, .copy a:visited, .copy a:link { color: rgb(136, 136, 136); text-decoration: none; }
+.copy a:hover { color: rgb(75, 149, 221); text-decoration: underline; }
+.ltitle { color: rgb(227, 64, 0); font-size: 18px; font-family: tahoma,sans,verdana; font-weight: bold; padding-left: 6px; padding-top: 11px; }
+.stext { color: rgb(136, 136, 136); font-size: 11px; font-family: tahoma,sans,verdana; }
+.stext a:active, .stext a:visited, .stext a:link { color: rgb(136, 136, 136); text-decoration: none; }
+.stext a:hover { color: rgb(75, 149, 221); text-decoration: underline; }
+.ntitle { color: rgb(99, 99, 99); font-size: 12px; font-family: tahoma,sans,verdana; font-weight: bold; }
+.ntitle a { color: rgb(244, 193, 84); text-decoration: none; }
+.ntitle a:hover { text-decoration: underline; }
+.ctitle { color: rgb(99, 99, 99); font-size: 11px; font-family: tahoma,sans,verdana; }
+.ctitle a { color: rgb(75, 149, 221); text-decoration: none; }
+.ctitle a:hover { text-decoration: underline; }
+.menu_item { color: red; }
+.news { font-size: 11px; font-family: tahoma,sans,verdana; text-align: justify; }
+.news a { color: rgb(75, 149, 221); text-decoration: none; }
+.news a img { border: medium none ; }
+.news a:hover { text-decoration: underline; }
+.news img { padding-right: 10px; padding-bottom: 10px; padding-top: 10px; }
+.userstop { font-family: Tahoma; font-size: 11px; }
+.userstop thead { font-family: Tahoma; font-size: 11px; font-weight: bold; }
+.userstop td { padding: 3px; }
+.userstop a { color: rgb(75, 149, 221); text-decoration: none; }
+.userstop a:hover { text-decoration: underline; }
+.hr_line { background: transparent url('line.gif') repeat; width: 100%; height: 7px; font-size: 3px; font-family: tahoma,sans,verdana; margin-top: 4px; margin-bottom: 4px; }
+.head_01 { background-image: url('head_01.gif'); background-repeat: repeat-x; height: 160px; }
+.inputstyle_01 { border: 1px solid rgb(255, 255, 255); font-size: 11px; color: rgb(117, 117, 117); font-family: tahoma,sans,verdana; padding-left: 3px; background-image: url('field_bkgr_01.gif'); background-repeat: no-repeat; }
+.inputstyle_02 { border: 1px solid rgb(245, 245, 245); font-size: 11px; color: rgb(117, 117, 117); font-family: tahoma,sans,verdana; padding-left: 3px; background-image: url('field_bkgr_02.gif'); background-repeat: no-repeat; }
+.mmenu_under { color: rgb(244, 193, 84); font-family: tahoma,sans,verdana; font-size: 11px; text-transform: uppercase; }
+.mmenu_under a:active, .mmenu_under a:visited, .mmenu_under a:link { color: rgb(110, 166, 219); text-decoration: none; font-weight: bold; }
+.mmenu_under a:hover { color: rgb(110, 166, 219); text-decoration: underline; font-weight: bold; }
+.spb_bkgr { background-image: url('spb_bkgr.gif'); background-repeat: repeat-x; height: 33px; }
+.footer_bkgr { background-image: url('footer_01b.gif'); background-repeat: repeat-x; height: 55px; }
+.footer_col_l { background-image: url('footer_02b.gif'); background-repeat: no-repeat; }
+.col_spacer { background-image: url('col_spacer.gif'); background-repeat: repeat-y; }
+.col_l_b { background-image: url('col_l_b.gif'); background-repeat: repeat-y; }
+.blo_01 { background-image: url('blo_01.gif'); background-repeat: no-repeat; height: 32px; }
+.art_block_01 { background-image: url('dlet_01.gif'); background-repeat: repeat-x; }
+.art_block_22 { background-image: url('dlet_22.gif'); background-repeat: repeat-x; }
+.art_block_31 { background-image: url('dlet_31.gif'); background-repeat: repeat-y; }
+.art_block_33 { background-image: url('dlet_33.gif'); background-repeat: repeat-y; }
+.art_block_52 { background-image: url('dlet_52.gif'); background-repeat: repeat-x; }
+.art_block_52s { background-image: url('dlet_52s.gif'); background-repeat: repeat-x; }
+.blo_title { font-size: 11px; font-weight: bold; text-transform: uppercase; color: rgb(255, 140, 0); }
+a.dblue:active, a.dblue:visited, a.dblue:link { font-size: 11px; font-family: tahoma,sans,verdana; color: rgb(75, 149, 221); text-decoration: none; }
+a.dblue:hover { color: rgb(75, 149, 221); text-decoration: underline; }
+.white { color: rgb(255, 255, 255); font-size: 11px; font-family: tahoma,sans,verdana; }
+.white a:active, .white a:visited, .white a:link { color: rgb(255, 255, 255); text-decoration: none; }
+.white a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+
+/* ::::: http://trinixy.ru/templates/trinixyru/css/engine.css ::::: */
+
+form { margin: 0px; padding: 0px; }
+.archives { vertical-align: top; font-family: tahoma,sans,verdana; font-size: 11px; margin-top: 6px; margin-left: 10px; margin-bottom: 10px; }
+.archives a { font-family: Tahoma; font-size: 11px; color: rgb(67, 99, 126); }
+.title_quote { border-style: dotted dotted none; border-color: rgb(190, 190, 190) rgb(190, 190, 190) -moz-use-text-color; border-width: 1px 1px 0pt; margin: 8px auto 0pt; padding: 3px; background: rgb(254, 255, 189) none repeat; color: rgb(34, 34, 34); font-weight: bold; font-size: 10px; }
+.quote { border: 1px dotted rgb(190, 190, 190); padding: 5px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10pt; line-height: normal; font-size-adjust: none; font-stretch: normal; text-align: justify; background-color: lightyellow; }
+.scriptcode { border-style: dotted; border-color: rgb(190, 190, 190); padding: 5px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 8pt; line-height: normal; font-size-adjust: none; font-stretch: normal; text-align: left; background-color: lightyellow; }
+.weekday-active-v { color: rgb(75, 149, 221); font-family: tahoma,sans,verdana; font-size: 11px; }
+.day-active-v { color: rgb(75, 149, 221); font-family: tahoma,sans,verdana; font-size: 11px; }
+.calendar { font-family: verdana; font-size: 11px; }
+.calendar td, th { font-family: verdana; font-size: 11px; text-decoration: none; padding-left: 4px; padding-right: 4px; padding-bottom: 4px; }
+.weekday { color: rgb(128, 64, 64); font-family: verdana; font-size: 11px; }
+.weekday-active { color: rgb(128, 64, 64); font-family: verdana; font-size: 11px; }
+.day-active { color: rgb(128, 64, 64); font-family: verdana; font-size: 11px; }
+.day-active a, .weekday-active a, .day-active-v a, .weekday-active-v a { text-decoration: underline; }
+.monthlink { color: rgb(217, 158, 32); font-family: tahoma,sans,verdana; font-size: 11px; text-decoration: none; }
+.rating { color: rgb(117, 117, 117); font-family: Tahoma,helvetica,sans-serif; font-size: 11px; width: 85px; height: 16px; }
+.unit-rating { margin: 0px; padding: 0px; background: transparent url('rating.gif') repeat-x scroll left top; list-style-type: none; list-style-image: none; list-style-position: outside; width: 85px; height: 16px; position: relative; }
+.unit-rating li { margin: 0px; padding: 0px; text-indent: -90000px; float: left; }
+.unit-rating li a { padding: 0px; display: block; width: 17px; height: 16px; text-decoration: none; text-indent: -9000px; z-index: 17; position: absolute; }
+.unit-rating li a:hover { background: transparent url('rating.gif') repeat scroll left center; z-index: 2; left: 0px; }
+.unit-rating a.r1-unit { left: 0px; }
+.unit-rating a.r1-unit:hover { width: 17px; }
+.unit-rating a.r2-unit { left: 17px; }
+.unit-rating a.r2-unit:hover { width: 34px; }
+.unit-rating a.r3-unit { left: 34px; }
+.unit-rating a.r3-unit:hover { width: 51px; }
+.unit-rating a.r4-unit { left: 51px; }
+.unit-rating a.r4-unit:hover { width: 68px; }
+.unit-rating a.r5-unit { left: 68px; }
+.unit-rating a.r5-unit:hover { width: 85px; }
+.unit-rating li.current-rating { background: transparent url('rating.gif') repeat scroll left bottom; position: absolute; height: 16px; display: block; text-indent: -9000px; z-index: 1; }
+.bbcodes { border: 1px solid rgb(224, 224, 224); margin: 2px; padding: 2px; background: rgb(255, 255, 255) none repeat; color: rgb(102, 102, 102); font-family: Verdana,Tahoma,helvetica,sans-serif; font-size: 10px; vertical-align: middle; height: 21px; }
+.bbcodes_poll { border: 1px solid rgb(196, 196, 196); margin: 2px; background: rgb(255, 255, 255) url('bttn_bbcodes.gif') repeat; color: rgb(255, 255, 255); font-family: Tahoma; vertical-align: middle; font-size: 11px; height: 20px; width: 80px; font-weight: bold; }
+.editor_button { float: left; cursor: pointer; padding-left: 2px; padding-right: 2px; }
+.editor_buttoncl { border-left: 1px solid rgb(187, 187, 187); border-right: 1px solid rgb(187, 187, 187); float: left; cursor: pointer; padding-left: 1px; padding-right: 1px; }
+.editbclose { float: right; cursor: pointer; }
+.xfields textarea { border: 1px solid rgb(224, 224, 224); width: 500px; height: 90px; font-family: verdana; font-size: 11px; }
+.xfields input { border: 1px solid rgb(224, 224, 224); width: 250px; height: 18px; font-family: verdana; font-size: 11px; }
+.xfields select { border: 1px solid rgb(224, 224, 224); height: 18px; font-family: verdana; font-size: 11px; }
+.xprofile textarea { border: 1px solid rgb(224, 224, 224); width: 320px; height: 90px; font-family: verdana; font-size: 11px; }
+.xprofile input { border: 1px solid rgb(224, 224, 224); width: 250px; height: 18px; font-family: verdana; font-size: 11px; }
+.pm_head { font-size: 12px; font-family: tahoma,sans,verdana; }
+.pm_list { color: rgb(117, 117, 117); font-size: 11px; font-family: tahoma,sans,verdana; }
+.pm_list a { color: rgb(75, 149, 221); font-size: 11px; font-family: tahoma,sans,verdana; }
+#dropmenudiv { border-style: solid; border-color: white; border-width: 1px 1px 0pt; margin: 2px; font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 10px; font-size-adjust: none; font-stretch: normal; background-color: rgb(100, 151, 202); line-height: 20px; }
+#dropmenudiv a { border: 1px solid white; margin: 1px; padding: 1px 0pt; display: block; text-indent: 3px; color: rgb(255, 255, 255); text-decoration: none; font-weight: bold; }
+#dropmenudiv a:hover { background-color: rgb(253, 208, 139); color: rgb(0, 0, 0); }
+.vote { color: rgb(117, 117, 117); font-size: 11px; font-family: tahoma,sans,verdana; }
+#newpm { border: 1px solid rgb(187, 187, 187); padding: 4px; position: absolute; height: 250px; width: 400px; background-color: rgb(253, 253, 253); font-family: Verdana; font-size: 11px; line-height: 135%; }
+#newpmheader { padding-left: 5px; padding-right: 5px; padding-top: 2px; height: 20px; color: rgb(0, 0, 0); font-weight: bold; background-color: rgb(227, 192, 192); font-family: verdana,sans-serif; font-size: 11px; cursor: move; }
+#newpm a { background: transparent none repeat; color: rgb(77, 106, 138); text-decoration: none; }
+#newpm a:hover { background: transparent none repeat; color: rgb(77, 106, 138); text-decoration: underline; }
+#attachment { color: gray; }
+.search { font-family: Tahoma; font-size: 11px; text-decoration: none; }
+.textin { font-family: Tahoma; font-size: 11px; text-decoration: none; }
+.sresult { text-align: justify; font-family: Tahoma; font-weight: normal; line-height: 16px; font-size: 12px; }

@@ -1,0 +1,95 @@
+###############################################################################
+# FA.lng (File Attachment text definitions)                                   #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+$falngver = 'YaBB 2.1 $Revision: 1.1 $',
+
+%fatxt = (
+'1' => "(attachment deleted)",
+'2' => "Allowed file types:",
+'3' => "Maximum attachment size:",
+'4' => "All types.",
+'5' => "No limit.",
+'6' => "Attach:",
+'6a' => "Keep old file",
+'6b' => "Attach new file",
+'6c' => "Delete file",
+'7' => "NOTICE: If you had an attachment in your post, you will need to reselect the attachment again in the browse box for security reasons.",
+'8' => "A file on the server already exists with that name. Please rename your file before attaching.",
+'9' => "Attachment Functions",
+'10' => "Attachments Directory",
+'11' => "Attachments URL",
+'12' => "File size limit for attachments in KB (set to 0 to disable)",
+'13' => "Attachment directory size limit in KB (set to 0 to disable)",
+'14' => "Allowed file extensions for attachments (ex: 'jpg gif bmp')",
+'15' => "Enable file extension check? (Turn off to allow all file types)<br /><span class =\"small\" style=\"color: red;\">It is recommended to ALWAYS have the extension check turned on. Disabling this may allow hackers to run scripts which can harm your forum!</span>",
+'16' => "Display picture attachments in posts?",
+'17' => "Allow file attaching in posts?",
+'18' => "Allow guests to upload attachments?",
+'19' => "Could not open",
+'20' => "Invalid File Format. Valid files are",
+'21' => "Attachment is approximately",
+'21b' => "too large.",
+'22' => "This attachment causes the attachments directory to exceed it's maximum capacity by approximately ",
+'22b' => "and cannot be uploaded.",
+'23' => "No max directory size for attachments currently set.",
+'24' => "Administrate File Attachments",
+'25' => "From here you can administrate the files on your system that have been attached to messages in your YaBB. You can delete attachments by size and date from your system. Statistics on attachments are also displayed below.",
+'26' => "File Attachment Stats",
+'27' => "Total",
+'28' => "Total Attachments:",
+'29' => "Total Size of Attachment Directory:",
+'30' => "Total Space Available in Attachments Directory:",
+'31' => "File Attachment Options",
+'31a' => "View attachment log",
+'32' => "Remove attachments older than",
+'33' => "Remove attachments larger than",
+'34' => "Remove attachments older than number of days:",
+'35' => "Remove attachment larger than",
+'36' => "Administrate File Attachments",
+'37' => "Administrate File Attachments : View Log",
+'38' => "The attachment log displays info about every attachment on your forum. You can download attachments from this section, delete attachments, or jump to the thread where the attachment is posted.",
+'39' => "Attachment Log",
+'40' => "Attachment Name",
+'41' => "File Size",
+'42' => "Posted By",
+'43' => "Date",
+'44' => "Topic",
+'45' => "Delete",
+'46' => "Are you sure you want to delete all attachments?",
+'47' => "Webserver Type",
+'48' => "There are currently no attachments uploaded",
+'49' => "Illegal attempt to attach a file.",
+'49a' => "downloads",
+'49b' => "File",
+'49c' => "does not exist!",
+'49d' => "Download log",
+'49e' => "IP",
+'50' => "Standard",
+'51' => "Unix/Linux/BSD",
+'52' => "Windows",
+'53' => "File Rename/Overwrite",
+'54o' => "Overwrite existing",
+'54r' => "Auto Rename",
+'54n' => "Do not upload file",
+'55' => "Your Current Uploads",
+'56' => "Attachment Path not found !!",
+'57' => "File Attachments",
+'58' => "days",
+'59' => "Could not upload file",
+'60' => "Could not open a new file on the server, check the paths and chmods",
+);
+
+1;
