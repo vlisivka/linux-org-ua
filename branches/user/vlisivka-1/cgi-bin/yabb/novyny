@@ -1,0 +1,82 @@
+#!/usr/bin/perl 
+
+##!/usr/bin/perl -wT -d:ptkdb
+#BEGIN{
+# $ENV{'DISPLAY'}='localhost:0.0';
+#}
+#don't forget to execute `xhost +localhost` in your X session
+#to enable displaying of debugger window
+use strict;
+use locale;
+use utf8;
+use encoding 'utf-8', STDOUT => 'utf-8';
+
+require './bbcode.pl';
+
+our $group = 'novyny';
+my $NUMBER_OF_POSTS_TO_DISPLAY = 15;
+my $msgIconTheme = 'subTrail';
+
+our ($boardsdir,$datadir,$vardir,$forumstylesurl);
+require "./Paths.pl";
+
+print "Content-Type: text/html; encoding=utf-8\r\n\r\n";
+
+require "./header.pl";
+
+# Read posts headers
+# Мабуть не варто читати більше сотні заголовків за раз
+open(POSTS,"<$boardsdir/$group.txt");
+my @posts=<POSTS>;
+close(POSTS);
+@posts=sort {(split('\|',$b,2))[0] <=> (split('\|',$a,2))[0]} @posts;
+
+# Display posts
+my $count=0;
+for my $line(@posts)
+{
+  chomp $line;
+  my ($ctime,$subject,$userName,$userEmail,$date1,$replies,$login,$icon,$status)=split('\|',$line);
+
+  next if($status =~ /m/);
+  last if($count++>=$NUMBER_OF_POSTS_TO_DISPLAY);#number of posts on page
+
+  $subject =~ s/&/&amp;/sg;
+  $subject =~ s/\[ch(\d{3,})\]/\&#$1;/sig;
+  #Read post body
+  open(MESSAGES,"<$datadir/$ctime.txt");
+  my $firstMessage=<MESSAGES>;
+  close(MESSAGES);
+  my ($subject2,$userName2,$userEmail2,$date,$login2,$icon2,$attach,$ip,$body,$ns,$mlm,$mlmb,$msf,$mfn)=split('\|',$firstMessage,11);
+  my $dateStr=ukrDate($ctime);
+  $body=parseBBCode($body);
+  $body=~s{(<br />\s*)*<hr />(.*)$}{"<br /><a href=\"YaBB.pl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
+
+  $replies.=' '.plural($replies,"коментар","коментарі","коментарів"); 
+
+  print <<ITEM;
+<div class="message">
+<table class="msgHeader"><tr><td class="msgIcon">
+<img src="$forumstylesurl/$msgIconTheme/$icon.gif" alt="$icon" width="16" height="16" />
+</td><td class="msgSubject" align="left">
+$subject
+</td><td class="msgDate" align="right">
+$dateStr
+</td></tr></table>
+<div class="msgBody">$body</div>
+<table class="msgFooter"><tr><td class="msgComments" align="left">
+<a href="YaBB.pl?num=$ctime">$replies</a>
+<a href="YaBB.pl?action=post;num=$ctime;title=PostReply">Додати</a>
+</td><td class="msgAuthor" align="right">
+повідомив: <a href="YaBB.pl?action=viewprofile;username=$login">$userName</a>
+</td></tr></table>
+</div>
+ITEM
+
+}
+
+require "./footer.pl";
+
+exit(0);
+
+###################################

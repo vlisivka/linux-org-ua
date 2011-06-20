@@ -1,0 +1,56 @@
+###############################################################################
+# SendTopic.lng (SendTopic text definitions)                                  #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%sendtopic_txt = (
+'23' => "Unable to open",
+'30' => "on",
+'69' => "Email",
+'75' => "The Name field was not filled out. It is required.",
+'76' => "The Email field was not filled out. It is required.",
+'106' => "An Error Has Occurred!",
+'118' => "Topic",
+'240' => "There is an invalid character in the",
+'241' => "field!",
+'318' => "From",
+'335' => "Your name",
+'336' => "Your e-mail address",
+'339' => "Send",
+'500' => "Please enter a valid e-mail address.",
+'568' => "Please shorten your name. It is too long ;)",
+'707' => "Send Topic",
+'708' => "to a friend!",
+'709' => "The board is missing from the query.",
+'710' => "The topic is missing from the query.",
+'711' => "Dear",
+'712' => "I want you to check out the following topic",
+'713' => "To view it, please click the link below",
+'714' => "Thanks",
+'717' => "Recipient's name",
+'718' => "Recipient's e-mail address",
+);
+
+%floodtxt=(
+'1' => "Your Verification Code is",
+'2' => "Activate Automatic Flood Security",
+'3' => "Verification Code",
+'4' => "Verification Code is wrong",
+'5' => "Max messages returned on recent posts by user<br /> <span class=\"small\">-1 will disable this option</span>",
+'6' => "Max messages returned on a search<br /> <span class=\"small\">-1 will disable this option</span>",
+'7' => "The requested number of results is higher then the maximum number allowed by the system",
+'8' => "The search option has been disabled"
+);
+
+1;

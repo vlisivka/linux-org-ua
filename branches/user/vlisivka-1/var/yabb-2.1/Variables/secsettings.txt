@@ -1,0 +1,15 @@
+###############################################################################
+# SecSettings.txt                                                             #
+###############################################################################
+
+$regcheck = 1;                                                        # Set to 1 if you want to enable automatic flood protection enabled
+$codemaxchars = 6;                                                    # Set max length of validation code (15 is max)
+$translayer = 0;                                                      # Set to 1 background for validation image should be transparent
+$stealthurl = 0;                                                      # Set to 1 to mask referer url to hosts if a hyperlink is clicked.
+$referersecurity = 1;                                                 # Set to 1 to activate referer security checking.
+$sessions = 1;                                                        # Set to 1 to activate session id protection.
+$show_online_ip_admin = 1;                                            # Set to 1 to show online IP's to admins.
+$show_online_ip_gmod = 1;                                             # Set to 1 to show online IP's to global moderators.
+
+
+1;

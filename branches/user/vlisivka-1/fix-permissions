@@ -1,0 +1,5 @@
+#!/bin/sh
+( cd cgi-bin && ./fix-permissions )
+( cd htdocs && ./fix-permissions )
+( cd var && ./fix-permissions )
+chown -R isbear.apache .

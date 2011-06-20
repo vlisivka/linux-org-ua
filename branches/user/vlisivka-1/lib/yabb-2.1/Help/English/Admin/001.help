@@ -1,0 +1,13 @@
+$SectionName = "Administrative_Help_Center";
+
+### Section 1
+#############################################
+$SectionSub1 = "Introduction";
+$SectionBody1 = qq~As you are well aware, YaBB is a fantastic community platform. Easily installed; easily managed. It's the perfect solution for growing and maintaining a solid, proactive relationship with your user base. This help section will help you understand some of the many new and powerful features you now have at your fingertips. If you would like to skip ahead to a specific subsection of this help, please use the navigation menu to the left.
+
+<p>For a more complete manual, please visit <a href="http://www.yabbsupport.com"><b>The YaBB Codex</b></a>.
+<br />For support and troubleshooting, please visit <a href="http://www.yabbforum.com/community/"><b>YaBB's Support Community</b></a></p>~;
+#############################################
+
+
+1;

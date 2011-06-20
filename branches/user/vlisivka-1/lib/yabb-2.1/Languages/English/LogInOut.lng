@@ -1,0 +1,71 @@
+###############################################################################
+# LogInOut.lng (LogInOut text definitions)                                    #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%loginout_txt = (
+'23' => "Unable to open",
+'33' => "email address",
+'33a' => "email",
+'34' => "Login",
+'35' => "Username",
+'36' => "Password",
+'37' => "You should fill in a username.",
+'38' => "Password field is empty",
+'39' => "Username / Password mismatch. <br />The Username you specified does not exist or you entered a wrong password.",
+'87' => "Position",
+'130' => "Regards,\nThe $mbname team",
+'130a' => "Go here to reset your password: ",
+'192' => "Email successfully sent to:",
+'193' => "Back",
+'194' => "reminder",
+'240' => "There is an invalid character in the",
+'241' => "field!",
+'315' => "Forgot password?",
+'337' => "This field only accepts numbers from 0-9",
+'339' => "Send",
+'497' => "Logged in for",
+'497a' => "hour",
+'497b' => "hours",
+'497c' => "Keeps",
+'508' => "Always stay logged in",
+'669' => "Password Reminder",
+'711' => "Dear",
+'753' => "Need to register?",
+'774' => "Only the admin can login at the moment, because our forum is in Maintenance Mode.<br />Please try again later. Thank you!",
+'833' => "You have an invalid ID.  Please try again.",
+'835' => "Your password has been reset successfully.<br />Your new password is:",
+'836' => "Password Reset Successfully.",
+'837' => "Your username is case sensitive.",
+);
+
+%floodtxt=(
+'1' => "Your Verification Code is",
+'2' => "Activate Automatic Flood Security",
+'3' => "Verification Code",
+'4' => "Verification Code is wrong",
+'5' => "Max messages returned on recent posts by user<br /> <span class=\"small\">-1 will disable this option</span>",
+'6' => "Max messages returned on a search<br /> <span class=\"small\">-1 will disable this option</span>",
+'7' => "The requested number of results is higher then the maximum number allowed by the system",
+'8' => "The search option has been disabled"
+);
+
+%prereg_txt=(
+'1' => "Your account is not activated yet<br />Please activate it by clicking the link in the email you received!",
+'5' => "Your account is activated. You can now log in using your user id and password!",
+'6' => "You did not activate your account within $preregspan hours!<br />As a result your pre-registration has been removed!<br />Please re-register again!",
+'10' => "Your activation code is wrong!",
+);
+
+1;

@@ -1,0 +1,76 @@
+.message {
+	color: #FFC;
+}
+.category {
+}
+.board {
+}
+.thread {
+	border: 1px solid #888;
+	background-color: #222;
+	margin: 3em 0;
+	padding: 4px;
+}
+.thread>.title {
+	border: 1px solid #AAA;
+	background-color: #555;
+	padding: 2px;
+}
+.thread>.title>.icon {
+	float:left;
+	max-width: 3%
+}
+.thread>.title>.subject {
+	width: 97%;
+	margin-left: 3%;
+}
+.thread>.title>.mark {
+	float: right;
+}
+.post {
+	background-color: #444;
+	padding: 4px;
+	margin: 1em 0;
+}
+.post>.title {
+	border: #888;
+	background-color: #666;
+	padding: 2px;
+}
+.post>.title>.icon {
+	max-width: 3%;
+	margin: 0 3px;
+	float: left;
+}
+.post>.title>.num {
+	font-size: 2em;
+	margin-right: 1em;
+	margin-left: 0.1em;
+	float: left;
+}
+.post>.title>.subject {
+}
+.post>.attachment {
+	border-top: 1px dotted #888;
+	background-color: inherit;
+	padding: 2px;
+}
+.post>.message {
+	padding: 4px;
+}
+.icon {
+	border: none;
+	align: center;
+}
+#markreadsubmit {
+	width: 100%;
+}
+.error {
+	border: 1px solid red;
+	padding: 1em;
+	color: white;
+	font-size: 1.1em;
+}
+.error>.title {
+	font-weight: bold;
+}
