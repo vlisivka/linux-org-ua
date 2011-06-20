@@ -58,8 +58,8 @@ mkback () {
 		local m4="$( date -d "$year-$month-01 -4 months" +%Y%m )"
 		local m5="$( date -d "$year-$month-01 -5 months" +%Y%m )"
 		local m6="$( date -d "$year-$month-01 -6 months" +%Y%m )"
-		rm "$backdir/$name-"!($m0|$m1|$m2|$m3|$m4|$m5|$m6)??_??????.tar.bz2
-		rm "$backdir/$name-"!($m0|$m1|$m2|$m3|$m4|$m5|$m6).snar
+		rm -f "$backdir/$name-"!($m0|$m1|$m2|$m3|$m4|$m5|$m6)??_??????.tar.bz2
+		rm -f "$backdir/$name-"!($m0|$m1|$m2|$m3|$m4|$m5|$m6).snar
 	fi
 }
 

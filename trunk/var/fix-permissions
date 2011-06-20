@@ -3,6 +3,6 @@
 BIN_DIR=`dirname "$0"`
 cd "$BIN_DIR"
 
-chmod -R a+rX .
+chmod a+rX .
 
-chmod a-w,a+r .htaccess
+chmod -R ug=rwX,o=rX yabb*
