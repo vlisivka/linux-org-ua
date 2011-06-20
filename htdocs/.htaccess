@@ -1,11 +1,3 @@
-<IfModule mod_php4.c>
-#php_value include_path ".:/var/www/vhosts/linux.org.ua/htdocs"
-</IfModule>
-<IfModule mod_env.c>
-SetEnv LANG uk_UA.KOI8-U
-</IfModule>
-
-#Redirect /index.php3 http://linux.org.ua/novyny/
 Redirect /index.php3 http://linux.org.ua/cgi-bin/yabb/novyny
 
 DefaultLanguage uk
