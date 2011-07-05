@@ -742,11 +742,11 @@ sub Display {
 			$online = qq(<span class="online">$display_txt{'online'}</span><br />)
 		}
 
-		if ( $snark_enable ) {
-			require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
-			$star = snark_panel ( $musername, "$viewnum/$counter", $counter % $cssnum );
-			$yyinlinestyle = qq(<link rel="stylesheet" href="$forumstylesurl/default/snark.css" type="text/css" />);
-		}
+#		if ( $snark_enable ) {
+#			require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
+#			$star = snark_panel ( $musername, "$viewnum/$counter", $counter % $cssnum );
+#			$yyinlinestyle = qq(<link rel="stylesheet" href="$forumstylesurl/default/snark.css" type="text/css" />);
+#		}
 		
 		$posthandelblock =~ s/<yabb quote>/$template_quote/g;
 		$posthandelblock =~ s/<yabb modify>/$template_modify/g;
