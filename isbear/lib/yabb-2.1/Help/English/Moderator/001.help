@@ -1,0 +1,15 @@
+$SectionName = "YaBB_Moderator_Help_Center";
+
+### Section 1
+#############################################
+$SectionSub1 = "Your_Moderator_Status";
+$SectionBody1 = qq~Congratulations on your promotion to moderator status. You are now able to directly help this YaBB forum by managing one more boards and the posts inside of them. While most of the new functions available to you will be familiar, there are a few new ones that will be covered in this help section.
+
+<p>For a more complete manual, please visit <a href="http://www.yabbsupport.com"><b>The YaBB Codex</b></a>.
+<br />For support and troubleshooting, please visit <a href="http://www.yabbforum.com/community/"><b>YaBB's Support Community</b></a></p>
+
+<p>You may use the menu on the left to quickly jump to any topic below.</p>~;
+#############################################
+
+
+1;

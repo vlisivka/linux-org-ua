@@ -1,0 +1,2 @@
+$UseHelp_Perms = 0;
+1;

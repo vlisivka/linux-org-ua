@@ -1,0 +1,51 @@
+
+our %loaded;
+
+our %bangroup_txt = (
+
+'notallowed'  => 'You are not allowed to access this section',
+'invaluname'  => 'Invalid username: ',
+'invalterm'   => 'Termin should be a number: ',
+'invalreason' => 'Reason contains strange chars: ',
+'nogroup'     => 'Group not found: ',
+'nolower'     => 'You can only lengthen ban termin. Current termin (minutes): ',
+'nobadmin'    => 'For security reasons you cannot ban username "admin"',
+
+'notbanned' => 'User is not banned',
+'noaddid'   => 'Addidtional group not found',
+
+'notexpired' => 'Ban is not expired',
+
+'cof'            => 'Cannot open file: ',
+'cannotlog'      => 'Cannot save log record',
+'cannotloaduser' => 'Cannot load user: ',
+
+'unamefield'  => 'User login',
+'terminfield' => 'Ban termin<br /><span class="small">m - minutes, h - hours, d - days, M - months</span>',
+'reasonfield' => 'Reason',
+'mesgfield'   => 'Message',
+'bansubmit'   => 'Ban',
+'mesgsubmit'  => 'Write',
+'title'       => 'Banning',
+'titleuser'   => 'Ban member ',
+'titlemesg'   => 'Add message',
+
+'banlogtitle' => 'Banning log',
+'nonick' => '(unnamed)',
+'blog1' => ' has banned ',
+'blog2' => ' until ',
+'blog3' => ' with gid ',
+'blog4' => ' has unbanned ',
+'blog5' => ' with reason: ',
+
+'banuntil' => 'Banned until ',
+'buttban'  => 'Ban',
+'buttunb'  => 'Remove active ban',
+'buttexp'  => 'Remove expired ban',
+
+);
+
+$loaded{'BanWithGroup.lng'} = 1;
+
+1;
+

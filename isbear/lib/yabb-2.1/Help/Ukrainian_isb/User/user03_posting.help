@@ -1,0 +1,334 @@
+$SectionName = "Дописування";
+
+### Section 1
+#############################################
+$SectionSub1 = "Створення_нової_гілки";
+$SectionBody1 = qq~
+Після реєстрації ви набули здібність створювати гілки. Щоб це зробити - знайдіть найвідповідніші до теми вашої гілки частину та розділ форуму та увійдіть усередину розділу. Тоді пошукайте й натисніть посилання чи кнопку з назвою &quot;Почати гілку&quot;. Де воно знаходиться, сказати точно неможливо, бо це залежить від стилю форуму, що використовується, але зазвичай - десь поблизу початку переліку гілок.
+
+<p>Відкриється сторінка редагування допису. Елементи цієї сторінки описуються нижче.</p>
+<p><b>Тема:</b> Це тема обговорення у вашій гілці, її буде показано у списку гілок розділу.</p>
+<p><b>Іконка:</b> Ви можете обрати із списку іконку (замість звичайної), що краще відповідає темі гілки. Іконки показуються у списку гілок окремим стовпчиком перед темою.</p>
+<p><b>Теги ЩоДОК:</b> Теги ЩоДО кодів надають можливість відформатувати текст вашого допису. Щоб вставити код в текст, натисніть на відповідну кнопку. Нижче це описується детальніше.</p>
+<p><b>Усмішки:</b> Ви можете зробить свій допис більш емоційним, висловити своє ставлення, настрій за допомогою усмішок (також відомі як смайлики). Просто натисніть на усмішку, і ЩоДО вставить відповідний код у текст.</p>
+<p><b>Долучити файл:</b> Ви можете долучити до допису один файл (якщо у цьому розділі це дозволено адміністратором). Для цього натисніть кнопку &quot;Огляд...&quot; та знайдіть потрібний вам файл. Однак зверніть увагу на обмеження типу та розміру файлу.</p>
+<p><b>Надіслати/Попередній перегляд/Скинути:</b> Ці кнопки роблять точно те, що на них написано. Якщо ви закінчили писати допис і бажаєте його відправити - натисніть &quot;Надіслати&quot;, якщо ви спершу хочете побачити, як буде виглядати ваш допис - натисніть &quot;Попередній перегляд&quot;. Кнопка &quot;Скинути&quot; поверне форму до початкового вигляду, ніби ви нічого в ній не змінювали.</p>
+~;
+#############################################
+
+
+### Section 2
+#############################################
+$SectionSub2 = "Відповідь";
+$SectionBody2 = qq~
+На додачу до здібності гілкотвору ви маєте здібність відповідати на дописи інших так швидко й просто, як тільки зможете... Якщо ви знайшли гілку, стосовно теми якої ви б хотіли висловитися, увійдіть до неї, та пошукайте посилання (або кнопку) &quot;Відповісти&quot; чи &quot;Процитувати&quot;. За першим з них ви потрапите на сторінку, дуже схожу на описану вище. За другим теж, тільки з тією різницею, що у тексті вашого допису вже буде процитовано текст допису, на який ви відповідаєте.
+<br /><br />
+[yabbc][quote]А ось як виглядає у дописі процитований текст[/quote][/yabbc]
+~;
+#############################################
+
+
+### Section 3
+#############################################
+$SectionSub3 = "Створення_опитування";
+$SectionBody3 = qq~
+Якщо у вас є питання, з яким ви б хотіли звернутися до цілої спільноти, ЩоДО надає вам здібність створювати опитування на ваших гілках. Щоб почати опитування, коли ви знаходитесь у переліці гілок розділу, натисніть кнопку &quot;Створити опитування&quot;. Точне місце цієї кнопки може змінюватись від стилю до стилю, але зазвичай вона десь на початку переліку. Тоді напишіть у відповідних рядках ваше запитання та варіанти відповіді на нього. Також ви маєте заповнити й допис, який почне гілку з опитуванням.
+~;
+#############################################
+
+
+### Section 4
+#############################################
+$SectionSub4 = "Покажчик кодів ЩоДО";
+$SectionBody4 = qq~
+
+Для підтримання безпеки роботи форуму та захисту його користувачів, звичайні теги HTML не діють у дописах. Замість них ЩоДО пропонує використовувати теги ЩоДОК (Коди ЩоДО). Вони схожі на HTML, але створені спеціально для безпечного використання у форумах. Окрім як вводити їх власноруч, ви можете також використовувати панель ЩоДОК на сторінці редагування допису. Нижче перелічені коди й наведено приклади їх дії.
+
+<p><b><u>Які вони, ЩоДОК?</u></b></p>
+
+<p>ЩоДОК - це набір тегів, заснованих на мові HTML. Вони дозволяють змінювати вигляд допису, як це роблять теги HTML, але без ризику порушити плин HTML-коду сторінки. До того ж вони мають простіший запис.
+Більшість тегів ЩоДОК парні, й можуть охоплювати частину тексту. Ви можете докласти такі теги до <span class="highlight">виділеного</span> шматку тексту, натиснувши кнопку на панелі.</p>
+<div class="yabbc" align="center">
+<table>
+<tr><th colspan="2"><img src="$imagesdir/url.gif" alt="Вставити гіперпосилання" /> Гіперпосилання</th></tr>
+<tr><td>Запис:
+<br />Результат:
+<br />Запис:
+<br />Результат:
+</td><td>[url]http://www.yabbforum.com[/url]
+<br />[yabbc][url]http://www.yabbforum.com[/url][/yabbc]
+<br />[url=http://www.yabbforum.com]Рушій ЩоДО[/url]
+<br />[yabbc][url=http://www.yabbforum.com]Рушій ЩоДО[/url][/yabbc]</td></tr>
+<tr><td colspan="2"><ul><li>Напишіть посилання, а за ним - текст: www.yabbforum.com Рушій ЩоДО</li>
+<li>Виберіть написане: <span class="highlight">www.yabbforum.com Рушій ЩоДО</span></li>
+<li>Натисніть кнопку: [yabbc][url=www.yabbforum.com]Рушій ЩоДО[/url][/yabbc]</li></ul>
+Код [link] працює так само, тільки відкриває сторінку у поточному вікні, тоді як [url] - у новому. Кнопки до нього немає.</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/ftp.gif" alt="Посилання на FTP" /> Посилання на FTP</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[ftp]ftp://ftpdom[/ftp]
+<br />[yabbc][ftp]ftp://ftpdom[/ftp][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/img.gif" alt="Зображення за посиланням" /> Зображення за посиланням</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+</td><td>[img]$imagesdir/on.gif[/img]
+<br />
+<br />[yabbc][img]$imagesdir/on.gif[/img][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/email2.gif" alt="Вставити поштову адресу" /> Поштова адреса</th></tr>
+<tr><td>Запис:
+<br />Результат:
+<br />Запис:
+<br />Результат:
+</td><td>[email]myname\@domain.com[/email]
+<br />[yabbc][email]myname\@domain.com[/email][/yabbc]
+<br />[email=myname\@domain.com]Нпишіть мені листа[/email]
+<br />[yabbc][email=myname\@domain.com]Напишіть мені листа[/email][/yabbc]</td></tr>
+<tr><td colspan="2"><ul><li>Напишіть адресу електронної поштової скриньки та текст: myname\@domain.com Напишіть мені листа</li>
+<li>Виділіть написане: <span class="highlight">myname\@domain.com Напишіть мені листа</span></li>
+<li>Натисніть кнопку: [yabbc][email=myname\@domain.com]Напишіть мені листа[/email][/yabbc]</li></ul></td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/flash.gif" alt="Вставити flash" /> Flash</th></tr>
+<tr><td>Запис:
+<br />Example:
+<br />Результат:
+</td><td>[flash=width,height]Посилання на файл flash[/flash]
+<br />[flash=150,30]http://www.your-domain.com/yabbchelp.swf[/flash]
+<br />[yabbc][flash=150,30]$imagesdir/yabbchelp.swf[/flash][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/table.gif" alt="Вставити таблицю" /><img src="$imagesdir/td.gif" alt="Вставити стовпчик таблиці (має бути вкладеним у рядок)" /><img src="$imagesdir/tr.gif" alt="Вставити рядок таблиці" /> Таблиця, стовпчик, рядок</th></tr>
+<tr><td>Запис:
+</td><td>[table][tr][td]приклад тексту[/td][/tr][/table]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/hr.gif" alt="Горизонтальна лінія" /> Горизонтальна лінія</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[hr]
+<br /><hr /></td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/tele.gif" alt="Друкарський текст (моноширинний шрифт)" /> Друкарський текст</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[tt]текст для прикладу[/tt]
+<br />[yabbc][tt]приклад тексту[/tt][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/code.gif" alt="Позначити як код" /> Код</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />
+<br />
+<br /><!-- This is the break matching the blank break below -->
+<br />Результат:
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</td><td>[code]&lt;script language="Javascript"&gt;
+<br />&lt;!--
+<br />alert("Здрастуй, ЩоДО два один!");
+<br />//--&gt;
+<br />&lt;/script&gt; [/code]
+<br />
+<br />[yabbc][code]<script language="Javascript">
+<!--
+alert("Здрастуй, ЩоДО два один!");
+//-->
+</script>[/code][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/quote2.gif" alt="Позначити як цитату" /> Цитата</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+</td><td>[quote]Привіт, ЩоДО 2.1[/quote]
+<br />[yabbc][quote]Привіт, ЩоДО 2.1[/quote][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/edit.gif" alt="Змінено" /> Виділення змін</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+</td><td>[edit]Редагувалося за допомогою ЩоДО 2.1[/edit]
+<br />[yabbc][edit]Редагувалося за допомогою ЩоДО 2.1[/edit][/yabbc]</td></tr>
+<br /><hr /></td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/sup.gif" alt="Верхній індекс" /> Верхній індекс</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+</td><td>текст [sup]для прикладу[/sup]
+<br />
+<br />[yabbc]текст [sup]для прикладу[/sup][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/sub.gif" alt="Нижній індекс" /> Нижній індекс</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+</td><td>ЩоДО[sub]2.1[/sub]
+<br />
+<br />[yabbc]ЩоДО[sub]2.1[/sub][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/move.gif" alt="Прокручування рядку зправа наліво" /> Рухомий текст</th></tr>
+<tr><td>Запис:
+<br />
+<br />Результат:
+<br />
+</td><td>[move]слово - не горобець,<br />вилетить - не впіймаєш![/move]
+<br />[yabbc][move]слово - не горобець,
+вилетить - не впіймаєш![/move][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/timestamp.gif" alt="Вставити поточний час" /> Поточний час</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[timestamp=1121602762]
+<br />[yabbc][timestamp=1121602762][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/bold.gif" alt="Жирний" /> Жирний шрифт</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[b]приклад тексту[/b]
+<br />[yabbc][b]приклад тексту[/b][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/italicize.gif" alt="Курсив" /> Похилий шрифт</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[i]приклад тексту[/i]
+<br />[yabbc][i]приклад тексту[/i][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/underline.gif" alt="Підкреслений" /> Підкреслення</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[u]приклад тексту[/u]
+<br />[yabbc][u]приклад тексту[/u][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/strike.gif" alt="Закреслений" /> Закреслення</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[s]приклад тексту[/s]
+<br />[yabbc][s]приклад тексту[/s][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/highlight.gif" alt="Виділення маркером" /> Виділення тексту</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[highlight]приклад тексту[/highlight]
+<br />[yabbc][highlight]приклад тексту[/highlight][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/face1.gif" alt="Вибір шрифту" /> Шрифт</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[font=Courier New]А оце - Courier New[/font]
+<br />[yabbc][font=Courier New]А оце - Courier New[/font][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/size1.gif" alt="Розмір шрифту" /> Розмір шрифту</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>[size=14]Шрифт розміром 14 точок[/size]
+<br />[yabbc][size=14]Шрифт розміром 14 точок[/size][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/pre.gif" alt="Вже відформатований текст (моноширинний без переносу рядків)" /> Наперед відформатований текст</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />
+<br />
+<br />Результат:
+<br />
+<br />
+<br />
+</td><td>[pre]&nbsp; цей &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; текст<br />
+&nbsp;вже &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; відформатований,<br />
+ЩоДО,&nbsp; будь ласка, не чіпай його! [/pre]
+<br />
+<br />[yabbc][pre]  цей                   текст
+ вже            відформатований,
+ЩоДО,  будь ласка, не чіпай його! [/pre][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/left.gif" alt="Вирівнювання по лівій межі" /> Вирівнювання тексту по лівій межі</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />Результат:
+</td><td>[left]приклад 
+<br />тексту[/left]
+<br />
+<br />[yabbc][left]приклад
+тексту[/left][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/center.gif" alt="Центрувати" /> Центрований текст</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />Результат:
+</td><td>[center]текст для
+<br />прикладу[/center]
+<br />
+<br />[yabbc][center]текст для
+прикладу[/center][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/right.gif" alt="Вирівнювання по правій межі" /> Вирівнювання тексту по правій межі</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />Результат:
+</td><td>[right]текст для
+<br />прикладу[/right]
+<br />
+<br />[yabbc][right]текст для
+прикладу[/right][/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/list.gif" alt="Вставити маркований список" /> Список</th></tr>
+<tr><td>Запис:
+<br />
+<br />
+<br />
+<br />Результат:
+<br />
+<br />
+<br />
+<br />
+</td><td>[list][*]по-перше 
+<br />[*]по-друге
+<br />[*]по-третє[/list]
+<br />[yabbc][list][*]по-перше
+[*]по-друге
+[*]по-третє[/list][/yabbc]</td></tr>
+<tr><td colspan="2">Ви можете вкладати списки один в оден, але відмітки до пунктів будуть відрізнятися лише на перших трьох рівнях вкладення.</td></tr>
+<tr><td>Приклад:
+<br />
+<br />
+<br />
+<br />
+<br />Результат:
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</td><td>[list][*][list][*][list][*]під-підпункт 1
+<br />[*]під-підпункт 2[/list]
+<br />[*]підпункт 2[/list]
+<br />[/list]
+<br />[yabbc][list][*][list][*][list][*] під-підпункт 1
+[*]під-підпункт 2[/list]
+[*]підпункт 2[/list]
+[/list]
+[/yabbc]</td></tr>
+<tr><td colspan="2"><hr /></td></tr>
+<tr><th colspan="2"><img src="$imagesdir/me.gif" alt="/me - ваше ім\'я" /> /me - ваше ім'я</th></tr>
+<tr><td>Запис:
+<br />Результат:
+</td><td>/me обирає ЩоДО 2.1 :)
+<br />[yabbc]/me обирає ЩоДО 2.1 :)[/yabbc]</td></tr>
+</table>
+</div>
+~;
+#############################################
+
+
+1;

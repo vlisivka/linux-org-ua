@@ -1,0 +1,16 @@
+$SectionName = "Personal_Messages";
+
+### Section 1
+#############################################
+$SectionSub1 = "Personal_Messaging";
+$SectionBody1 = qq~YaBB is about community and communication. And there are plenty of ways to communicate: Posting on the boards, Personal Messaging, E-mail, ICQ, AIM, YIM, MSN, and Gtalk. Of course, all methods of communication are only available to members. An exception is when the Forum Staff decides to allow guests to post on the boards: in this case all unregistered users are NOT allowed to do is viewing the Member List and sending Personal Messages to members.
+
+<p>While e-mail is a good way to correspond privately with members, it has several drawbacks: You must open your e-mail application to write and send the message; the recipient must open his/her e-mail application; check his/her mail and your message will mixed in with all the other mail and it can take sometimes several minutes to an hour for mail to reach the recipient.</p>
+
+<p>As an alternative to e-mail, YaBB offers a faster, more private method. Personal Messaging on the forum provides instantaneous delivery to the recipient's private mailbox. The mail is sent and received entirely through YaBB, so neither you nor the recipient have to open another program or leave YaBB. Personal Messaging also gives both the sender and recipient greater privacy: no one's real e-mail address is revealed. Personal Messages show only the username and name of both parties.</p>
+
+<p>If a recipient isn't online, Personal Messages wait in the member's PM box until the next time he/she logs in and manually reads and/or deletes them. YaBB Personal Messages is basically a self-contained, highly private e-mail system.</p>~;
+#############################################
+
+
+1;

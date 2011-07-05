@@ -1,0 +1,12 @@
+novyny
+display
+login
+logout
+messageindex
+pages
+print
+profile
+recent
+register
+resetpass
+viewprofile

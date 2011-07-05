@@ -1,0 +1,457 @@
+################################################################################
+###############################################################################
+## Main.lng (General text definitions)                                         #
+# Main.lng (General text definitions)                                         #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#$englishlngver = 'YaBB 2 RC 3 $Revision: 1.37 $';
+$englishlngver = 'YaBB 2 RC 3 $Revision: 1.37 $';
+#
+
+#$yycharset = "ISO-8859-1";
+$yycharset = "utf-8";
+#
+
+#@days = ('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+@days = ('неділя','понеділок','вівторок','середа','четвер',"п'ятниця",'субота');
+#@months = ('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
+@months = ('січ','лют','бер','кві','тра','чер','лип','сер','вер','жов','лис','гру');
+#
+@days_short = ('Sun','Mon','Tue','Wed','Thu','Fri','Sat'); # for smtp, so, I feared of translating this
+
+#%maintxt = (
+%maintxt = (
+'banwithgroup' => 'Забанити',
+#'1' => "You are not allowed to access this section.",
+'1' => "You are not allowed to access this section.",
+#'2' => "Only spaces and line feeds is not considered a useful contribution!",
+'2' => "Only spaces and line feeds is not considered a useful contribution!",
+#'22' => "Last post",
+'22' => "Last post",
+#'23' => "Unable to open",
+'23' => "Unable to open",
+#'27' => "View Profile",
+'27' => "View Profile",
+#'28' => "Guest",
+'28' => "Гість",
+#'30' => "on",
+'30' => "on",
+#'32' => "Go",
+'32' => "Вперед",
+#'34' => "Login",
+'34' => "Увійти",
+#'67' => "You are not allowed to change this message",
+'67' => "You are not allowed to change this message",
+#'70' => "Subject",
+'70' => "Тема",
+#'73' => "You are not allowed to delete this post!",
+'73' => "You are not allowed to delete this post!",
+#'97' => "Register",
+'97' => "Зареєструватися",
+#'102' => "News",
+'102' => "Новини",
+#'106' => "An Error Has Occurred!",
+'106' => "An Error Has Occurred!",
+#'107' => "at",
+'107' => "",
+#'109' => "Started by",
+'109' => "Почато",
+#'114' => "Administration Login",
+'114' => "Administration Login",
+#'125' => "Notify",
+'125' => "Оповіщати",
+#'126' => "Do you want a notification Email if someone replies to this topic\?",
+'126' => "Чи оповіщати вас листом коли хтось відповість на цю тему\?",
+#'132' => "Move",
+'132' => "Перенести",
+#'133' => "Move to",
+'133' => "Перенести до",
+#'134' => "You are not allowed to move topics...",
+'134' => "You are not allowed to move topics...",
+#'138' => "This service is only for members...",
+'138' => "This service is only for members...",
+#'155' => "Maintenance Mode",
+'155' => "Maintenance Mode",
+#'156' => "Our Forum is currently in maintenance mode!",
+'156' => "Our Forum is currently in maintenance mode!",
+#'157' => "Our Forum is currently in maintenance-mode. Please try again later. Thank you!",
+'157' => "Our Forum is currently in maintenance-mode. Please try again later. Thank you!",
+#'160' => "This topic has been moved to",
+'160' => "This topic has been moved to",
+#'163' => "Yes",
+'163' => "Так",
+#'164' => "No",
+'164' => "Ні",
+#'170' => "Sorry, no matches were found",
+'170' => "Sorry, no matches were found",
+#'193' => "Back",
+'193' => "Назад",
+#'195' => "Message started by",
+'195' => "Message started by",
+#'196' => "Title",
+'196' => "Заголовок",
+#'197' => "Post by",
+'197' => "Надіслано",
+#'199' => "Post not found",
+'199' => "Post not found",
+#'212' => "Would you like to deactivate Notification on this topic\?",
+'212' => "Чи бажаєте ви припинити оповіщати вас про відповіді на цю тему\?",
+#'214' => "Recent Posts",
+'214' => "Останні повідомлення",
+#'236' => "Return",
+'236' => "Повернутися",
+#'237' => "to the board index.",
+'237' => "до індексу дошки.",
+#'247' => "Hey,",
+'247' => "Привіт,",
+#'248' => "Welcome,",
+'248' => "Вітаємо,",
+#'249' => "Please",
+'249' => "Будь ласка",
+#'251' => "Forum Jump",
+'251' => "Швидкий перехід до дошки",
+#'278' => "Reset",
+'278' => "Скинути",
+#'316' => "Inbox",
+'316' => "Вхідні",
+#'317' => "Date",
+'317' => "Дата",
+#'318' => "From",
+'318' => "Від",
+#'320' => "Outbox",
+'320' => "Вихідні",
+#'324' => "To",
+'324' => "До",
+#'337' => "This field only accepts numbers from 0-9",
+'337' => "This field only accepts numbers from 0-9",
+#'377' => "or",
+'377' => "або",
+#'399' => "The board field does not accept / in the query string",
+'399' => "The board field does not accept / in the query string",
+#'399a' => "The category field does not accept / in the query string",
+'399a' => "The category field does not accept / in the query string",
+#'400' => "The board field does not accept \\ in the query string",
+'400' => "The board field does not accept \\ in the query string",
+#'400a' => "The category field does not accept \\ in the query string",
+'400a' => "The category field does not accept \\ in the query string",
+#'409' => "The last posting from your IP was less than",
+'409' => "The last posting from your IP was less than",
+#'410' => "seconds ago! Please try again later!",
+'410' => "seconds ago! Please try again later!",
+#'414' => "There are no topics with Notification marked!",
+'414' => "There are no topics with Notification marked!",
+#'415' => "You are notified on replies in the following topics",
+'415' => "You are notified on replies in the following topics",
+#'416' => "Activate checkbox to <b><i>deactivate</i></b> Notification on the Topic!",
+'416' => "Activate checkbox to <b><i>deactivate</i></b> Notification on the Topic!",
+#'417' => "Update Notifications",
+'417' => "Оновити оповіщення",
+#'418' => "Notification",
+'418' => "Оповіщення",
+#'470' => "N/A",
+'470' => "н.д.",
+#'470a' => "<i>Ex Member</i>",
+'470a' => "<i>Ex Member</i>",
+#'472' => "This topic doesn't exist on this board.",
+'472' => "This topic doesn't exist on this board.",
+#'525' => "by",
+'525' => "by",
+#'609' => "For purposes of security, YaBB asks that you please always use absolute paths. The '../' (parent directory) symbol is illegal. Please run Setup.pl again and modify the setting to use absolute paths instead of the '../' symbol.",
+'609' => "For purposes of security, YaBB asks that you please always use absolute paths. The '../' (parent directory) symbol is illegal. Please run Setup.pl again and modify the setting to use absolute paths instead of the '../' symbol.",
+#'631' => "Please make sure you have 'fake truncation' turned on in your Settings.pl file.<br />\$faketruncation = 1;<br />Could not truncate file",
+'631' => "Please make sure you have 'fake truncation' turned on in your Settings.pl file.<br />\$faketruncation = 1;<br />Could not truncate file",
+#'633' => "Warning!",
+'633' => "Увага!",
+#'634' => "Only registered members are allowed to access this forum.",
+'634' => "Only registered members are allowed to access this forum.",
+#'635' => "Please login below or click",
+'635' => "Please login below or click",
+#'636' => "-here-",
+'636' => "-here-",
+#'637' => "to register an account with $mbname.",
+'637' => "to register an account with $mbname.",
+#'668' => "Print Page",
+'668' => "Сторінка для друку",
+#'758' => "Moved",
+'758' => "Перенесено",
+#'769' => "Today",
+'769' => "Сьогодні",
+#'769a'=> "Yesterday",
+'769a'=> "Вчора",
+#'772' => "No thread specified!",
+'772' => "No thread specified!",
+#'773' => "Would you like to print this page now?",
+'773' => "Would you like to print this page now?",
+#'dst' => "<sup>*</sup>",
+'dst' => "<sup>*</sup>",
+#'774' => "There are no boards with Notification marked!",
+'774' => "There are no boards with Notification marked!",
+#'775' => "Can't find required language file. Please inform the administrator about this problem.",
+'775' => "Can't find required language file. Please inform the administrator about this problem.",
+'801' => "<b>УВАГА!</b> Виявлена спроба підсовування форми з IP-адреси:",
+#);
+);
+#
+
+#%load_txt = (
+%load_txt = (
+#'1' => "You are not allowed to access this section.",
+'1' => "You are not allowed to access this section.",
+#'23' => "Unable to open",
+'23' => "Unable to open",
+#'106' => "An Error Has Occurred!",
+'106' => "An Error Has Occurred!",
+#'152' => "you have",
+'152' => "ви маєте",
+#'153' => "messages",
+'153' => "повідомлень",
+#'154' => "are new",
+'154' => "нові",
+#'155' => "is new",
+'155' => "нове",
+#'231' => "Gender",
+'231' => "Стать",
+#'337' => "This field only accepts numbers from 0-9",
+'337' => "This field only accepts numbers from 0-9",
+#'471' => "message",
+'471' => "повідомлення",
+#'472' => "This topic doesn't exist on this board.",
+'472' => "This topic doesn't exist on this board.",
+#'616' => "Remember, this forum is in 'Maintenance Mode'.",
+'616' => "Remember, this forum is in 'Maintenance Mode'.",
+#'773' => "IP not found, please change \$user_ip in $lang",
+'773' => "IP not found, please change \$user_ip in $lang",
+#'805' => "You",
+'805' => "Ви",
+#'806' => "<b>can</b>",
+'806' => "<b>можете</b>",
+#'807' => "<b>can not</b>",
+'807' => "<b>не можете</b>",
+#'808' => "view topics in this board.",
+'808' => "переглядати теми на цій дошці.",
+#'809' => "post replies to topics in this board.",
+'809' => "надсилати відповіді до тем на цій дошці.",
+#'810' => "start new topics in this board.",
+'810' => "починати нові теми на цій дошці.",
+#'811' => "start polls in this board.",
+'811' => "починати опитування на цій дошці.",
+#'812' => "post towards your post count in this board."
+'812' => "post towards your post count in this board."
+#);
+);
+#
+
+#%load_imtxt = (
+%load_imtxt = (
+#'16' => "is new",
+'16' => "нове",
+#'17' => "are new",
+'17' => "нові",
+#'46' => "Storage",
+'46' => "Storage",
+#'71' => "Printed from your",
+'71' => "Надруковано з вашого",
+#);
+);
+#
+
+#%security_txt = (
+%security_txt = (
+#'1' => "You are not allowed to access this section.",
+'1' => "You are not allowed to access this section.",
+#'134' => "You are not allowed to move topics...",
+'134' => "You are not allowed to move topics...",
+#'430' => ", you are banned from using this forum",
+'430' => ", you are banned from using this forum",
+#'678' => "Sorry",
+'678' => "Вибачте",
+#'999' => "Board Announcement"
+'999' => "Board Announcement"
+#);
+);
+#
+
+#%ml_txt = (
+%ml_txt = (
+#'1' => "Sort by:",
+'1' => "Sort by:",
+#'2' => "GO!",
+'2' => "GO!",
+#'3' => "Viewing The",
+'3' => "Viewing The",
+#'4' => "Members By",
+'4' => "Members By",
+#'19' => "Page Index toggle",
+'19' => "Page Index toggle",
+#'21' => "Posts",
+'21' => "Повідомлень",
+#'35' => "Username",
+'35' => "Учасник",
+#'87' => "Position",
+'87' => "Position",
+#'96' => "Website",
+'96' => "Майданчик",
+#'139' => "Pages",
+'139' => "Сторінок",
+#'223' => "Sorry, you must register before using this feature!",
+'223' => "Sorry, you must register before using this feature!",
+#'233' => "Date Registered",
+'233' => "Дата реєстрації",
+#'234' => "Reg. Date",
+'234' => "Reg. Date",
+#'307' => "e-mail",
+'307' => "e-mail",
+#'309' => "of",
+'309' => "of",
+#'312' => "Viewing Members By Letter",
+'312' => "Viewing Members By Letter",
+#'313' => "Viewing The",
+'313' => "Viewing The",
+#'314' => "Members By Number of Posts",
+'314' => "Members By Number of Posts",
+#'331' => "Members",
+'331' => "Учасники",
+#'683' => "a whole lot",
+'683' => "a whole lot",
+#'759' => "Please select a letter.",
+'759' => "Please select a letter.",
+#'760' => "There are no entries available for this letter.",
+'760' => "There are no entries available for this letter.",
+#'800' => "Other",
+'800' => "Інше",
+#'801' => "Sorry, you are not allowed to access this users email address!",
+'801' => "Sorry, you are not allowed to access this users email address!",
+#);
+);
+#
+
+#%reftxt=(
+%reftxt=(
+#'1' => "Referer Security",
+'1' => "Referer Security",
+#'2' => "Select Board Actions which are allowed from outside your domain",
+'2' => "Select Board Actions which are allowed from outside your domain",
+#'3' => "(These commands are derived from $sourcedir/SubList.pl)",
+'3' => "(These commands are derived from $sourcedir/SubList.pl)",
+#'4' => "Save Settings",
+'4' => "Save Settings",
+#'5' => "This action is not allowed from an outside domain!! <br />Action is: ",
+'5' => "This action is not allowed from an outside domain!! <br />Action is: ",
+#'6' => "Referer Domain:",
+'6' => "Referer Domain:",
+#'7' => "Your Domain:"
+'7' => "Your Domain:"
+#);
+);
+#
+
+#%dereftxt =(
+%dereftxt =(
+#'1' => "You are being redirected.... one moment please !",
+'1' => "You are being redirected.... one moment please !",
+#'2' => "Use Stealth URL's in hyperlinks (leave no referer)",
+'2' => "Use Stealth URL's in hyperlinks (leave no referer)",
+#'3' => "The email activation window will auto close after a few seconds!",
+'3' => "The email activation window will auto close after a few seconds!",
+#'4' => "Subject to viewers browser configuation",
+'4' => "Subject to viewers browser configuation",
+#);
+);
+#
+
+#%timelocktxt=(
+%timelocktxt=(
+#'01' => "The Forum Admin has set a time limit of ",
+'01' => "The Forum Admin has set a time limit of ",
+#'02' => " day(s) to modify posts.  This post may not be altered.",
+'02' => " day(s) to modify posts.  This post may not be altered.",
+#'02a' => " day(s) to delete posts.  This post may not be deleted.",
+'02a' => " day(s) to delete posts.  This post may not be deleted.",
+#);
+);
+#
+
+#%smiltxt = (
+%smiltxt = (
+#'1' => "More Smilies",
+'1' => "Більше посмішок",
+#'21' => "Click on the smilie you wish to insert into your message:"
+'21' => "Клацніть на усмішці, яку ви бажаєте вставити у ваше повідомлення:"
+#);
+);
+#
+
+#%timetxt = (
+%timetxt = (
+#'1' => "st",
+'1' => "-ий",
+#'2' => "nd",
+'2' => "-ий",
+#'3' => "rd",
+'3' => "-ій",
+#'4' => "th",
+'4' => "-ий",
+#);
+);
+#
+
+#%msntxt = (
+%msntxt = (
+#'1' => "Open Messenger",
+'1' => "Open Messenger",
+#'2' => "Add to Buddylist",
+'2' => "Add to Buddylist",
+#'3' => "Attempting to sign in! Make sure MSN Messenger is installed and online.",
+'3' => "Attempting to sign in! Make sure MSN Messenger is installed and online.",
+#'4' => "(Only active in IE)",
+'4' => "(Only active in IE)",
+#'5' => "MSN Center"
+'5' => "MSN Center"
+#);
+);
+#
+
+#%pidtxt = (
+%pidtxt = (
+#'01' => "all",
+'01' => "всі",
+#'02' => "Click for previous page - double click for first page.",
+'02' => "Click for previous page - double click for first page.",
+#'03' => "Click for next page - double click for last page."
+'03' => "Click for next page - double click for last page."
+#);
+);
+#
+
+#$yycopyright = qq~<span class="copyright"><a href="$boardurl/YaBB.$yyext" class="copyright">$mbname</a> &#187; Powered by <a href="http://www.yabbforum.com" class="copyright">$YaBBversion</a>!<br />\n<a href="http://www.yabbforum.com" class="copyright">YaBB</a> &copy; 2000-2005. All Rights Reserved.</span>~;
+$yycopyright = qq~<span class="copyright"><a href="$boardurl/YaBB.$yyext" class="copyright">$mbname</a> &#187; Powered by <a href="http://www.yabbforum.com" class="copyright">$YaBBversion</a>!<br />\n<a href="http://www.yabbforum.com" class="copyright">YaBB</a> &copy; 2000-2005. Всі права закріплені.</span>~;
+#
+
+#1;
+1;

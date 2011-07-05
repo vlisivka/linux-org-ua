@@ -1,0 +1,116 @@
+$SectionName = "Manage_Boards";
+
+### Section 1
+#############################################
+$SectionSub1 = "Accessing_the_Board_Functions";
+$SectionBody1 = qq~Now that you have created your categories, you can use YaBB's amazing board-creation utilities to manage the postable sections of your community. YaBB allows you to create an unlimited* number of boards in every category. In order to access these functions, you must be logged in as an Administrator or Global Moderator with proper access rights. Once you are, look at the main menu. You will notice a link titled &quot;Admin Center&quot;. Clicking this will bring you to a large control panel. On the left hand menu, search for the section titled &quot;Forum Controls&quot; and click on the second link titled &quot;Boards&quot;.
+
+<p><i>* YaBB is only limited by the space allocated to you on your web hosting server.</i></p>~;
+#############################################
+
+
+### Section 2
+#############################################
+$SectionSub2 = "Adding_New_Boards";
+$SectionBody2 = qq~YaBB now gives admins the ability to add multiple boards from a single screen. To do this, access the forum's board management functions as explained above. Once there, scroll to the bottom of the list of existing boards (if any) and find the function titled &quot;Add Boards&quot;. Enter the number of new boards you would like to create in the text box then press the button titled &quot;Add&quot;.
+
+<p>On this new page, you will be given a large set of options for each of the new boards you are trying to add:</p>
+<ul><li><b>Board ID</b>
+<ul><li>This is only used for internal YaBB functions, and it is used in the URL used to view a board. You may enter any alphanumeric name you wish.</li></ul></li>
+<li><b>Name</b>
+<ul><li>This is what your users will see. You may enter anything you wish here.</li></ul></li>
+<li><b>Description</b>
+<ul><li>Describe this board so your users will know what the subject/topic will be.</li></ul></li>
+<li><b>Moderators</b>
+<ul><li>Enter the username of the members you wish to give Moderator access (seperate with commas).</li></ul></li>
+<li><b>Category</b>
+<ul><li>Choose which category you would like this board to be a part of.</li></ul></li>
+<li><b>Board Picture</b>
+<ul><li>Here you can assign a small picture to represent this board. </li></ul></li>
+<li><b>Zero Post Count Board?</b>
+<ul><li>Check this box if you would like to prevent posts made in this board from increasing users' post counts.</li></ul></li>
+<li><b>Show to All?</b>
+<ul><li>Checking this option will ensure the board is shown to all able to view the Board Index even if they are not allowed access to the board.</li></ul></li>
+<li><b>Allow Attachments</b>
+<ul><li>Checking this option will enable users to attach files to their posts.</li></ul></li>
+<li><b>Global Announcements</b>
+<ul><li>Checking this option will ensure the messages in this board are shown as important on top of every board. No matter how the permissions are set, only Administrators and Global Moderators can start new topics or reply. Note: YaBB only allows a single board to have this label.</li></ul></li>
+<li><b>Recycle Bin</b>
+<ul><li>Checking this option make this board a recycle bin for messages deleted by moderators. Note: YaBB only allows a single board to have this label.</li></ul></li>
+<li><b>Mininum Age to Access</b>
+<ul><li>Restrict access by mininum age.</li></ul></li>
+<li><b>Maxium Age to Access</b>
+<ul><li>Restrict access by maximum age.</li></ul></li>
+<li><b>Gender Allowed Access</b>
+<ul><li>Restrict access by gender.</li></ul></li>
+<li><b>Allowed to Start Topics</b>
+<ul><li>Limit which Member Groups can start a new topic.</li></ul></li>
+<li><b>Allowed to Reply to Topics</b>
+<ul><li>Limit which Member Groups are allowed to reply to topics.</li></ul></li>
+<li><b>Allowed to View Topics</b>
+<ul><li>Limit which Member Groups are allowed to view topics.</li></ul></li>
+<li><b>Allowed to Create Polls</b>
+<ul><li>Limit which Member Groups are allowed to create polls.</li></ul></li>
+</ul>
+
+<p>Once you have filled out all the information for your new boards, scroll down to the bottom of the list and click on the button titled &quot;Save&quot;. Your new boards will be created and opened for posting!</p>~;
+#############################################
+
+
+### Section 3
+#############################################
+$SectionSub3 = "Deleting_a_Board";
+$SectionBody3 = qq~If you would like to remove a board, follow the directions above to access your board management page. In the list of boards, you will notice a check box that corresponds to each title. Check this box for each and every board you wish to remove. Once selected, scroll to the bottom of the board listings and locate the set of radio buttons titled &quot;With Selected:&quot;. Click on the radio labeled &quot;Remove&quot; then press the button to the right titled &quot;Go&quot;.
+
+<p>A small popup will ask you to confirm that you want to remove these boards. Click &quot;OK&quot; to remove them or &quot;Cancel&quot; to keep them.</p>~;
+#############################################
+
+
+### Section 4
+#############################################
+$SectionSub4 = "Editing_a_Board";
+$SectionBody4 = qq~If you need to make changes to any of the boards you have created, simply follow the directions above to access your board management section. In the list of boards, you will notice a check box that corresponds to each title. Check this box for each and every board you wish to edit. Once selected, scroll to the bottom of the board listings and locate the set of radio buttons titled &quot;With Selected:&quot;. Click on the radio labeled &quot;Edit&quot; then press the button to the right titled &quot;Go&quot;.
+
+<p>On this new page, you will be given a large set of options for each of the boards you are editing:</p>
+<ul><li><b>Board ID</b>
+<ul><li>This cannot be changed.</li></ul></li>
+<li><b>Name</b>
+<ul><li>This is what your users will see. You may enter anything you wish here.</li></ul></li>
+<li><b>Description</b>
+<ul><li>Describe this board so your users will know what the subject/topic will be.</li></ul></li>
+<li><b>Moderators</b>
+<ul><li>Enter the username of the members you wish to give Moderator access (seperate with commas).</li></ul></li>
+<li><b>Category</b>
+<ul><li>Choose which category you would like this board to be a part of.</li></ul></li>
+<li><b>Board Picture</b>
+<ul><li>Here you can assign a small picture to represent this board. </li></ul></li>
+<li><b>Zero Post Count Board?</b>
+<ul><li>Check this box if you would like to prevent posts made in this board from increasing users' post counts.</li></ul></li>
+<li><b>Show to All?</b>
+<ul><li>Checking this option will ensure the board is shown to all able to view the Board Index even if they are not allowed access to the board.</li></ul></li>
+<li><b>Allow Attachments</b>
+<ul><li>Checking this option will enable users to attach files to their posts.</li></ul></li>
+<li><b>Global Announcements</b>
+<ul><li>Checking this option will ensure the messages in this board are shown as important on top of every board. No matter how the permissions are set, only Administrators and Global Moderators can start new topics or reply. Note: YaBB only allows a single board to have this label.</li></ul></li>
+<li><b>Recycle Bin</b>
+<ul><li>Checking this option make this board a recycle bin for messages deleted by moderators. Note: YaBB only allows a single board to have this label.</li></ul></li>
+<li><b>Mininum Age to Access</b>
+<ul><li>Restrict access by mininum age.</li></ul></li>
+<li><b>Maxium Age to Access</b>
+<ul><li>Restrict access by maximum age.</li></ul></li>
+<li><b>Gender Allowed Access</b>
+<ul><li>Restrict access by gender.</li></ul></li>
+<li><b>Allowed to Start Topics</b>
+<ul><li>Limit which Member Groups can start a new topic.</li></ul></li>
+<li><b>Allowed to Reply to Topics</b>
+<ul><li>Limit which Member Groups are allowed to reply to topics.</li></ul></li>
+<li><b>Allowed to View Topics</b>
+<ul><li>Limit which Member Groups are allowed to view topics.</li></ul></li>
+<li><b>Allowed to Create Polls</b>
+<ul><li>Limit which Member Groups are allowed to create polls.</li></ul></li>
+</ul>
+Once you have made your changes, scroll down to the bottom of the list and click on the button titled &quot;Save&quot;. ~;
+#############################################
+
+
+1;

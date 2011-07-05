@@ -1,0 +1,151 @@
+body   {
+  margin-top:0px; /* Я не роблю відступу зверху, щоб панелька була приліплена догори */
+  margin-left:4px;
+  margin-right:0px;
+  margin-bottom:2px;
+  background:white;
+}
+
+input   {
+  background-color : #FFFFF0;
+  border : 1px solid #696969;
+  color : #003366;
+  background-image: url(/twiki/pub/Main/FlexibleSkinStyleSheet/text.background.png);
+}
+
+select   {
+  background : #FFFFF0;
+  color : #003366;
+}
+
+textarea   {
+  background-color : #FFFFF0;
+  border : 1px solid #696969;
+  color : #003366;
+}
+
+
+/* Область вводу для CommentPluggin */
+textarea.comments{
+  width:100%;
+  background-image: url(/twiki/pub/Main/FlexibleSkinStyleSheet/text.background.png);
+}
+
+/* Область вводу при редагуванні сторінки */
+textarea.edit{
+  width:100%;
+  height:80%;
+}
+
+
+
+/* Підсвітка посилань */
+a {
+  color: #003366;
+  padding: 2px;
+  text-decoration : none;
+}
+a:hover   
+{
+  color: #009000;
+  border: 1px solid #000000;
+  padding: 1px;
+  background: #e0f8e0;
+  text-decoration: none;
+}
+
+/* Для якорів */
+a[name]
+{ 
+  color: black;
+  border:none;
+  padding:2px;
+  text-decoration:none; 
+  background:inherit;
+}
+a[name]:hover
+{
+  color:black;
+  border:none;
+  padding:2px;
+  text-decoration:none;
+  background:inherit;
+}
+
+/* Для елементів поточного параграфу */
+p a {text-decoration: none;}
+p:hover a {text-decoration: underline;}
+font a {text-decoration: none;}
+font:hover a {text-decoration: underline;}
+
+/* Вверхній рядочок з посиланнями */
+/*a.toplink  {} a.toplink:visited  {}*/
+
+
+/* Не пам'ятаю */
+td.header {}
+
+td.FlexibleSkinLeftBar
+{
+  width:50px;
+  border-right: medium solid #663300;
+  border-right-width:3;
+  height:100%;
+  padding-right:5px;
+}
+
+td.FlexibleSkinRightBar
+{}
+
+td.FlexibleSkinTopBar
+{
+  border: 2px solid #663300;
+  border-width:3;
+  height:100%;
+  background-color: #FFCC00;
+}
+
+td.FlexibleSkinBottomBar
+{
+  border-top: 2px solid #663300;
+  border-top-width:3;
+  height:100%;
+  padding-top:0px;
+}
+
+td.FlexibleSkinTopicHeader
+{}
+
+td.FlexibleSkinPrintingHeader
+{}
+
+
+td.FlexibleSkinPrintingFooter
+{}
+
+div.FlexibleSkinInfo
+{
+   font-size: 80%;
+   color : gray;
+}
+
+td.FlexibleSkinContent
+{
+  padding-left:5px;
+}
+
+td.FlexibleSkinPreview
+{
+  padding-left:5px;
+
+  background: #FFEEEE;
+  background-image: url("/twiki/pub/TWiki/PreviewBackground/previewbg.gif");
+}
+
+/* Для малювання всіляких клавіатурних комбінацій, пунктів меню, кнопок */
+.key { background-color: #dddddd; border: outset; border-width: 1px 2px 4px 1px; padding-left: 1ex; padding-right: 1ex; font-weight: bold; cursor: default; }
+.menuitem { background-color: lightgray; border: 1px outset gray; padding: 1px; cursor: default; }
+.button { background-color: lightgray; border: 2px outset gray; padding: 1px; cursor: default; }
+
+/* Для малювання різних приміток */
+.note { color: blue; border: 1px solid red; font-size: smaller; font-family: Arial, Helvetica, san-serif; cursor: help; }

@@ -1,0 +1,31 @@
+$use_guardian = 1;
+$use_htaccess = 0;
+
+$disallow_proxy_on = 0;
+$referer_on = 1;
+$harvester_on = 0;
+$request_on = 0;
+$string_on = 1;
+$union_on = 0;
+$clike_on = 0;
+$script_on = 0;
+
+$disallow_proxy_htaccess = 0;
+$referer_htaccess = 0;
+$harvester_htaccess = 0;
+$request_htaccess = 0;
+$string_htaccess = 0;
+$union_htaccess = 0;
+$clike_htaccess = 0;
+$script_htaccess = 0;
+
+$disallow_proxy_notify = 1;
+$referer_notify = 0;
+$harvester_notify = 1;
+$request_notify = 0; 
+$string_notify = 1;
+$union_notify = 1;
+$clike_notify = 1;
+$script_notify = 1;
+
+1;

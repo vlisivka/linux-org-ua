@@ -1,0 +1,221 @@
+body{
+background: #DFE4E9 url("default/adminbg.gif") repeat-y;
+}
+
+img#adminlogo{
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 2;
+}
+
+#menu{
+position: absolute;
+top: 120px;
+left: 0px;
+width: 170px;
+font-family: arial, verdana, helvetiva, sans-serif;
+color: #000;
+z-index: 3;
+}
+
+#menu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+border: none;
+}
+
+#menu li {
+padding-left: 5px;
+padding-right: 5px;
+margin: 0;
+}
+
+#menu li a {
+padding: 1px;
+padding-left: 10px;
+display: block;
+background-color: transparent;
+border: 1px solid #A7B8CC;
+color: #000;
+text-decoration: none;
+width: 100%;
+font-size: 70%;
+margin: 2px;
+}
+
+html>body #menu li a {
+width: auto;
+}
+
+#menu li a:hover {
+border: 1px solid #738DAE;
+background-color: #DFE4E9;
+color: #000;
+}
+#menu li a.current{
+background-color: #fefefe;
+border: 1px solid #738DAE;
+}
+#menu li a.current:hover{
+background-color: #fefefe;
+border: 1px solid #738DAE;
+}
+#menu h3{
+width: 175px;
+background-color: #D2DBE6;
+border: 1px solid #738DAE;
+border-left: 0px;
+font-size: 70%;
+margin: 0;
+margin-top: 5px;
+padding: 0;
+padding: 2px;
+padding-left: 5px;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+text-transform: capitalize;
+}
+#menu h3 a{
+color: #000;
+text-decoration: none;
+text-transform: capitalize;
+}
+
+#ql {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 31px;
+  width: 100%;
+  background: #DFE4E9 url("default/admintopbg.gif") repeat-x;
+  z-index: 1;
+}
+#ql td{
+  height: 29px;
+}
+#ql a{
+  font-weight: bold;
+}
+#ql a:hover{
+  color: black;
+  position: relative;
+  left: 1px;
+  top: 1px;
+}
+
+#content{
+position: absolute;
+top: 60px;
+left: 210px;
+width: 75%;
+font-family: arial, verdana, helvetiva, sans-serif;
+font-size: 12px;
+color: #000;
+z-index: 10;
+}
+
+/* General layout */
+a:link {
+font-weight: normal;
+text-decoration: none;
+color: #475F79;
+}
+a:visited {
+color: #475F79;
+text-decoration: none;
+font-weight: normal;
+}
+a:hover {
+color: #00AEEF;
+text-decoration: none;
+font-weight: normal;
+}
+
+/* YaBB alternating bgcolors */
+.windowbg {
+background-color: #E0E4EB;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg2 {
+background-color: #FEFEFE;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg3 {
+background-color: #EDEEF1;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+
+/* Misc./title/category colors */
+.hr {
+color: #A7B8CC;
+}
+.titlebg {
+background-color: #D2DBE6;
+color: #475F79;
+font-size: 13px;
+}
+.catbg {
+background: url("default/admincatbg.gif");
+background-color: #FEFEFE;
+color: #000000;
+font-size: 13px;
+}
+.bordercolor {
+background-color: #A7B8CC;
+}
+.small {
+font-size: 10px;
+font-family: verdana, sans-serif;
+}
+.setting_cell {
+float: left;
+width: 55%;
+text-align: left;
+font-size: 12px;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+.setting_cell2 {
+float: left;
+width: 45%;
+text-align: left;
+font-size: 12px;
+padding-top: 2px;
+padding-bottom: 2px;
+}
+form {
+display: inline;
+}
+input {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+color: #000000;
+border: 1px solid #C2C6CF;
+}
+textarea {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+color: #000000;
+border: 1px solid #C2C6CF;
+}
+select {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 7pt;
+color: #000000;
+}
+.copyright {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+}

@@ -1,0 +1,74 @@
+<b>Overview</b>
+
+This is the site of <u>Ukrainian-speaking community</u> interested in free (open) software and operating systems development.
+
+When making a reply or starting a new topic, please follow the rules listed below:
+
+<b>Main Topics</b>
+
+<ul><li>Unix-like open source operating systems (like  GNU/Linux, {Free,Net,Open}BSD, Hurd, Darwin).</li><li>Open source and free software.</li><li>Translations of program messages and technical documentation into Ukrainian.</li></ul>
+
+A piece of software is considered "open source" if it is distributed under the terms of any <a href="http://www.opensource.org/" >Open Source Initiative</a> approved license.
+
+Issues of using closed-source software in open-source environments (like VMWare on Linux), as well as using open-source software in closed-source environments (like Cygwin on Windows) are considered to be on-topic.
+
+<b>Discussion Rules</b>
+
+1. Only <b>Ukrainian</b> and/or <b>English</b> languages are accepted here. Using any other languages in postings is forum rules violation.
+1.1. Citations in another languages with an appropriate source reference are allowed, as a matter of exception. A brief translation in one of the languages mentioned in paragraph 1 should be attached to the citation.
+1.2. Due to frequent use of Russian by the newcomers and ambiguous reaction from the old residents, messages in Russian by the newcomers will be translated with the help of the on-line translation tool (Перекладачка), but only in case there are at least two on-topic replies. The rest of messages in foreign languages (including Chinese) will be deleted.
+
+2. Keep in mind that you are in polite environment -- so please be nice to others.
+2.1. Check the spelling of your messages before posting them to the forum. Deliberate Ukrainian language grammar rules violation is not allowed.
+2.2. Obscene language usage is strictly prohibited at this forum.
+2.3. Creating messages containing attacks of the ethnical or religious nature as well as off-topic political discussions is strictly prohibited.
+2.4. Creating inane messages (flood) and deliberate advertising (spam) is prohibited.
+2.5. Posting links to the resources with inadmissible or immoral content - explicit scenes, violence and those of specific medical and anatomical nature - is prohibited.
+2.6. Using images that are not related to the topic of respective thread is prohibited. Using images with content specified in 2.5 is strictly prohibited.
+
+3. Avoid heavy color tags usage in your messages, it could make them unreadable. In addition, usage of the red and similar colors is prohibited as they are reserved for administrator's and moderator's warnings and important messages.
+
+4. Cross-posting withing this forum is prohibited. Such a topics will be deleted and their authors will get a warning.
+
+5. Discussions which grow into personal insults will be locked.
+
+6. Violation of this rules entails punishment; punishments could vary from warnings to banning a person from postings. Each punishment should be explained. Anonymous messages violating this rules could be deleted without an appropriate explanation.
+
+7. For discussions that does not concern forum subject-matters a special section exists "Всячина::Балачки".
+
+8. Use private messaging system for personal discussions.
+
+9. Publishing serial numbers, crack software and links to warez resources is strictly prohibited. This also concerns virus, worm and trojan software.
+
+10. It is usually considered rude to publish personal details of other members if they did not agree to that. In particular, this concerns emails without anti-spam distortions.
+
+11. Any push upon the moderators as well as offenses and public discussions of their activities are <b>not allowed</b>. If you have questions, send private messages. Style of the private messages will be taken into account.
+
+12. Any moderator action can be appeal with administrator or, in case no adequate reaction was given by administrator, with domain name owner (man whois). Domain name owner can choose any other person to solve the problem (except moderators and administrators). The arbitrament of the domain name owner (or chosen person) can not be appealed.
+
+<b>About nicknames</b>
+
+1. Using obscene nicknames is forbidden.
+
+2. It is highly recommended (although it is not strict requirement) to use your real name as a nickname.
+
+3. Blaming others for their nickname, avatar or signature is forbidden. Political and religious conflicts should leave outside this forum.
+
+4. If you think someones nickname obscene notify moderator about that. Public discussion of acceptability of any part of someone's profile is forbidden.
+
+5. Final decision about an acceptability of a nickname will be made by moderator. The owner of a nickname and requesting person will be informed privately with argumentation. Such a decision can not be appealed.
+
+<b>Punishments</b>
+
+(*) - small violation, unintended off-topic, violation because of unawareness of the rules.
++ - major violation, second violation of the same rule.
+! - ban from posting with specifying a reason.
+
++ = (*)(*)(*)
+! = +++
+
+These are standard moderatorials existing from the FIDO ages.
+
+Punishment can be canceled for good deeds (efficient advice or proposal, interesting topic, etc). The amount of canceled punishments is proportional to deed quality.
+
+<i>Enjoy!</i>

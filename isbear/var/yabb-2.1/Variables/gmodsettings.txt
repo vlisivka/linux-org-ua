@@ -1,0 +1,114 @@
+### Gmod Releated Setttings ###
+
+$allow_gmod_admin = "on"; #
+$allow_gmod_profile = ""; #
+
+### Areas Gmods can Access ### 
+
+%gmod_access = (
+'modsettings',"",
+'flood_control',"on",
+'advsettings',"",
+'smilies',"on",
+'helpadmin',"on",
+'setcensor',"on",
+'detailedversion',"on",
+'managecats',"",
+'manageboards',"",
+'editnews',"on",
+'modagreement',"on",
+'modtemp',"on",
+'modcss',"on",
+'referer_control',"",
+'viewmembers',"on",
+'modmemgr',"on",
+'mailing',"",
+'ipban',"on",
+'setreserve',"on",
+'clean_log',"",
+'boardrecount',"",
+'membershiprecount',"",
+'rebuildmemlist',"",
+'deleteoldthreads',"",
+'manageattachments',"on",
+'stats',"on",
+'showclicks',"on",
+'errorlog',"on",
+'view_reglog',"on",
+);
+
+%gmod_access2 = (
+admin => "on",
+deleteattachment => "on",
+manageattachments2 => "on",
+removeoldattachments => "on",
+removebigattachments => "on",
+
+profile => "",
+profile => "",
+profile2 => "",
+profileAdmin => "",
+profileAdmin2 => "",
+profileContacts => "",
+profileContacts2 => "",
+profileIM => "",
+profileIM2 => "",
+profileOptions => "",
+profileOptions2 => "",
+
+delgroup => "on",
+editgroup => "on",
+editAddGroup2 => "on",
+modmemgr2 => "on",
+assigned => "on",
+assigned2 => "on",
+
+reordercats => "",
+modifycatorder => "",
+modifycat => "",
+createcat => "",
+catscreen => "",
+reordercats2 => "",
+addcat => "",
+addcat2 => "",
+
+modifyboard => "",
+addboard => "",
+addboard2 => "",
+reorderboards2 => "",
+boardscreen => "",
+
+smilieput => "on",
+smilieindex => "on",
+smiliemove => "on",
+addsmilies => "on",
+
+addmember => "on",
+addmember2 => "on",
+deletemultimembers => "on",
+
+mailmultimembers => "",
+mailing2 => "",
+
+del_regentry => "on",
+clean_reglog => "on",
+
+cleanerrorlog => "on",
+deleteerror => "on",
+
+do_clean_log => "",
+modagreement2 => "on",
+modsettings2 => "",
+advsettings2 => "",
+ml => "",
+referer_control2 => "",
+removeoldthreads => "",
+ipban2 => "on",
+setcensor2 => "on",
+setreserve2 => "on",
+editnews2 => "on",
+
+flood_control2,"on",
+);
+
+1;

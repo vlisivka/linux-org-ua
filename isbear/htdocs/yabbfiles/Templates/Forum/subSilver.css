@@ -1,0 +1,318 @@
+/* This is the CSS file for the YaBB subSilver template.  The original subSilver template was created by subBlue for phpBB.  This version of subSilver was created by Curtiss Grymala to be used on YaBB 2 boards.  Most of the images used in this template are from the original subSilver phpBB template, however a few of the images were modified from original YaBB images by Curtiss Grymala. */
+/* General layout */
+a {
+font-weight: normal;
+text-decoration: none;
+color: #1d76a2;
+}
+a:hover {
+color: #000;
+}
+body {
+background-color: #ffffff;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10pt;
+margin-top: 0;
+margin-left: 0;
+margin-right: 0;
+padding-top: 0;
+padding-left: 0;
+padding-right: 0;
+}
+form {
+display: inline;
+}
+input {
+background-color: #ffffff;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+color: #000000;
+border: 1px #cccccc inset;
+}
+textarea {
+background-color: #ffffff;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+color: #000000;
+border: 2px #cccccc inset;
+}
+select {
+background-color: #ffffff;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 7pt;
+color: #000000;
+}
+.copyright {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 8pt;
+}
+/* YaBB navigation links */
+a.nav {
+color: #000;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+}
+a.nav:hover {
+color: #cc3333;
+}
+a.navcur {
+font-style: italic;
+font-size: 12pt;
+}
+a.navcur:hover {
+color: #cc3333;
+font-size: 12pt;
+}
+/* YaBB alternating bgcolors */
+.windowbg {
+background-color: #efefef;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg2 {
+background-color: #dee3e7;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg3 {
+background-color: #EDEEF1;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+/* Misc./title/category colors */
+.hr {
+color: #000000;
+}
+.titlebg {
+background: #ffffff url("subSilver/catbg.png") repeat-x;
+color: #006699;
+font-size: 10pt;
+font-weight: bold;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+}
+.titlebg a{
+color: #2b80aa;
+font-weight: bold;
+font-style: normal;
+}
+.top{
+font-style: normal;
+font-size: 9pt;
+color: #475F79;
+}
+.catbg {
+background: #ffffff url("subSilver/catbg.png") repeat-x;
+color: #006699;
+font-size: 9pt;
+font-weight: bold;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+}
+.catbg a{
+color: #2b80aa;
+font-weight: bold;
+font-style: normal;
+}
+.bordercolor {
+background-color: transparent;
+}
+.big {
+font-size: 16pt;
+font-family: verdana, sans-serif;
+}
+.small {
+font-size: 8pt;
+font-family: verdana, sans-serif;
+}
+.message {
+font-size: 9pt;
+font-family: verdana, sans-serif;
+}
+.droppageindex {
+float: left;
+font-family: verdana, sans-serif;
+background: #5988BD url("subSilver/catbg.png") repeat-x;
+color: #000;
+padding: 2px;
+padding-left: 4px;
+margin: 0px;
+border: 0px;
+}
+.droppages{
+height: 14px;
+padding-left: 1px;
+padding-right: 1px;
+}
+.droppages a{
+color: #000;
+font-size: 7pt;
+font-weight: normal;
+}
+h2{
+margin: 0px;
+display: inline;
+}
+.highlight {
+font-weight: bolder;
+background-color: #FF3;
+color: #000;
+}
+/* Image fonts */
+.imgbg {
+font-style: normal;
+font-size: 8pt;
+color: #fff;
+}
+.imgcatbg {
+font-style: normal;
+font-size: 8pt;
+color: #000000;
+font-weight: bold;
+}
+.imgtitlebg {
+font-style: normal;
+font-size: 8pt;
+color: #FFFFFF;
+font-weight: bold;
+}
+.imgwindowbg {
+font-style: normal;
+font-size: 7pt;
+color: #005177;
+}
+.imgmenu {
+font-style: normal;
+font-size: 8pt;
+color: #000000;
+text-decoration: none;
+}
+/* Post quote/code colors */
+.quote {
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+color: #000000;
+background-color: #fafafa;
+border: 1px #d1d7dc solid;
+width: 90%;
+padding: 4px;
+}
+.code {
+font-size: 10pt;
+font-weight: normal;
+font-style: normal;
+font-family: Courier, Courier New;
+color: #000000;
+background-color: #fafafa;
+border: 1px #d1d7dc solid;
+width: 90%;
+padding: 4px;
+}
+.editbg,.offtopbg,.flamebg,.floodbg {
+color: #000;
+font-size: 9pt;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+background-color: #fafafa;
+border: 1px #ff0000 solid;
+width: 90%;
+padding: 4px;
+}
+
+
+
+.showover {
+color: #48A;
+display: block;
+border: 1px solid #DCB;
+padding: 2px 3px;
+}
+.showover>* {
+display: none;
+}
+.showover:hover>*, .showover>*:first-child {
+display: block;
+}
+.showover>*:first-child:before {
+color: #499;
+content: "Show ";
+}
+.showover:hover>*:first-child:before {
+content: "";
+}
+
+.offtopbg {
+color: #000;
+background-color: #DDE;
+border: 1px #ACB solid;
+}
+.flamebg {
+color: #000;
+background-color: #FED;
+border: 1px #CBA solid;
+}
+.floodbg {
+color: #000;
+background-color: #DDD;
+border: 1px solid #CCC;
+}
+
+/* Anything below here is just for the template */
+.topline{
+border-top: 1px solid #34689A;
+}
+.topheader{
+background: #ffffff url("subSilver/headerbg.png");
+margin-bottom: 1px;
+}
+#container{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+background-color: #ffffff;
+border: 2px #006699 solid;
+border-top: 0;
+margin-bottom: 1px;
+}
+.headerwelc{
+color: #000000;
+font-size: 8pt;
+}
+.headerwelc a{
+color: #808080;
+text-decoration: none;
+}
+.headerwelc a:hover{
+color: #80DAF2;
+}
+.headerinfo{
+color: #3586be;
+}
+.headerinfo a{
+color: #3586be;
+text-decoration: underline;
+}
+.headerinfo a:hover{
+color: #0000ff;
+}
+.seperator{
+border-top: 1px #ffffff solid;
+border-bottom: 1px #ffffff solid;
+}
