@@ -23,6 +23,8 @@ BEGIN {
 
 $subsplver = 'YaBB 2.1 $Revision: 1.15 $';
 
+use Encode;
+
 use subs 'exit';
 $yymain = "";
 $CGITempFile::TMPDIRECTORY = "$uploaddir";
@@ -567,8 +569,10 @@ sub readform {
 			($name, $value) = split(/=/, $pair);
 			$name  =~ tr/+/ /;
 			$name  =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+			$name  =  decode ( 'UTF-8', $name );
 			$value =~ tr/+/ /;
 			$value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+			$value =  decode ( 'UTF-8', $value );
 
 			if (exists($hash->{$name})) {
 				$hash->{$name} .= ", $value";
@@ -1166,6 +1170,7 @@ unless (defined $LOCK_SH) { $LOCK_SH = 1; }
 			if ($openMode) { flock($filehandle, $LOCK_EX); }
 			else { flock($filehandle, $LOCK_SH); }
 		}
+		binmode $filehandle, ':utf8';
 		return 1;
 	}
 

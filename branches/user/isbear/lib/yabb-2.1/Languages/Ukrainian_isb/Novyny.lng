@@ -1,4 +1,6 @@
 
+use utf8;
+
 %novyny_txt = (
 'from' => 'повідомив:',
 'on' => '',

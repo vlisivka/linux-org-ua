@@ -207,11 +207,6 @@ sub plushSearch2 {
 	require "$sourcedir/Decoder.pl";
 	&scrambled($search);
 
-#### FIXME: Ukrainian search case fix. Ugly.
-	use locale;
-	use POSIX 'locale_h';
-	setlocale (LC_CTYPE, 'uk_UA.utf8');
-
 	$search =~ s/\A\s+//;
 	$search =~ s/\s+\Z//;
 	&ToHTML($search);

@@ -1,4 +1,6 @@
 
+use utf8;
+
 our %recent_txt = (
 	guest => ' (гість)',
 	ex => ' (предок)',

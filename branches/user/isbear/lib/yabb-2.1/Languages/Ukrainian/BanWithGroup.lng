@@ -1,4 +1,6 @@
 
+use utf8;
+
 our %loaded;
 
 our %bangroup_txt = (
