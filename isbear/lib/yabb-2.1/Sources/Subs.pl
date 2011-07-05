@@ -281,12 +281,12 @@ sub template {
 	$yyboardname = "$mbname";
 	$yytime      = &timeformat($date, 1);
 
-	if ( $snark_enable ) {
-
-		require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
-		$yyuname = snark_header ( $username );
-		
-	} elsif ( $regdisable ) {
+#	if ( $snark_enable ) {
+#
+#		require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
+#		$yyuname = snark_header ( $username );
+#	} els
+	if ( $regdisable ) {
 		$yyuname = $iamguest ? qq~$maintxt{'248'} $maintxt{'28'}. $maintxt{'249'} <a href="$scripturl?action=login">$maintxt{'34'}</a>.~ : qq~$maintxt{'247'} $realname, ~;
 	} else {
 		$yyuname = $iamguest ? qq~$maintxt{'248'} $maintxt{'28'}. $maintxt{'249'} <a href="$scripturl?action=login">$maintxt{'34'}</a> $maintxt{'377'} <a href="$scripturl?action=register">$maintxt{'97'}</a>.~ : qq~$maintxt{'247'} $realname, ~;
@@ -1795,7 +1795,7 @@ sub load_online_users {
 
 	close ONLINELOG;
 
-	$snark_state{online_users} = 1;
+#	$snark_state{online_users} = 1;
 
 	return 1
 }

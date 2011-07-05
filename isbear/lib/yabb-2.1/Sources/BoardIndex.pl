@@ -636,13 +636,13 @@ sub BoardIndex {
 
 	$yymain .= qq~$boardindex_template~;
 
-	if ( $snark_enable ) {
-		require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
-		$yymain .= 	qq(<div class="huntlog" ><div class="windowbg" ><div class="catbg"><a href="$scripturl?action=huntlog" >$snark_txt{'bi_huntlog'}</a></div>) .
-				join ( q(<br />), huntlog_get ( qr/(kill|revive|bomb|patrick|tristar|rlsaber|esca|boyan|giggle|watch)/, 5 ) ) .
-				q(</div></div>);
-		$yyinlinestyle .= qq(<link rel="stylesheet" href="$forumstylesurl/default/snark.css" type="text/css" />);
-	}
+#	if ( $snark_enable ) {
+#		require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
+#		$yymain .= 	qq(<div class="huntlog" ><div class="windowbg" ><div class="catbg"><a href="$scripturl?action=huntlog" >$snark_txt{'bi_huntlog'}</a></div>) .
+#				join ( q(<br />), huntlog_get ( qr/(kill|revive|bomb|patrick|tristar|rlsaber|esca|boyan|giggle|watch)/, 5 ) ) .
+#				q(</div></div>);
+#		$yyinlinestyle .= qq(<link rel="stylesheet" href="$forumstylesurl/default/snark.css" type="text/css" />);
+#	}
 
 	if ($imnewcount > 0) {
 		if ($imnewcount > 1) { $en = "s"; $en2 = "$boardindex_imtxt{'47'}"; }
