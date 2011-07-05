@@ -1,0 +1,323 @@
+/* This is the CSS file for the YaBB subBlack template. The original subBlack template was created by spectre for phpBB. This version of subBlack was created by Curtiss Grymala to be used on YaBB 2 boards. Most of the images used in this template are from the original subBlack phpBB template, however a few of the images were modified from original YaBB images by Curtiss Grymala. Curtiss Grymala's site can be found at http://dcevolution.net/DCHelp/ spectre's web site can be found at http://www.gamerhaven.com/ */
+/* General layout */
+a {
+font-weight: normal;
+text-decoration: none;
+color: #c90;
+}
+a:hover {
+color: #ffc;
+}
+body {
+background-color: #000;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 12px;
+margin-top: 0;
+margin-left: 0;
+margin-right: 0;
+padding-top: 0;
+padding-left: 0;
+padding-right: 0;
+}
+form {
+display: inline;
+}
+input {
+background-color: #000;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+color: #ffc;
+border: 2px #ffffe5 outset;
+}
+textarea {
+background-color: #000;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+color: #dedeb2;
+border: 2px #ffffe5 inset;
+}
+select {
+background-color: #000;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9px;
+color: #ffc;
+}
+.copyright {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+color: #ffc
+}
+
+/* YaBB navigation links */
+a.nav {
+color: #c90;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+}
+a.nav:hover {
+color: #ffc;
+}
+a.navcur {
+font-style: italic;
+font-size: 14px;
+}
+a.navcur:hover {
+color: #ffc;
+font-size: 14px;
+}
+/* YaBB alternating bgcolors */
+.windowbg {
+background-color: #000;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #f4f4c3;
+}
+.windowbg2 {
+background-color: #212121;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #f2f2c2;
+}
+.windowbg3 {
+background-color: #EDEEF1;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, sans-serif;
+color: #000;
+}
+/* Misc./title/category colors */
+.hr {
+color: #000;
+}
+.titlebg {
+background: #000 url("subBlack/cellpic3.gif") repeat-x bottom;
+color: #fc0;
+font-size: 12px;
+font-weight: bold;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+}
+.titlebg a{
+color: #c90;
+font-weight: bold;
+font-style: normal;
+}
+.top{
+font-style: normal;
+font-size: 11px;
+color: #475F79;
+}
+.catbg {
+/* for some reason author puts here #ffffff, and so, he is not true goth :). I have fixed that. */
+background: #000 url("subBlack/cellpic1.gif") repeat-x;
+color: #c90;
+font-size: 11px;
+font-weight: bold;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+}
+.catbg a{
+color: #c90;
+font-weight: bold;
+font-style: normal;
+}
+.bordercolor {
+background-color: transparent;
+}
+.big {
+font-size: 18px;
+font-family: verdana, sans-serif;
+}
+.small {
+font-size: 10px;
+font-family: verdana, sans-serif;
+color: #ffc;
+}
+.message {
+font-size: 11px;
+font-family: verdana, sans-serif;
+}
+.droppageindex {
+float: left;
+font-family: verdana, sans-serif;
+background: #000 url("subBlack/cellpic1.gif");
+color: #c90;
+padding: 2px;
+padding-left: 4px;
+margin: 0px;
+border: 0px;
+}
+.droppages{
+height: 14px;
+padding-left: 1px;
+padding-right: 1px;
+}
+.droppages a{
+color: #fff;
+font-size: 9px;
+font-weight: normal;
+}
+h2{
+margin: 0px;
+display: inline;
+}
+.highlight {
+font-weight: bolder;
+background-color: #FF3;
+color: #000;
+}
+/* Image fonts */
+.imgbg {
+font-style: normal;
+font-size: 10px;
+color: #fff;
+}
+.imgcatbg {
+font-style: normal;
+font-size: 10px;
+color: #c90;
+font-weight: bold;
+}
+.imgtitlebg {
+font-style: normal;
+font-size: 10px;
+color: #FFF;
+font-weight: bold;
+}
+.imgwindowbg {
+font-style: normal;
+font-size: 9px;
+color: #005177;
+}
+.imgmenu {
+font-style: normal;
+font-size: 11px;
+font-weight:bolder;
+color: #da1;
+text-decoration: none;
+}
+/* Post quote/code colors */
+.quote {
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+color: #000;
+background-color: #616161;
+border: 1px #bfbfbf solid;
+width: 90%;
+padding: 4px;
+}
+.code {
+font-size: 12px;
+font-weight: normal;
+font-style: normal;
+font-family: Courier, Courier New;
+color: #fff;
+background-color: #616161;
+border: 1px #bfbfbf solid;
+width: 90%;
+padding: 4px;
+}
+.editbg,.offtopbg,.floodbg,.flamebg{
+color: #C00;
+font-size: 11px;
+font-weight: normal;
+font-style: normal;
+font-family: Verdana, Helvetica, Arial;
+background-color: #444;
+border: 1px #f00 solid;
+width: 90%;
+padding: 4px;
+}
+
+.showover {
+color: #FA0;
+display: block;
+border: 1px dashed olive;
+padding: 2px 3px;
+}
+.showover>* {
+display: none;
+}
+.showover:hover>*, .showover>*:first-child {
+display: block;
+}
+.showover>*:first-child:before {
+color: #9C3;
+content: "Show ";
+}
+.showover:hover>*:first-child:before {
+content: "";
+}
+
+.offtopbg {
+color: #ABB;
+background-color: #445;
+border: 1px #467 solid;
+}
+.flamebg {
+color: #D53;
+background-color: #200;
+border: 1px #320 solid;
+}
+.floodbg {
+color: #4B0;
+background-color: #040;
+border: 1px #760 solid;
+}
+
+/* Anything below here is just for the template */
+.topline{
+border-top: 1px solid #34689A;
+}
+.topheader{
+color: #aa8;
+background-color: #000;
+border-bottom: 1px solid #fff;
+margin-bottom: 1px;
+}
+#container{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+background-color: #000;
+border: 2px #000 solid;
+border-top: 0;
+margin-bottom: 1px;
+}
+.headerwelc{
+color: #c90;
+font-size: 10px;
+}
+.headerwelc a{
+color: #c90;
+text-decoration: none;
+}
+.headerwelc a:hover{
+color: #ffffcc;
+}
+.headerinfo{
+color: #c90;
+}
+.headerinfo a{
+color: #c90;
+text-decoration: underline;
+}
+.headerinfo a:hover{
+color: #ffc;
+}
+.seperator{
+border-top: 1px #000 solid;
+border-bottom: 1px #000 solid;
+}

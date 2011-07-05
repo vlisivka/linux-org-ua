@@ -1,0 +1,5 @@
+Redirect /index.php3 http://linux.org.ua/cgi-bin/yabb/novyny
+
+DefaultLanguage uk
+
+ErrorDocument 403 /403.html

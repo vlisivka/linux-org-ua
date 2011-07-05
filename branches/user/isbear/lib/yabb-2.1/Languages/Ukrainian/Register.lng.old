@@ -1,0 +1,214 @@
+################################################################################
+###############################################################################
+## Register.lng (Register text definitions)                                    #
+# Register.lng (Register text definitions)                                    #
+################################################################################
+###############################################################################
+## YaBB: Yet another Bulletin Board                                            #
+# YaBB: Yet another Bulletin Board                                            #
+## Open-Source Community Software for Webmasters                               #
+# Open-Source Community Software for Webmasters                               #
+## Version:        YaBB 2 RC 3                                                 #
+# Version:        YaBB 2 RC 3                                                 #
+## Released:       June 20, 2005                                               #
+# Released:       June 20, 2005                                               #
+## Distributed by: http://www.yabbforum.com                                    #
+# Distributed by: http://www.yabbforum.com                                    #
+## =========================================================================== #
+# =========================================================================== #
+## Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+## Software by: The YaBB Development Team                                      #
+# Software by: The YaBB Development Team                                      #
+##              with assistance from the YaBB community.                       #
+#              with assistance from the YaBB community.                       #
+## Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+##               Your source for web hosting, web design, and domains.         #
+#               Your source for web hosting, web design, and domains.         #
+################################################################################
+###############################################################################
+#
+
+#%register_txt = (
+%register_txt = (
+#'1' => "For security, you cannot use your username as your password.",
+'1' => "For security, you cannot use your username as your password.",
+#'2' => "You cannot register while logged in.",
+'2' => "You cannot register while logged in.",
+'3' => "Реєстрація на цьому форумі заборонена.",
+#'23' => "Unable to open",
+'23' => "Unable to open",
+#'34' => "Login",
+'34' => "Login",
+#'35' => "Username",
+'35' => "Username",
+#'36' => "Password",
+'36' => "Password",
+#'37' => "You should fill in a username.",
+'37' => "You should fill in a username.",
+#'69' => "Email",
+'69' => "Email",
+#'76' => "The Email field was not filled out. It is required.",
+'76' => "The Email field was not filled out. It is required.",
+#'81' => "Choose password",
+'81' => "Choose password",
+#'82' => "Verify password",
+'82' => "Verify password",
+#'91' => "Password field empty",
+'91' => "Password field empty",
+#'97' => "Register",
+'97' => "Register",
+#'98' => "Choose username",
+'98' => "Choose username",
+#'99' => "Username may only contain numbers and letters (example: yabber69)",
+'99' => "Username may only contain numbers and letters (example: yabber69)",
+#'100' => "The username you tried to register already exists.",
+'100' => "The username you tried to register already exists.",
+'101' => "Мова, яку ви бажаєте використовувати",
+#'130' => "Regards,\nThe $mbname team",
+'130' => "Regards,\nThe $mbname team",
+#'209' => "I love YaBB 2!",
+'209' => "I love YaBB 2!",
+#'213' => "Passwords aren't the same!",
+'213' => "Passwords aren't the same!",
+#'240' => "There is an invalid character in the",
+'240' => "There is an invalid character in the",
+#'241' => "field. Valid Characters are Letters(a-z), Numbers (0-9), and ( # + - . @ ^ _ )",
+'241' => "field. Valid Characters are Letters(a-z), Numbers (0-9), and ( # + - . @ ^ _ )",
+#'244' => "The username you tried to register contains a reserved name! Please try another username. Reserved name: ",
+'244' => "The username you tried to register contains a reserved name! Please try another username. Reserved name: ",
+#'245' => "Registration successful",
+'245' => "Registration successful",
+#'248' => "Welcome,",
+'248' => "Welcome,",
+#'430' => ", you are banned from using this forum",
+'430' => ", you are banned from using this forum",
+#'431' => "Success! You are now a member of the Forum.",
+'431' => "Success! You are now a member of the Forum.",
+#'473' => "This name is already in use by another member.",
+'473' => "This name is already in use by another member.",
+#'492' => "and your password is",
+'492' => "and your password is",
+#'500' => "Please enter a valid e-mail address.",
+'500' => "Please enter a valid e-mail address.",
+#'517' => "Required Information",
+'517' => "Required Information",
+#'520' => "Used only for identification by YaBB. You can use special characters after logging in by changing your displayed name in your profile.",
+'520' => "Used only for identification by YaBB. You can use special characters after logging in by changing your displayed name in your profile.",
+#'585' => "I Agree",
+'585' => "I Agree",
+#'586' => "I Do Not Agree",
+'586' => "I Do Not Agree",
+#'678' => "Sorry",
+'678' => "Sorry",
+#'679' => "This must be a valid e-mail address.",
+'679' => "This must be a valid e-mail address.",
+#'700' => "Welcome to",
+'700' => "Welcome to",
+#'701' => "You may change it after you log in by going to the profile page or by visiting this page after you log in:",
+'701' => "You may change it after you log in by going to the profile page or by visiting this page after you log in:",
+#'703' => "Thank you for registration. You will receive an e-mail soon with your password. You may change the password after you login for the first time.",
+'703' => "Thank you for registration. You will receive an e-mail soon with your password. You may change the password after you login for the first time.",
+#'719' => "Your username is",
+'719' => "Your username is",
+#'721' => "Hide Email from public?",
+'721' => "Hide Email from public?",
+#'730' => "The e-mail address",
+'730' => "The e-mail address",
+#'731' => "is being used by a registered member already! If you feel this is a mistake, please go to the login page and use the password reminder.",
+'731' => "is being used by a registered member already! If you feel this is a mistake, please go to the login page and use the password reminder.",
+#'764a' => "User Agreement"
+'764a' => "User Agreement"
+#);
+);
+#
+
+#%floodtxt=(
+%floodtxt=(
+#'1' => "Your Verification Code is",
+'1' => "Your Verification Code is",
+#'2' => "Activate Automatic Flood Security",
+'2' => "Activate Automatic Flood Security",
+#'3' => "Verification Code",
+'3' => "Verification Code",
+#'4' => "Verification Code is wrong",
+'4' => "Verification Code is wrong",
+#'5' => "Max messages returned on recent posts by user<br /> <span class=\"small\">-1 will disable this option</span>",
+'5' => "Max messages returned on recent posts by user<br /> <span class=\"small\">-1 will disable this option</span>",
+#'6' => "Max messages returned on a search<br /> <span class=\"small\">-1 will disable this option</span>",
+'6' => "Max messages returned on a search<br /> <span class=\"small\">-1 will disable this option</span>",
+#'7' => "The requested number of results is higher then the maximum number allowed by the system",
+'7' => "The requested number of results is higher then the maximum number allowed by the system",
+#'8' => "The search option has been disabled"
+'8' => "The search option has been disabled"
+#);
+);
+#
+
+#%prereg_txt=(
+%prereg_txt=(
+#'1' => "Your account is not activated yet<br />Please activate it within $preregspan hours by clicking the link in the email you received!",
+'1' => "Your account is not activated yet<br />Please activate it within $preregspan hours by clicking the link in the email you received!",
+#'1a' => "Pre-Registration Completed",
+'1a' => "Pre-Registration Completed",
+#'2' => "Here is your account activation code",
+'2' => "Here is your account activation code",
+#'3' => "You have been successfully pre-registered at $mbname.\nPlease activate your account within $preregspan hours!",
+'3' => "You have been successfully pre-registered at $mbname.\nPlease activate your account within $preregspan hours!",
+#'4' => "Please click on the link below to activate your user account",
+'4' => "Please click on the link below to activate your user account",
+#'5' => "Your account is activated now and you can now log in!",
+'5' => "Your account is activated now and you can now log in!",
+#'6' => "You did not activate your account within $preregspan hours!<br />As a result your pre-registration has been removed!<br />Please re-register again!",
+'6' => "You did not activate your account within $preregspan hours!<br />As a result your pre-registration has been removed!<br />Please re-register again!",
+#'7' => "Use Pre-registration and account activation",
+'7' => "Use Pre-registration and account activation",
+#'8' => "Show pre-registration and account activation log",
+'8' => "Show pre-registration and account activation log",
+#'9' => "Clean pre-registration and account activation log",
+'9' => "Clean pre-registration and account activation log",
+#'10' => "Your activation code is wrong!",
+'10' => "Your activation code is wrong!",
+#'11' => "Max time span for users to activate their account hours",
+'11' => "Max time span for users to activate their account hours",
+#'12' => "Remove pre-registered user",
+'12' => "Remove pre-registered user",
+#'13' => "This user is already pre-registered!",
+'13' => "This user is already pre-registered!",
+#'14' => "This user was not pre-registered or the allowed time span of $preregspan hours expired!",
+'14' => "This user was not pre-registered or the allowed time span of $preregspan hours expired!",
+'14a' => "Цей акаунт вже активовано",
+#'15' => "The allowed activation time span of $preregspan hours expired!",
+'15' => "The allowed activation time span of $preregspan hours expired!",
+#'15a' => "View Registration Log",
+'15a' => "View Registration Log",
+#'16' => "Delete",
+'16' => "Delete",
+'16a' => "Активувати",
+#'17' => "Date and Time",
+'17' => "Date and Time",
+#'18' => "Status",
+'18' => "Status",
+#'19' => "Pre-registered UserID",
+'19' => "Pre-registered UserID",
+#'20' => "This is the logfile for pre-registration of users.<br />Non activate pre-registrations can be removed.",
+'20' => "This is the logfile for pre-registration of users.<br />Non activate pre-registrations can be removed.",
+#'N' => "Not Activated",
+'N' => "Not Activated",
+#'A' => "Activated",
+'A' => "Activated",
+#'T' => "Time Out Delete",
+'T' => "Time Out Delete",
+#'E' => "Activation Key Error",
+'E' => "Activation Key Error",
+#'D' => "Admin Delete",
+'D' => "Admin Delete",
+#'LD' => "No log entries present",
+'LD' => "No log entries present",
+#);
+);
+#
+
+#1;
+1;

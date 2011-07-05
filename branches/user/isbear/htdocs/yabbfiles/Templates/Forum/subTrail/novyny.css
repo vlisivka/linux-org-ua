@@ -1,0 +1,115 @@
+
+h1 {
+text-align: center;
+font-family: serif;
+font-weight: normal;
+font-size: 2em;
+font-style: normal;
+color: yellow;
+}
+
+h1:first-letter {
+color: darkred;
+font-weight: bolder;
+}
+
+#nypoll {
+display: block;
+width: 99%;
+background-color: #DC9;
+padding: 3px;
+}
+
+.nyside, .nysidehead {
+display: block;
+width: 25%;
+float: right;
+clear: right;
+border: 1px solid green;
+padding: 3px;
+margin: 1%;
+}
+
+.nysidehead {
+color: #BDC;
+background-color: #465;
+font-weight: bold;
+text-align: center;
+margin-bottom: 0;
+}
+
+.nyside input {
+width: 99%;
+}
+
+.nysidebrd {
+display: block;
+width: 99%;
+padding: 1%;
+background-color: #CDC;
+}
+
+.nysidetopic {
+display: block;
+width: 99%;
+}
+
+.nysideimage {
+text-align: center;
+}
+
+.nysideimage img {
+width: 100%;
+border: 0px none black;
+}
+
+.nyitem, .nypages {
+display: block;
+width: 70%;
+margin: 1%;
+}
+
+.nypages {
+padding: 2px;
+background-color: #DC8;
+font-size: 0.8em;
+font-family: monospace;
+font-weight: bold;
+}
+
+.nyitem>* {
+display: block;
+width: 100%;
+padding: 2px;
+}
+
+.nytopic {
+background-color: #ED9;
+}
+
+.nytopic a {
+font-weight: bold;
+}
+
+.nymessage {
+background-color: #EDA;
+padding-bottom: 1em;
+}
+
+.nyfooter {
+background-color: #EDA;
+font-size: 0.9em;
+font-weight: bold;
+border-bottom: 1px solid #CD7;
+}
+
+#nyfoot {
+clear: both;
+display: block;
+width: 99%;
+padding: 3px;
+border: 1px solid yellow;
+font-weight: bolder;
+text-align: center;
+}
+

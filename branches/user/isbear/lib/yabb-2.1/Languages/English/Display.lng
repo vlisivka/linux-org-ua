@@ -1,0 +1,62 @@
+###############################################################################
+# Display.lng (Display text definitions)                                      #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 8, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+#               Your source for web hosting, web design, and domains.         #
+###############################################################################
+
+%display_txt = (
+'1' => "You are not allowed to access this section.",
+'19' => "Page Index toggle",
+'21' => "Posts",
+'23' => "Unable to open",
+'24' => "(No subject)",
+'28' => "Guest",
+'29' => "Author",
+'30' => "on",
+'63' => "Moderators",
+'63a' => "Moderator Groups",
+##### Do no edit the words DATE, AUTHOR and QUOTE!
+'68' => "<b>on DATE, AUTHOR wrote:</b><br /><div class=\"quote\" style=\"width: 90%\">QUOTE</div>",
+'106' => "An Error Has Occurred!",
+'116' => "Post Reply",
+'118' => "Topic",
+'139' => "Pages",
+'146' => "Reply",
+'162' => "Are you sure you want to remove this topic\?",
+'211' => "Last Edit",
+'298' => "Moderator",
+'298a' => "Moderator Group",
+'337' => "This field only accepts numbers from 0-9",
+'470' => "N/A",
+'470a' => "<i>Ex Member</i>",
+'511' => "IP Logged",
+'525' => "by",
+'641' => "Read",
+'642' => "times",
+'643' => "Back to top",
+'644' => "Members viewing this topic",
+'645' => "replying",
+'646' => "Members replying to this topic",
+'739' => "Are you sure you want to delete this post?",
+'766' => "No topic",
+'767' => "Next topic",
+'768' => "Previous topic",
+'769' => "Flash location",
+'888' => "Browsing topic",
+'online' => 'Online',
+);
+
+$display_polltxt{'2a'} = "Add Poll";
+$mdintxt{'3'} = "Delete Selected";
+
+1;

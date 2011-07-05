@@ -1,0 +1,236 @@
+/*
+This is the CSS that will add a little bit of style
+to your board. If you're not sure what's what in this
+file, have no fear! Check out the links below. They
+contain all you'll need to understand every single 
+line here!
+
+A great introductrion to CSS
+http://www.w3schools.com/css/css_intro.asp
+
+One of the best CSS 2 Referenes on the web -
+http://www.w3schools.com/css/css_reference.asp
+
+Enjoy, and happy tweeking!
+- YaBB Development Team
+*/
+
+/* General layout */
+a:link {
+font-weight: normal;
+text-decoration: none;
+color: #475F79;
+}
+a:visited {
+color: #475F79;
+text-decoration: none;
+font-weight: normal;
+}
+a:hover {
+color: #00AEEF;
+text-decoration: none;
+font-weight: normal;
+}
+body {
+background-color: #efefef;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size:12px;
+margin-top: 0;
+margin-left: 0;
+margin-right: 0;
+padding-top: 0;
+padding-left: 0;
+padding-right: 0;
+}
+text {
+font-family: Verdana, Helvetica, Arial, sans-serif; 
+font-size: 11px;
+}
+td {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+color: #000000;
+font-size: 11px;
+}
+input {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+color: #000000;
+border: 1px solid #C2C6CF;
+}
+textarea {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 9pt;
+color: #000000;
+border: 1px solid #C2C6CF;
+}
+select {
+background-color: #F1F2F4;
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 7pt;
+color: #000000;
+}
+.copyright {
+font-family: Verdana, Helvetica, Arial, sans-serif;
+font-size: 10px;
+}
+
+/* YaBB navigation links */
+a.nav {
+color: #000000; 
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+}
+a.nav:link {
+color: #000000;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+}
+a.nav:visited {
+color: #000000;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+}
+a.nav:hover {
+color: #cc3333;
+background-color: transparent;
+text-decoration: underline;
+font-weight: bold;
+}
+a.navcur {
+color: #000000;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+}
+a.navcur:link {
+color: #000000;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+}
+a.navcur:hover {
+color: #cc3333;
+background-color: transparent;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+}
+/* YaBB alternating bgcolors */
+.windowbg {
+background-color: #E0E4EB;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg2 {
+background-color: #FEFEFE;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+.windowbg3 {
+background-color: #EDEEF1;
+font-size: 11px;
+font-family: Verdana, sans-serif;
+color: #000000;
+}
+
+/* Misc./title/category colors */
+.hr {
+color: #A7B8CC;
+}
+.titlebg {
+background-color: #D0D9E2;
+color: #475F79;
+font-size: 13px;
+}
+.text1 {
+font-style: normal;
+font-size: 12px;
+color: #475F79;
+}
+.top{
+font-style: normal;
+font-size: 11px;
+color: #475F79;
+}
+.catbg {
+background-color: #FEFEFE;
+color: #000000;
+font-size: 13px;
+}
+.bordercolor {
+background-color: #CCCCCC;
+}
+.small {
+font-size: 10px;
+font-family: verdana, sans-serif;
+}
+h2{
+margin: 0px;
+display: inline;
+}
+.highlight {
+font-size: 13px;
+font-family: verdana, sans-serif;
+font-weight: bold;
+background-color: #FFFF33;
+color: #000000;
+}
+
+/* Image fonts */
+.imgbg {
+font-style: normal;
+font-size: 10px;
+color: #005177;
+}
+.imgcatbg {
+font-style: normal;
+font-size: 10px;
+color: #005177;
+font-weight: bold;
+}
+.imgtitlebg {
+font-style: normal;
+font-size: 10px;
+color: #FFFFFF;
+font-weight: bold;
+}
+.imgwindowbg {
+font-style: normal;
+font-size: 9px;
+color: #005177;
+}
+.imgmenu {
+font-style: normal;
+font-size: 11px;
+color: #475F79;
+font-weight: bold;
+}
+
+/* Post quote/code colors */
+.quote {
+font-size: 10px;
+font-family: Verdana, Helvetica, Arial;
+color: #000000;
+background-color: #DEE7EF;
+border: 1px #6394BD solid;
+width: 90%;
+padding: 4px;
+}
+.code {
+font-size: 12px;
+font-family: Courier New;
+color: #000000;
+background-color: #CCCCCC;
+border: 1px #000000 solid;
+width: 90%;
+padding: 4px;
+}

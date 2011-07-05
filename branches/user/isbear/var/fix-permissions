@@ -1,0 +1,8 @@
+#!/bin/sh
+
+BIN_DIR=`dirname "$0"`
+cd "$BIN_DIR"
+
+chmod a+rX .
+
+chmod -R ug=rwX,o=rX yabb*

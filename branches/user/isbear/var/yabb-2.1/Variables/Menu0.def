@@ -1,0 +1,99 @@
+###############################################################################
+# Menu0.def (Image text/images definitions)                                   #
+###############################################################################
+# YaBB: Yet another Bulletin Board                                            #
+# Open-Source Community Software for Webmasters                               #
+# Version:        YaBB 2.1                                                    #
+# Released:       November 3, 2005                                            #
+# Distributed by: http://www.yabbforum.com                                    #
+# =========================================================================== #
+# Copyright (c) 2000-2005 YaBB (www.yabbforum.com) - All Rights Reserved.     #
+# Software by: The YaBB Development Team                                      #
+#              with assistance from the YaBB community.                       #
+# Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
+###############################################################################
+
+$englishlngver = "YaBB 2.1";
+
+$imgext = "gif";
+
+$menusep = ' ';
+%img = (
+'admin' => "<img src=\"$imagesdir/admin.$imgext\" alt=\"$img_txt{'2'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'2'}</span>",
+'admin_func' => "<img src=\"$imagesdir/admin.$imgext\" alt=\"$img_txt{'137'}\" border=\"0\" /> <span class=\"imgbg\">$img_txt{'137'}</span>",
+'collapse' => "<img src=\"$imagesdir/cat_collapse.$imgext\" alt=\"$img_txt{'623'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'623'}</span>",
+'expand' => "<img src=\"$imagesdir/cat_expand.$imgext\" alt=\"$img_txt{'624'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'624'}</span>",
+'email' => "<img src=\"$imagesdir/email.$imgext\" alt=\"$img_txt{'69'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'69'}</span>",
+'email_sm' => "<img src=\"$imagesdir/email.$imgext\" alt=\"$img_txt{'69'}\" border=\"0\" />",
+'favorites' => "<img src=\"$imagesdir/favorites.$imgext\" alt=\"$img_txt{'70'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'70'}</span>",
+'help' => "<img src=\"$imagesdir/help.$imgext\" alt=\"$img_txt{'119'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'119'}</span>",
+'home' => "<img src=\"$imagesdir/home.$imgext\" alt=\"$img_txt{'103'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'103'}</span>",
+'im_config' => "<img src=\"$imagesdir/im_config.$imgext\" alt=\"$img_txt{'323'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'323'}</span>",
+'im_delete' => "<img src=\"$imagesdir/im_delete.$imgext\" alt=\"$img_txt{'412'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'412'}</span>",
+'im_inbox' => "<img src=\"$imagesdir/im_inbox.$imgext\" alt=\"$img_txt{'316'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'316'}</span>",
+'im_new' => "<img src=\"$imagesdir/im_new.$imgext\" alt=\"$img_txt{'321'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'321'}</span>",
+'im_outbox' => "<img src=\"$imagesdir/im_outbox.$imgext\" alt=\"$img_txt{'320'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'320'}</span>",
+'im_remove' => "<img src=\"$imagesdir/remove.$imgext\" alt=\"$img_txt{'31'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'31'}</span>",
+'im_reload' => "<img src=\"$imagesdir/im_reload.$imgext\" alt=\"$img_txt{'322'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'322'}</span>",
+'lastpost' => "<img src=\"$imagesdir/lastpost.$imgext\" alt=\"$img_txt{'105'}\" border=\"0\" />",
+'lock' => "<img src=\"$imagesdir/locked.$imgext\" alt=\"$img_txt{'104'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'104'}</span>",
+'login' => "<img src=\"$imagesdir/login.$imgext\" alt=\"$img_txt{'34'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'34'}</span>",
+'logout' => "<img src=\"$imagesdir/logout.$imgext\" alt=\"$img_txt{'108'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'108'}</span>",
+'markallread' => "<img src=\"$imagesdir/markread.$imgext\" alt=\"$img_txt{'452'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'452'}</span>",
+'markboardread' => "<img src=\"$imagesdir/markread.$imgext\" alt=\"$img_txt{'300'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'300'}</span>",
+'memberlist' => "<img src=\"$imagesdir/guest.$imgext\" alt=\"$img_txt{'331'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'331'}</span>",
+'message' => "<img src=\"$imagesdir/message.$imgext\" alt=\"$img_txt{'144'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'144'}</span>",
+'message_sm' => "<img src=\"$imagesdir/message.$imgext\" alt=\"$img_txt{'144'}\" border=\"0\" />",
+'newthread' => "<img src=\"$imagesdir/new_thread.$imgext\" alt=\"$img_txt{'33'}\" border=\"0\" /><span class=\"imgcatbg\">$img_txt{'33'}</span>",
+'notification' => "<img src=\"$imagesdir/notify.$imgext\" alt=\"$img_txt{'418'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'418'}</span>",
+'notify' => "<img src=\"$imagesdir/notify.$imgext\" alt=\"$img_txt{'131'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'131'}</span>",
+'pollicon' => "<img src=\"$imagesdir/poll_open.$imgext\" alt=\"\" border=\"0\" />",
+'polliconnew' => "<img src=\"$imagesdir/poll_new.$imgext\" alt=\"\" border=\"0\" />",
+'polliconclosed' => "<img src=\"$imagesdir/poll_lock.$imgext\" alt=\"\" border=\"0\" />",
+'print' => "<img src=\"$imagesdir/print.$imgext\" alt=\"$img_txt{'465'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'465'}</span>",
+'profile' => "<img src=\"$imagesdir/profile.$imgext\" alt=\"$img_txt{'467'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'467'}</span>",
+'register' => "<img src=\"$imagesdir/register.$imgext\" alt=\"$img_txt{'97'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'97'}</span>",
+'removetopic' => "<img src=\"$imagesdir/remove.$imgext\" alt=\"$img_txt{'63'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'63'}</span>",
+'reply' => "<img src=\"$imagesdir/reply.$imgext\" alt=\"$img_txt{'146'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'146'}</span>",
+'regtoreply' => "<img src=\"$imagesdir/register.$imgext\" alt=\"$img_txt{'146a'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'146a'}</span>",
+'search' => "<img src=\"$imagesdir/search.$imgext\" alt=\"$img_txt{'182'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'182'}</span>",
+'sessreval' => "<img src=\"$imagesdir/session.$imgext\" alt=\"$img_txt{'34a'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'34a'}</span>",
+'sendtopic' => "<img src=\"$imagesdir/sendtopic.$imgext\" alt=\"$img_txt{'707'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'707'}</span>",
+'viewprofile' => "<img src=\"$imagesdir/profile.$imgext\" alt=\"$img_txt{'27'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'27'}</span>",
+'viewprofile_sm' => "<img src=\"$imagesdir/profile.$imgext\" alt=\"$img_txt{'27'}\" border=\"0\" />",
+'website' => "<img src=\"$imagesdir/www.$imgext\" alt=\"$img_txt{'515'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'515'}</span>",
+'website_sm' => "<img src=\"$imagesdir/www.$imgext\" alt=\"$img_txt{'515'}\" border=\"0\" />",
+'mem_online' => "<nobr><img src=\"$imagesdir/greenon.$imgext\" alt=\"$img_txt{'686'}\" border=\"0\" align=\"middle\" />",
+'mem_offline' => "<nobr><img src=\"$imagesdir/redoff.$imgext\" alt=\"$img_txt{'687'}\" border=\"0\" align=\"middle\" />",
+'mark_ims' => "<img src=\"$imagesdir/markread.$imgext\" alt=\"$img_imtxt{'32'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_imtxt{'32'}</span>",
+'markunread' => "<img src=\"$imagesdir/markunread.$imgext\" alt=\"$img_txt{'627'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'627'}</span>",
+'reply_ims' => "<img src=\"$imagesdir/reply.$imgext\" alt=\"$img_txt{'146'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'146'}</span>",
+'buddylist' => "<img src=\"$imagesdir/buddylist.$imgext\" alt=\"$img_imtxt{'42'}\" border=\"0\" /> <span class=\"imgmenu\">$img_imtxt{'42'}</span>",
+'im_store' => "<img src=\"$imagesdir/imstore.$imgext\" alt=\"$img_imtxt{'46'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_imtxt{'46'}</span>",
+'print_im' => "<img src=\"$imagesdir/print.$imgext\" alt=\"$img_txt{'465'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'465'}</span>",
+'createpoll' => "<img src=\"$imagesdir/poll_create.$imgext\" alt=\"$img_polltxt{'1'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'1'}</span>",
+'addpoll' => "<img src=\"$imagesdir/poll_create.$imgext\" alt=\"$img_polltxt{'2'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'2'}</span>",
+'modifypoll' => "<img src=\"$imagesdir/poll_mod.$imgext\" alt=\"$img_polltxt{'39'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'39'}</span>",
+'deletepoll' => "<img src=\"$imagesdir/poll_del.$imgext\" alt=\"$img_polltxt{'27'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'27'}</span>",
+'openpoll' => "<img src=\"$imagesdir/poll_lock.$imgext\" alt=\"$img_polltxt{'20'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'20'}</span>",
+'closepoll' => "<img src=\"$imagesdir/poll_lock.$imgext\" alt=\"$img_polltxt{'21'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_polltxt{'21'}</span>",
+'viewvotes' => "<img src=\"$imagesdir/poll_vvote.$imgext\" alt=\"$img_polltxt{'33'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_polltxt{'33'}</span>",
+'deletevote' => "<img src=\"$imagesdir/poll_dvote.$imgext\" alt=\"$img_polltxt{'43'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_polltxt{'43'}</span>",
+'modify' => "<img src=\"$imagesdir/modify.$imgext\" alt=\"$img_txt{'66'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'66'}</span>",
+'modify_profile' => "<img src=\"$imagesdir/modify.$imgext\" alt=\"$img_txt{'66'}\" border=\"0\" /> <span class=\"imgmenu\">$img_txt{'66'}</span>",
+'replyquote' => "<img src=\"$imagesdir/quote.$imgext\" alt=\"$img_txt{'145'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'145'}</span>",
+'recentquote' => "<img src=\"$imagesdir/quote.$imgext\" alt=\"$img_txt{'145'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'145'}</span>",
+'delete' => "<img src=\"$imagesdir/delete.$imgext\" alt=\"$img_txt{'121'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'121'}</span>",
+'hide' => "<img src=\"$imagesdir/hide.$imgext\" alt=\"$img_txt{'622'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'622'}</span>",
+'addfav' => "<img src=\"$imagesdir/addfav.$imgext\" alt=\"$img_txt{'625'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'625'}</span>",
+'remfav' => "<img src=\"$imagesdir/remfav.$imgext\" alt=\"$img_txt{'626'}\" border=\"0\" /> <span class=\"imgcatbg\">$img_txt{'626'}</span>",
+'admin_rem' => "<img src=\"$imagesdir/admin_rem.$imgext\" alt=\"$img_txt{'54'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'54'}</span>",
+'admin_del' => "<img src=\"$imagesdir/admin_rem.$imgext\" alt=\"$img_txt{'55'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'55'}</span>",
+'admin_sticky' => "<img src=\"$imagesdir/sticky.$imgext\" border=\"0\" alt=\"$img_txt{'781'}\" /> <span class=\"imgwindowbg\">$img_txt{'781'}</span>",
+'admin_split' => "<img src=\"$imagesdir/admin_split.$imgext\" border=\"0\" alt=\"$img_txt{'620a'}\" /> <span class=\"imgwindowbg\">$img_txt{'620'}</span>",
+'admin_splice' => "<img src=\"$imagesdir/admin_splice.$imgext\" border=\"0\" alt=\"$img_txt{'621a'}\" /> <span class=\"imgwindowbg\">$img_txt{'621'}</span>",
+'admin_lock' => "<img src=\"$imagesdir/locked.$imgext\" alt=\"$img_txt{'104'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'104'}</span>",
+'admin_move' => "<img src=\"$imagesdir/admin_move.$imgext\" alt=\"$img_txt{'132'}\" border=\"0\" /> <span class=\"imgwindowbg\">$img_txt{'132'}</span>",
+);
+
+1;

@@ -1,0 +1,231 @@
+#!/usr/bin/perl -T
+#use CGI::Debug;
+use strict;
+use locale;
+use utf8;
+use encoding 'utf-8', STDOUT => 'utf-8';
+
+use CGI qw/param/;
+use Text::Iconv;
+
+require "./bbcode.pl";
+
+our ($boardsdir, $datadir);
+require "./Paths.pl";
+
+our ( $mloaded, @categoryorder, %cat, %catinfo, %board);
+require "$boardsdir/forum.master";
+
+# Return list of all available groups
+sub all_groups() {
+  my @groups=();
+  foreach my $catName (@categoryorder)
+  {
+    push @groups, split(/,/, $cat{$catName});
+  }
+  return @groups;
+}
+
+
+if(param('help'))
+{
+  my $all_groups=join(', ', all_groups());
+  print <<HELP;
+Content-type: text/plain; charset=UTF-8
+
+Usage:
+  yabb2rss?group=NAME[&group=NAME2&...][&body=yes[&cdata=yes]]
+
+ group=NAME    group (board) ID
+ body=0    don\'t include message body into RSS (default)
+ body=1    include message body into RSS
+ cdata=0   don\'t include body into <![CDATA[ ]]> brackets
+ cdata=1   include body into <![CDATA[ ]]> brackets
+           (now default, no workarounds needed)
+ encoding  convert text to another encoding , eg. encoding=UTF-8
+ maxlength=LENGTH maximum allowed length of message body
+           default is 350. Set to 0 to disable limit.
+ 
+ Available groups: $all_groups.
+HELP
+  
+  exit(0);
+}
+
+my @groups=param('group');
+my $withDescriptions=param('body');
+my $cdata=param('cdata') || 1;
+my $encoding=param('encoding');
+my $len_limit=param('maxlength');
+
+if(not defined $len_limit or $len_limit !~ /^[0-9]+$/) {
+    $len_limit = 350;
+}
+
+if($encoding ne '' && $encoding=~m/^([a-zA-Z0-9_-]+)$/)
+{
+    $encoding=$1;
+}else
+{
+    $encoding='UTF-8';
+}
+
+my $converter;
+if($encoding)
+{
+# print "$encoding\n"; #debug output //prapor
+ $converter=Text::Iconv->new("utf-8",$encoding);
+}
+
+#Для відлагодки
+if(scalar(@groups)==0)
+{
+  @groups=all_groups();
+}
+
+@groups=map { /([a-zA-Z0-9_-]+)/; $1} @groups;
+
+print "Content-Type: text/xml; charset=$encoding\r\n\r\n";
+
+my $doctype='<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN" "http://my.netscape.com/publish/formats/rss-0.91.dtd" >';
+$doctype='' if(scalar(@groups)>1 or ($withDescriptions and not $cdata));
+
+print <<HEADER;
+<?xml version="1.0" encoding="$encoding" ?>
+<?xml-stylesheet type="text/xsl" href="/include/rss-view.xsl"?>
+$doctype
+<rss version="0.91">
+HEADER
+
+for my $group(@groups)
+{
+
+# Use group name for title
+  my ($title, undef)= split /\|/,$board{$group};
+  my $description="";
+
+  #Конвертує заголовок та текст у вибране кодування
+  if($encoding)
+  {
+    $title=$converter->convert($title);
+    $description = $converter->convert($description);
+  }
+
+ 
+  print <<CHANEL_HEADER;
+<channel>
+ <title>$title</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group</link>
+ <description>$description</description>
+ <language>uk-ua</language>
+ <copyright>linux.org.ua community</copyright>
+ <managingEditor>vlisivka\@gmail.com</managingEditor>
+ <webMaster>vlisivka\@gmail.com</webMaster>
+ 
+ <image>
+  <title>linux.org.ua</title>
+  <url>http://linux.org.ua/lambada-icons/linux-org-ua.gif</url>
+  <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group</link>
+  <width>88</width>
+  <height>31</height>
+ </image>
+ 
+CHANEL_HEADER
+
+#Read posts headers
+#FIXME: Мабуть не варто читати більше сотні заголовків за раз
+open(POSTS,"<$boardsdir/$group.txt");
+my @posts=<POSTS>;
+close(POSTS);
+@posts=sort {(split('\|',$b,2))[0] <=> (split('\|',$a,2))[0]} @posts;
+
+#Display posts
+my $count=0;
+for my $line(@posts)
+{
+  chomp $line;
+  my ($ctime,$subject,$userName,$userEmail,$date,$replies,$login,$icon,$status)=split('\|',$line);
+
+  next if($status =~ /m/);
+  last if($count++>=10);
+  $replies.=' '.plural($replies,"коментар","коментарі","коментарів");
+  my $dateStr=ukrDate($ctime);
+
+
+  if($encoding)
+  {
+    $replies=$converter->convert($replies);
+    $dateStr=$converter->convert($dateStr);
+    $subject=$converter->convert($subject);
+  }
+
+  $subject =~ s/&/\&amp;/ig; 
+  $subject =~ s/\[ch(\d{3,})\]/&#$1;/sig;
+  $subject =~ s/&nbsp;/\&#160;/ig;
+ 
+  if($withDescriptions)
+  {#Просять включати тіло новини
+  
+    #Read post body
+    open(MESSAGES,"<$datadir/$ctime.txt");
+    my $firstMessage=<MESSAGES>;
+    close(MESSAGES);
+    
+    my ($subject2,$userName2,$userEmail2,$date2,$login2,$icon2,$attach,$ip,$body,$ns,$mlm,$mlmb,$msf,$mfn)=split('\|',$firstMessage,11);
+
+    # Cut too long bodies (may break markup)
+    if ($len_limit and $len_limit < length ($body)) {
+        # Crude cutting on the end of word...
+        $body = substr ($body, 0, $len_limit);
+        $body =~ s/\s+\S*$//o;
+        $body .= " ...";
+    }
+
+    $body = parseBBCode($body);
+
+    # Шукаєм та заміняєм nbsp на #160 в темі та тілі повідомлення
+#    $body =~ s/&/\&amp;/ig; 
+    $body =~ s/&nbsp;/\&#160;/ig;
+#    $body =~ s/\[ch(\d{3,})\]/&#$1;/sig;
+
+    # Обрізаєм повідомлення після горизонтальної лінійки
+    $body=~s{(<br />)?<hr />(.*)$}{"<br /><a href=\"YaBB.pl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
+    if($encoding)
+    {
+      $body = $converter->convert($body);
+    }
+
+    
+    #Просять взяти тіло повідомлення в лапки, як по стандарту
+    $body="<![CDATA[$body]]>" if($cdata);
+
+   
+    print <<ITEM;
+<item>
+ <title>$subject</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;action=display;num=$ctime</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;num=$ctime/0</guid>
+ <description>$body</description>
+</item>
+ITEM
+  }else
+  {
+    print <<ITEM;
+<item>
+ <title>$subject</title>
+ <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;action=display;num=$ctime</link>
+ <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;num=$ctime</guid>
+</item>
+ITEM
+  }
+
+}
+
+  print <<CHANEL_FOOTER;
+</channel>
+CHANEL_FOOTER
+  }
+
+print <<FOOTER;
+</rss>
+FOOTER
