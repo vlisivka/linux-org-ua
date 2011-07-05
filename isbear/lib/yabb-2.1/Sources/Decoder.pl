@@ -325,6 +325,7 @@ sub convert {
 		$im->stringFT ($foreground[rand(@foreground)], $font, 15 + rand(6), rand(0.7), $x, 20 + rand(10), $_);
 		$x += 12 + rand(6);
 	}
+	binmode STDOUT, ':bytes';
 	print "Content-type: image/png\n\n", $im->png;
 }
 

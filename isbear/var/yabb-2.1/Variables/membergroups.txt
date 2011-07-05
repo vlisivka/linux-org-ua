@@ -1,3 +1,6 @@
+
+use utf8;
+
 $Group{'Global Moderator'} = 'Загальний модератор|5|stargmod.gif|blue|0|0|0|0|0|0';
 $Group{'Moderator'} = 'Модератор дошки|5|starmod.gif|green|0|0|0|0|0|0';
 $Group{'Administrator'} = 'Адміністратор ЩОДО|5|staradmin.gif|teal|0|0|0|0|0|0';
