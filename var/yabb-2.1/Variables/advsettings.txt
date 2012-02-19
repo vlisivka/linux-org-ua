@@ -35,9 +35,9 @@ $numibox = 20;                                                        # Number o
 $numobox = 20;                                                        # Number of maximum Messages in the IM-Outbox
 $numstore = 20;                                                       # Number of maximum Messages in the Storage box
 $enable_imlimit = 0;                                                  # Set to 1 to enable limitation of incoming and outgoing im messages
-$imtext = qq~Welcome to my boards~;
+$imtext = qq~Вітаємо на нашому форумі!~;
 $sendname = "admin";
-$imsubject = "Hey Hey :)";
+$imsubject = "Привіт :)";
 $send_welcomeim = 0;                                                  ######### Topic Summary Cutter #############
 
 $cutamount  = "15";                                                   # Number of posts to list in topic summary
@@ -55,7 +55,7 @@ $tllastmodtime = 30;                                                  # Time lim
 ########## File Attachment Settings ##########
 
 $limit = 500;                                                         # Set to the maximum number of kilobytes an attachment can be. Set to 0 to disable the file size check.
-$dirlimit = 100000;                                                   # Set to the maximum number of kilobytes the attachment directory can hold. Set to 0 to disable the directory size check.
+$dirlimit = 1000000;                                                  # Set to the maximum number of kilobytes the attachment directory can hold. Set to 0 to disable the directory size check.
 $overwrite = 0;                                                       # Set to 0 to auto rename attachments if they exist, 1 to overwrite them or 2 to generate an error if the file exists already.
 @ext = qw(jpg jpeg gif png svg zip gz bz2 rpm deb pdf);               # The allowed file extensions for file attachements. Variable should be set in the form of "jpg bmp gif" and so on.
 $checkext = 1;                                                        # Set to 1 to enable file extension checking, set to 0 to allow all file types to be uploaded
