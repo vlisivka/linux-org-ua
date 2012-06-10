@@ -148,6 +148,7 @@ sub sizefont {
 
 	sub codemsg {
 		my $code = $_[0];
+		my $lang = $_[1];
 		&ToChars($code);
 		if ($code !~ /&\S*;/) { $code =~ s/;/&#059;/g; }
 		$code =~ s~([\(\)\-\:\\\/\?\!\]\[\.\^])~$killhash{$1}~g;
@@ -168,9 +169,44 @@ sub sizefont {
 		# try to display text as it was originally intended
 		$code =~ s~ \&nbsp; \&nbsp; \&nbsp;~\t~ig;
 		$code =~ s~\&nbsp;~ ~ig;
-#		$code =~ s~ ?\n ?~\[code_br\]~ig;            # we need to keep normal linebreaks inside <pre> tag
+
+		if ( defined $lang ) {
+			# try to use highlight module
+			# XXX will encoding work well with non-utf8 data?
+			eval "use highlight";
+			if ( not $@ ) {
+				eval q{
+					our ( $yycharset );
+
+					use Encode;
+
+					my $gen = highlight::CodeGenerator::getInstance($highlight::CodeGenerator::XHTML);
+					my $dir = new highlight::DataDir();
+					$dir -> searchDataDir ( "" );
+					# have no effect, but required :/
+					my $themepath = $dir -> getThemePath ( "seashell.theme"  );
+					my $langpath  = $dir -> getLangPath  ( "$lang.lang" );
+
+					$gen -> initTheme    ( $themepath );
+					$gen -> loadLanguage ( $langpath  );
+
+					$gen -> setFragmentCode      ( 1 );
+					$gen -> setIncludeStyle      ( 0 );
+					$gen -> setHTMLEnclosePreTag ( 0 );
+					$gen -> setEncoding          ( $yycharset );
+
+					# highlight will take care of html escaping
+					&FromHTML ( $code );
+					$code =~ s/\&#(\d+);/ chr ( $1 ) /iesg;
+					$code = decode ( $yycharset, $gen -> generateString ( $code ) );
+
+					highlight::CodeGenerator::deleteInstance ( $gen );
+				};
+			}
+		}
+
 		$code =~ s~\n~\[code_br\]~ig;            # we need to keep normal linebreaks inside <pre> tag
-		$code = qq~<pre class="code" style="margin: 0px; width: 90%; $height overflow: auto;">$code\[code_br\][code_br\]</pre>~;
+		$code = qq~<pre class="code" style="margin: 0px; width: 90%; $height overflow: auto;">$code\[code_br\]</pre>~;
 		$_ =~ s~CODE~$code~g;
 		return $_;
 	}
@@ -197,7 +233,7 @@ sub DoUBBC {
 	$message =~ s~\[/glow\]~ \[/glow\]~ig;
 	$message =~ s~<br>~\n~ig;
 	$message =~ s~<br />~\n~ig;
-	$message =~ s~\[code\]\n*(.+?)\n*\[/code\]~&codemsg($1)~eisg;
+	$message =~ s~\[code(?:\s+lang=([a-z0-9_]+)\s*)?\]\n*(.+?)\n*\[/code\]~ &codemsg( $2, $1 ) ~eisg;
 	if ($message =~ /\#nosmileys/isg || $ns =~ "NS") { $message =~ s/\#nosmileys//isg; }
 	else { &MakeSmileys; }
 	$message =~ s~\[([^\]\[]{0,30})\n([^\]\[]{0,30})\]~\[$1$2\]~g;

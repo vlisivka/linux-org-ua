@@ -321,3 +321,23 @@ color: #ffc;
 border-top: 1px #000 solid;
 border-bottom: 1px #000 solid;
 }
+
+/* Code Highlighting */
+
+/* night */
+pre.code	{ color:#f0f0f8; background-color:#303040; font-size:10pt; font-family:'Courier New';}
+.hl.num { color:#b8b8c8; }
+.hl.esc { color:#40f8f8; }
+.hl.str { color:#f0f0f8; }
+.hl.pps { color:#f0f0f8; }
+.hl.slc { color:#e0e070; }
+.hl.com { color:#e0e070; }
+.hl.ppc { color:#33cc66; }
+.hl.opt { color:#f0f0f8; }
+.hl.lin { color:#e0e070; }
+.hl.kwa { color:#00d8f8; }
+.hl.kwb { color:#bbaaff; }
+.hl.kwc { color:#9d00f7; }
+.hl.kwd { color:#cc66cc; }
+
+/* The End */

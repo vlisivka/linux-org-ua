@@ -316,3 +316,23 @@ color: #0000ff;
 border-top: 1px #ffffff solid;
 border-bottom: 1px #ffffff solid;
 }
+
+/* Code Highlighting */
+
+/* nuvola */
+pre.code { color:#000000; background-color:#f9f5f9; font-size:10pt; font-family:'Courier New';}
+.hl.num { color:#00c226; }
+.hl.esc { color:#ee0000; }
+.hl.str { color:#b91f49; }
+.hl.pps { color:#b91f49; }
+.hl.slc { color:#3f6b5b; }
+.hl.com { color:#3f6b5b; }
+.hl.ppc { color:#000000; }
+.hl.opt { color:#000000; }
+.hl.lin { color:#3f6b5b; }
+.hl.kwa { color:#f06f00; }
+.hl.kwb { color:#0000ff; }
+.hl.kwc { color:#08f000; font-weight:bold; }
+.hl.kwd { color:#e800f0; }
+
+/* The End */
