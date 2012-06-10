@@ -1,3 +1,6 @@
+
+use utf8;
+
 $SectionName = "Довідковий_центр_ЩоДО";
 
 ### Section 1

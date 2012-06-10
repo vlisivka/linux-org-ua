@@ -7,7 +7,7 @@
 use strict;
 use warnings;
 no strict qw(refs); # >:( ${$uid.$login}{...}
-use Encode;
+#use Encode;
 
 our (%FORM, %INFO);
 our ($yySetLocation, $yycharset, $scripturl, $uid, $date);
@@ -51,9 +51,7 @@ sub group_gid {
 ## R: boolean
 sub push_ban_log {
 	my ( $who, $whom, $gid, $termin, $reason ) = @_;
-	$reason = decode ( $yycharset, $reason ); # XXX
 	fopen ( *BANLOG, ">> $vardir/banwithgroup.log" ) or return 0;
-	binmode BANLOG, ":encoding(UTF-8)"; # XXX
 	print BANLOG "$date|$who|$whom|$gid|$termin|$reason\n";
 	fclose ( *BANLOG );
 	return 1
@@ -64,7 +62,7 @@ sub push_ban_log {
 sub save_groups {
 	fopen ( *GRP, ">$vardir/membergroups.txt" )
 		or fatal_error $bangroup_txt{'cof'} . "$vardir/membergroups.txt";
-#	binmode GRP, ":encoding($yycharset)"; # XXX
+	print GRP     "\nuse utf8;\n\n";
 	print GRP map "\$Group{'$_'} = '$Group{$_}';\n",   keys %Group;
 	print GRP map "\$NoPost{'$_'} = '$NoPost{$_}';\n", keys %NoPost;
 	print GRP map "\$Post{'$_'} = '$Post{$_}';\n",     keys %Post;
@@ -418,7 +416,6 @@ sub show_ban_log {
 
 	fopen ( *BANLOG, "< $vardir/banwithgroup.log" )
 			or fatal_error ( $bangroup_txt{'cof'} . "$vardir/banwithgroup.log" );
-	binmode BANLOG, ":encoding(UTF-8)"; # XXX
 
 	our $yytitle = $bangroup_txt{'banlogtitle'};
 	our $yymain  = qq(<div class="windowbg"><div class="catbg">$bangroup_txt{'banlogtitle'}</div>);
@@ -426,7 +423,6 @@ sub show_ban_log {
 		chomp;
 
 		my ( $cdate, $who, $whom, $gid, $termin, $reason ) = split /\|/, $_;
-		$reason = encode ( $yycharset, $reason ); # XXX
 		
 		LoadUser ( $who )  if not exists ${$uid.$who}{'realname'};
 		LoadUser ( $whom ) if not exists ${$uid.$whom}{'realname'};

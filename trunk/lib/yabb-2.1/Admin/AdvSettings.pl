@@ -696,6 +696,8 @@ sub AdvSettings2 {
 # AdvSettings.txt                                                             #
 ###############################################################################
 
+use utf8;
+
 ########## In-Thread Multi Delete ##########
 
 \$mdadmin = $mdadmin;

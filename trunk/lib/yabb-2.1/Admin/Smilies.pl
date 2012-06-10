@@ -202,6 +202,7 @@ sub AddSmilies {
 	$count = 0;
 	$tempA = 0;
 	fopen(FILE, ">$vardir/Smilies.txt", 1);
+	print FILE "\nuse utf8;\n\n";
 	while ($FORM{"scd[$tempA]"}) {
 		$delcheck = $FORM{"delbox[$tempA]"};
 		$var1     = $FORM{"smimg[$tempA]"};

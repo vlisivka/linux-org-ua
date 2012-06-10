@@ -1,3 +1,6 @@
+
+use utf8;
+
 $SectionName = "Про_мене";
 
 ### Section 1

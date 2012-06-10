@@ -62,7 +62,6 @@ sub write_captcha_log_entry {
 		$value =~ s/[\n|]+//go;
 	}
 	fopen (*LOG, "+<$vardir/captcha.log") or return undef;
-	binmode LOG, ':encoding(UTF-8)';
 	my @log;
 	while (<LOG>) {
 		my ($ip, $uname, $timestamp) = split /\|/o;
@@ -84,7 +83,6 @@ sub write_captcha_log_entry {
 ## R: string or undef
 sub read_captcha_log_entry {
 	fopen (*LOG, "<$vardir/captcha.log") or return undef;
-	binmode LOG, ':encoding(UTF-8)';
 	my $value = undef;
 	my $vtimestamp = 0;
 	while (<LOG>) {
@@ -117,8 +115,6 @@ sub checkcaptcha_log {
 	if (not defined $word) {
 		return undef;
 	}
-
-	$ansver = decode ($yycharset, $ansver); # XXX: catch errors?
 
 	return $ansver eq $word;
 }
@@ -325,6 +321,7 @@ sub convert {
 		$im->stringFT ($foreground[rand(@foreground)], $font, 15 + rand(6), rand(0.7), $x, 20 + rand(10), $_);
 		$x += 12 + rand(6);
 	}
+	binmode STDOUT, ':bytes';
 	print "Content-type: image/png\n\n", $im->png;
 }
 

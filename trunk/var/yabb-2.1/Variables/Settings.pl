@@ -14,6 +14,8 @@
 #               Your source for web hosting, web design, and domains.         #
 ###############################################################################
 
+use utf8;
+
 ########## Board Info ##########
 # Note: these settings must be properly changed for YaBB to work
 

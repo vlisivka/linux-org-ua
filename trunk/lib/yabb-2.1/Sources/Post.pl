@@ -1645,7 +1645,7 @@ sub Post2 {
 		if ($upload_okay == 1) {
 			# create a new file on the server using the formatted ( new instance ) filename
 			if (fopen(NEWFILE, ">$uploaddir/$fixfile")) {
-				if ($isWIN) { binmode NEWFILE; }
+				binmode NEWFILE, ':bytes';
 
 				# start reading users HD.
 				while (<$filename>) {
@@ -1676,12 +1676,14 @@ sub Post2 {
 			$okatt = 1;
 			if ($fixfile =~ /(gif)$/i) {
 				fopen(ATTFILE, "$uploaddir/$fixfile");
+				binmode ATTFILE, ':bytes';
 				read(ATTFILE, $header, 10);
 				($giftest, undef, undef, undef, undef, undef) = unpack("a3a3C4", $header);
 				fclose(ATTFILE);
 				if ($giftest ne "GIF") { $okatt = 0; }
 			}
 			fopen(ATTFILE, "$uploaddir/$fixfile");
+			binmode ATTFILE, ':bytes';
 			while ( read(ATTFILE, $buffer, 1024) ) {
 				if ($buffer =~ /\<html/ig || $buffer =~ /\<script/ig) { $okatt = 0; last; }
 			}

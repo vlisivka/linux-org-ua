@@ -1994,6 +1994,8 @@ sub FloodControl2 {
 # SecSettings.txt                                                             #
 ###############################################################################
 
+use utf8;
+
 \$regcheck = $regcheck;					# Set to 1 if you want to enable automatic flood protection enabled
 \$codemaxchars = $codemaxchars;				# Set max length of validation code (15 is max)
 \$translayer = $translayer;				# Set to 1 background for validation image should be transparent

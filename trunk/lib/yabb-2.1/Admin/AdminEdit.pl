@@ -1180,6 +1180,8 @@ sub GmodSettings2 {
 	my $setfile = << "EOF";
 ### Gmod Releated Setttings ###
 
+use utf8;
+
 \$allow_gmod_admin = "$FORM{'allow_gmod_admin'}"; #
 \$allow_gmod_profile = "$FORM{'allow_gmod_profile'}"; #
 
@@ -1441,6 +1443,8 @@ sub ModifySettings2 {
 # Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
 #               Your source for web hosting, web design, and domains.         #
 ###############################################################################
+
+use utf8;
 
 ########## Board Info ##########
 # Note: these settings must be properly changed for YaBB to work
@@ -1930,6 +1934,8 @@ sub EditPaths2 {
 #              with assistance from the YaBB community.                       #
 # Sponsored by: Xnull Internet Media, Inc. - http://www.ximinc.com            #
 ###############################################################################
+
+use utf8;
 
 \$lastsaved = "$lastsaved";
 \$lastdate = "$lastdate";
