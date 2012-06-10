@@ -382,7 +382,7 @@ sub ShowNotifications {
 			fclose(FILE);
 			($msub, $mname, $memail, $mdate, $musername, $micon, $mattach, $mip, $mmessage) = split(/\|/, $messages[0]);
 			&ToChars($msub);
-			$$msub = &Censor($msub);
+			$msub = &Censor($msub);
 			&LoadUser($musername);
 
 			if (${$uid.$musername}{'realname'}) {
