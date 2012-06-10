@@ -1832,8 +1832,8 @@ sub Post2 {
 			}
 			&ManageMemberinfo("update", $username, '', '', $grp_after, ${$uid.$username}{'postcount'});
 
-			require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
-			snark_ammo_up ( $username );
+#			require "$sourcedir/Snark.pl" if not $loaded{'Snark.pl'};
+#			snark_ammo_up ( $username );
 
 		} else {
 			&UserAccount($username, "update", "lastpost");
