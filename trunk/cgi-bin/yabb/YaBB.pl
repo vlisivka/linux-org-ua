@@ -32,12 +32,6 @@ use Encode;
 
 @ARGV = map { decode ( 'utf8', $_ ) } @ARGV;
 
-# Make sure the module path is present
-# Some servers need all the subdirs in @INC too.
-push(@INC, "./Modules");
-push(@INC, "./Modules/Upload");
-push(@INC, "./Modules/Digest");
-
 if ($ENV{'SERVER_SOFTWARE'} =~ /IIS/) {
 	$yyIIS = 1;
 	$0 =~ m~(.*)(\\|/)~;
@@ -47,17 +41,23 @@ if ($ENV{'SERVER_SOFTWARE'} =~ /IIS/) {
 	push(@INC, $yypath);
 }
 
-# Check for Time::HiRes
-#eval { require Time::HiRes; import Time::HiRes qw(time); };
-#if ($@) { $START_TIME = 0; }
-#else { $START_TIME = time; }
-
 ### Requirements and Errors ###
 $script_root = $ENV{'SCRIPT_FILENAME'};
 $script_root =~ s/\/YaBB\.(pl|cgi)//ig;
 
 if (-e "Paths.pl") { require "Paths.pl"; }
 elsif (-e "$script_root/Paths.pl") { require "$script_root/Paths.pl"; }
+
+# Make sure the module path is present
+# Some servers need all the subdirs in @INC too.
+push(@INC, "$modulesdir");
+push(@INC, "$modulesdir/Upload");
+push(@INC, "$modulesdir/Digest");
+
+# Check for Time::HiRes
+#eval { require Time::HiRes; import Time::HiRes qw(time); };
+#if ($@) { $START_TIME = 0; }
+#else { $START_TIME = time; }
 
 require "$vardir/Settings.pl";
 require "$vardir/advsettings.txt";

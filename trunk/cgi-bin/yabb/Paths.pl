@@ -22,6 +22,7 @@ $datadir   = "$rd$drd/Messages";	# Directory with messages
 $memberdir = "$rd$drd/Members";	# Directory with member files
 $vardir    = "$rd$drd/Variables";	# Directory with variable files
 
+$modulesdir   = "$rd$srd/Modules";      # Directory with third-party modules, used by YaBB
 $sourcedir    = "$rd$srd/Sources";	# Directory with YaBB source files
 $admindir     = "$rd$srd/Admin";	# Directory with YaBB admin source files
 $langdir      = "$rd$srd/Languages";	# Directory with Language files and folders
