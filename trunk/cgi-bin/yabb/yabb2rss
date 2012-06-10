@@ -1,17 +1,25 @@
-#!/usr/bin/perl -T
-#use CGI::Debug;
+#!/usr/bin/perl
+
+# TODO
+# * use settings for hostmaster and board name information
+# * allow rss on individual threads, recent, new messages
+#   probably it's easier to do in yabb by adding alternative
+#   representation method
+# * handle unclosed html tags (<a>[cut]</a>)
+
 use strict;
 use locale;
 use utf8;
-use encoding 'utf-8', STDOUT => 'utf-8';
 
-use CGI qw/param/;
-use Text::Iconv;
+use DateTime;
+use CGI qw/param url/;
 
 require "./bbcode.pl";
 
-our ($boardsdir, $datadir);
+our ($boardurl, $boardsdir, $datadir);
 require "./Paths.pl";
+my $yabburl   = "$boardurl/YaBB.pl";
+my $scripturl = url ();
 
 our ( $mloaded, @categoryorder, %cat, %catinfo, %board);
 require "$boardsdir/forum.master";
@@ -26,6 +34,12 @@ sub all_groups() {
   return @groups;
 }
 
+my $tz = DateTime::TimeZone -> new ( name => 'local' );
+# Formats time for RSS (RFC822)
+sub rss_format_time {
+	my ( $time ) = @_;
+	return DateTime -> from_epoch ( time_zone => $tz, epoch => $time ) -> strftime ( "%a, %d %b %Y %H:%M:%S %z" );
+}
 
 if(param('help'))
 {
@@ -52,30 +66,24 @@ HELP
   exit(0);
 }
 
-my @groups=param('group');
-my $withDescriptions=param('body');
-my $cdata=param('cdata') || 1;
-my $encoding=param('encoding');
-my $len_limit=param('maxlength');
+my @groups           = param('group');
+my $withDescriptions = param('body');
+my $cdata            = param('cdata') || 1;
+my $encoding         = param('encoding');
+my $len_limit        = param('maxlength');
 
 if(not defined $len_limit or $len_limit !~ /^[0-9]+$/) {
     $len_limit = 350;
 }
 
-if($encoding ne '' && $encoding=~m/^([a-zA-Z0-9_-]+)$/)
-{
-    $encoding=$1;
-}else
-{
-    $encoding='UTF-8';
+if($encoding ne '' && $encoding=~m/^([a-zA-Z0-9_-]+)$/) {
+	$encoding=$1;
+} else {
+	$encoding='UTF-8';
 }
 
-my $converter;
-if($encoding)
-{
-# print "$encoding\n"; #debug output //prapor
- $converter=Text::Iconv->new("utf-8",$encoding);
-}
+binmode STDOUT, ":encoding($encoding)";
+binmode STDERR, ":utf8";
 
 #Для відлагодки
 if(scalar(@groups)==0)
@@ -104,28 +112,21 @@ for my $group(@groups)
   my ($title, undef)= split /\|/,$board{$group};
   my $description="";
 
-  #Конвертує заголовок та текст у вибране кодування
-  if($encoding)
-  {
-    $title=$converter->convert($title);
-    $description = $converter->convert($description);
-  }
-
- 
   print <<CHANEL_HEADER;
 <channel>
  <title>$title</title>
- <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group</link>
+ <link>$yabburl?board=$group</link>
  <description>$description</description>
  <language>uk-ua</language>
  <copyright>linux.org.ua community</copyright>
  <managingEditor>vlisivka\@gmail.com</managingEditor>
  <webMaster>vlisivka\@gmail.com</webMaster>
+ <docs>$scripturl?help=1</docs>
  
  <image>
   <title>linux.org.ua</title>
   <url>http://linux.org.ua/lambada-icons/linux-org-ua.gif</url>
-  <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group</link>
+  <link>$yabburl?board=$group</link>
   <width>88</width>
   <height>31</height>
  </image>
@@ -135,6 +136,7 @@ CHANEL_HEADER
 #Read posts headers
 #FIXME: Мабуть не варто читати більше сотні заголовків за раз
 open(POSTS,"<$boardsdir/$group.txt");
+binmode POSTS, ':utf8';
 my @posts=<POSTS>;
 close(POSTS);
 @posts=sort {(split('\|',$b,2))[0] <=> (split('\|',$a,2))[0]} @posts;
@@ -146,39 +148,36 @@ for my $line(@posts)
   chomp $line;
   my ($ctime,$subject,$userName,$userEmail,$date,$replies,$login,$icon,$status)=split('\|',$line);
 
+	# Filter moved threads
   next if($status =~ /m/);
+	# Number of items in rss
   last if($count++>=10);
-  $replies.=' '.plural($replies,"коментар","коментарі","коментарів");
-  my $dateStr=ukrDate($ctime);
-
-
-  if($encoding)
-  {
-    $replies=$converter->convert($replies);
-    $dateStr=$converter->convert($dateStr);
-    $subject=$converter->convert($subject);
-  }
 
   $subject =~ s/&/\&amp;/ig; 
   $subject =~ s/\[ch(\d{3,})\]/&#$1;/sig;
   $subject =~ s/&nbsp;/\&#160;/ig;
- 
+
+	$date = rss_format_time ( $date ); 
+
   if($withDescriptions)
   {#Просять включати тіло новини
   
     #Read post body
     open(MESSAGES,"<$datadir/$ctime.txt");
+    binmode MESSAGES, ':utf8';
     my $firstMessage=<MESSAGES>;
     close(MESSAGES);
     
     my ($subject2,$userName2,$userEmail2,$date2,$login2,$icon2,$attach,$ip,$body,$ns,$mlm,$mlmb,$msf,$mfn)=split('\|',$firstMessage,11);
 
+
     # Cut too long bodies (may break markup)
     if ($len_limit and $len_limit < length ($body)) {
-        # Crude cutting on the end of word...
-        $body = substr ($body, 0, $len_limit);
-        $body =~ s/\s+\S*$//o;
-        $body .= " ...";
+			# Crude cutting on the end of word...
+			$body =  substr ($body, 0, $len_limit);
+			$body =~ s/\s+\S*$//o;
+			$body =~ s/<[^>]*$//; # eliminate possible broken tags FIXME does not solve <a> [cut] </a> problem
+			$body .= " ...";
     }
 
     $body = parseBBCode($body);
@@ -189,22 +188,19 @@ for my $line(@posts)
 #    $body =~ s/\[ch(\d{3,})\]/&#$1;/sig;
 
     # Обрізаєм повідомлення після горизонтальної лінійки
-    $body=~s{(<br />)?<hr />(.*)$}{"<br /><a href=\"YaBB.pl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
-    if($encoding)
-    {
-      $body = $converter->convert($body);
-    }
+    $body=~s{(<br />)?<hr />(.*)$}{"<br /><a href=\"$yabburl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
 
     
     #Просять взяти тіло повідомлення в лапки, як по стандарту
     $body="<![CDATA[$body]]>" if($cdata);
 
-   
     print <<ITEM;
 <item>
  <title>$subject</title>
- <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;action=display;num=$ctime</link>
- <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;num=$ctime/0</guid>
+ <link>$yabburl?board=$group;action=display;num=$ctime</link>
+ <guid>$yabburl?board=$group;num=$ctime/0</guid>
+ <comments>$yabburl?board=$group;action=post;num=$ctime;title=PostReply</comments>
+ <pubDate>$date</pubDate>
  <description>$body</description>
 </item>
 ITEM
@@ -213,8 +209,10 @@ ITEM
     print <<ITEM;
 <item>
  <title>$subject</title>
- <link>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;action=display;num=$ctime</link>
- <guid>http://linux.org.ua/cgi-bin/yabb/YaBB.pl?board=$group;num=$ctime</guid>
+ <link>$yabburl?board=$group;action=display;num=$ctime</link>
+ <guid>$yabburl?board=$group;num=$ctime</guid>
+ <comments>$yabburl?board=$group;action=post;num=$ctime;title=PostReply</comments>
+ <pubDate>$date</pubDate>
 </item>
 ITEM
   }
@@ -229,3 +227,5 @@ CHANEL_FOOTER
 print <<FOOTER;
 </rss>
 FOOTER
+
+# vim: se ts=2 sw=2: #
