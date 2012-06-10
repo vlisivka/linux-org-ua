@@ -184,22 +184,6 @@ sub killimgurls {
 	return $_;
 }
 
-
-sub format_diff {
-	$_ = $_[0];
-	s/^(\+\+\+|---|\*\*\*|\@\@|[\d,ac]+)/<span style="color:#C0C">$1/mg;
-	s/^(\+|&gt;)/<span style="color:#494">$1/mg;
-	s/^(-|&lt;)/<span style="color:#944">$1/mg;
-	s/^ /<span style="color:#449">&nbsp;/mg;
-	s/^([!\\])/<span style="color:#894">!/mg;
-	s/^([^<])/<span style="color:#AAA">$1/mg;
-	s/$/<\/span>/mg;
-	s/<span style="color:#[0-9A-F]+"><\/span>//g;
-#	s#>([^<]+)<# my $t = $1; $t =~ s/ /&nbsp;/g; qq^>$t<^#eg;
-	return $_;
-}
-
-
 sub DoUBBC {
 	$message =~ s~\[code\]~ \[code\]~ig;
 	$message =~ s~\[/code\]~ \[/code\]~ig;
@@ -229,14 +213,11 @@ sub DoUBBC {
 	$hardspace = q~&nbsp;~;
 	$char_160  = chr(160);
 
-	# FIXME: to css
-	$message =~ s^\[diff\]\s*(.*?)\s*\[/diff\]^ q~<div style="display:block;width:90%;border:1px dotted #444;background-color:#EED;padding:0.3em;font-family:monospace;overflow:auto;white-space:nowrap">~ . &format_diff($1) . q~</div>~ ^egis;
 	while ($message =~ s~(.*)\[quote(\s+author=(.*?)\s(?:\s|$hardspace)*link=(.*?)\s+date=(.*?)\s*)?\]\s*(.*?)\s*\[/quote\]~&quotemsg($1,$3,$4,$5,$6)~eisg) { };
 
 	$message =~ s~\[img\](?:\s|\t|\n|$hardspace|$char_160)*(http\:\/\/)*(.+?)(?:\s|\t|\n|$hardspace|$char_160)*\[/img\]~<img src="http\:\/\/$2" alt="" border="0" />~isg;
 	$message =~ s~\[img width=(\d+) height=(\d+)\](?:\s|\t|\n|$hardspace|$char_160)*(http\:\/\/)*(.+?)(?:\s|\t|\n|$hardspace|$char_160)*\[/img\]~restrictimage($1,$2,'http://'.$4)~eisg;
 
-	#### CHANGED
 	$message =~ s~\[color=([0-9#a-z -]+?)\](.+?)\[/color\]~<span style="color:$1;">$2</span>~isg;
 	$message =~ s~\[black\](.*?)\[/black\]~<span style="color:#000;">$1</span>~isg;
 	$message =~ s~\[white\](.*?)\[/white\]~<span style="color:#FFF;">$1</span>~isg;
@@ -253,7 +234,6 @@ sub DoUBBC {
 	$message =~ s~\[timestamp\=([\d]{9,10})\]~&timeformat($1)~eisg;
 	$message =~ s~\[moved\]~$maintxt{'160'}~;
 	$message =~ s~\[move by\]~$maintxt{'525'}~;
-	#### CHANGED
 	$message =~ s~\[font=([0-9a-z _-]+?)\](.+?)\[/font\]~<span style="font-family:$1;">$2</span>~isg;
 	while ($message =~ s~\[size=(\d+?)\](.+?)\[/size\]~&sizefont($1,$2)~eisg) { }
 
