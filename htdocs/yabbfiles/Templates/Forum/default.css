@@ -403,3 +403,23 @@ color:red;
 text-align:right;
 float:right;
 }
+
+/* Code highlighting */
+
+/* seashell */
+pre.code { color:#000000; background-color:#fff5ee; font-size:10pt; font-family:'Courier New';}
+.hl.num { color:#ff1493; }
+.hl.esc { color:#6a5acd; }
+.hl.str { color:#ff1493; }
+.hl.pps { color:#ff1493; }
+.hl.slc { color:#2929cc; }
+.hl.com { color:#2929cc; }
+.hl.ppc { color:#800080; }
+.hl.opt { color:#676767; }
+.hl.lin { color:#555555; }
+.hl.kwa { color:#2e8b57; font-weight:bold; }
+.hl.kwb { color:#2e8b57; font-weight:bold; }
+.hl.kwc { color:#696969; font-weight:bold; }
+.hl.kwd { color:#00008f; }
+
+/* The End */
