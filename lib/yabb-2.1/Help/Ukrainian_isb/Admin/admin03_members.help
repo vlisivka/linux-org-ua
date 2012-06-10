@@ -1,3 +1,6 @@
+
+use utf8;
+
 $SectionName = "Користувачі";
 
 ### Section 1

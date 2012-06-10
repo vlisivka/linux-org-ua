@@ -21,6 +21,17 @@ $indexplver = 'YaBB 2.1 $Revision: 1.3 $';
 $indexplver =~ s/\$Revision\: (.*?) \$/Build $1/ig;
 $YaBBversion = 'YaBB 2.1';
 
+#use utf8;
+
+binmode STDIN, ':utf8';
+binmode STDOUT, ':utf8';
+binmode STDERR, ':utf8';
+
+# XXX
+use Encode;
+
+@ARGV = map { decode ( 'utf8', $_ ) } @ARGV;
+
 # Make sure the module path is present
 # Some servers need all the subdirs in @INC too.
 push(@INC, "./Modules");

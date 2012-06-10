@@ -1,3 +1,6 @@
+
+use utf8;
+
 $SectionName = "Модерування_дописів";
 
 ### Section 1

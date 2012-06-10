@@ -23,6 +23,8 @@ BEGIN {
 
 $subsplver = 'YaBB 2.1 $Revision: 1.15 $';
 
+use Encode;
+
 use subs 'exit';
 $yymain = "";
 $CGITempFile::TMPDIRECTORY = "$uploaddir";
@@ -567,8 +569,10 @@ sub readform {
 			($name, $value) = split(/=/, $pair);
 			$name  =~ tr/+/ /;
 			$name  =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+			$name  =  decode ( 'UTF-8', $name );
 			$value =~ tr/+/ /;
 			$value =~ s/%([a-fA-F0-9][a-fA-F0-9])/pack("C", hex($1))/eg;
+			$value =  decode ( 'UTF-8', $value );
 
 			if (exists($hash->{$name})) {
 				$hash->{$name} .= ", $value";
@@ -811,6 +815,7 @@ sub sendmail {
 	if ($mailtype == 0) {
 		$to =~ s/,//g;
 		open(MAIL, "| $mailprog  $to");
+		binmode MAIL, ':utf8';
 		print MAIL "To: $toheader\n";
 		print MAIL "From: $fromheader\n";
 		print MAIL "X-Mailer: YaBB Sendmail\n";
@@ -1166,6 +1171,7 @@ unless (defined $LOCK_SH) { $LOCK_SH = 1; }
 			if ($openMode) { flock($filehandle, $LOCK_EX); }
 			else { flock($filehandle, $LOCK_SH); }
 		}
+		binmode $filehandle, ':utf8';
 		return 1;
 	}
 
@@ -1536,7 +1542,7 @@ sub Recent_Save {
 
 sub Write_ForumMaster {
 	fopen(FORUMMASTER, ">$boardsdir/forum.master", 1);
-	print FORUMMASTER qq~\$mloaded = 1;\n~;
+	print FORUMMASTER qq~use utf8;\n\$mloaded = 1;\n~;
 	@catorder = &undupe(@categoryorder);
 	print FORUMMASTER qq~\@categoryorder = qw(@catorder);\n~;
 	while (($key, $value) = each(%cat)) {

@@ -2,6 +2,8 @@
 # SecSettings.txt                                                             #
 ###############################################################################
 
+use utf8;
+
 $regcheck = 1;                                                        # Set to 1 if you want to enable automatic flood protection enabled
 $codemaxchars = 6;                                                    # Set max length of validation code (15 is max)
 $translayer = 0;                                                      # Set to 1 background for validation image should be transparent

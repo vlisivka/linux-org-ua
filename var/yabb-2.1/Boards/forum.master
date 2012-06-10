@@ -1,3 +1,6 @@
+
+use utf8;
+
 $mloaded = 1;
 @categoryorder = qw(ncat_news life ncat_nix ncat_linguistic ncat_site ncat_misc deprecated);
 $cat{'deprecated'} = qq~news,problems~;

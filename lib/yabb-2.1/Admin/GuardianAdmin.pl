@@ -476,6 +476,8 @@ sub setup_guardian2 {
 	map { $fi = lc $_; ${$_} = $FORM{$fi} == 1 ? 1 : 0; } @onoff;
 
 	my $settingfile = << "EOF";
+use utf8;
+
 \$use_guardian = $use_guardian;
 \$use_htaccess = $use_htaccess;
 
@@ -538,6 +540,7 @@ EOF
 	$whitelist         =~ s~\n~|~g;
 
 	my $bannedfile = << "TOP";
+use_utf8;
 \$banned_harvesters = qq~$banned_harvesters~;
 \$banned_referers = qq~$banned_referers~;
 \$banned_requests = qq~$banned_requests~;

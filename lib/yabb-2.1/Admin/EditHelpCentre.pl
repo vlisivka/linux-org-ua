@@ -96,6 +96,7 @@ sub HelpEdit2 {
 	fopen(HELPORDER, ">$helpfile/$language/$Area/$Page.help");
 
 	$FORM{"SectionName"} =~ s/ /_/g;
+	print HELPORDER qq~\nuse utf8;\n\n~;
 	print HELPORDER qq~\$SectionName = "$FORM{"SectionName"}";\n\n~;
 	$a = 1;
 	while ($FORM{"SectionBody$a"}) {
@@ -133,7 +134,7 @@ sub HelpSet2 {
 	if ($FORM{"UseHelp_Perms"}) { $helpperms = 1 }
 	else { $helpperms = 0 }
 	fopen(HELPWRITE, ">$vardir/HelpSettings.txt");
-
+	print HELPWRITE qq~\nuse utf8;\n\n~;
 	print HELPWRITE qq~\$UseHelp_Perms = $helpperms;~;
 	print HELPWRITE qq~\n1;~;
 

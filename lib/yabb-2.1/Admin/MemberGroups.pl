@@ -19,6 +19,19 @@ if ($action eq 'detailedversion') { return 1; }
 
 require "$vardir/membergroups.txt";
 
+our ( %Group, %NoPost, %Post );
+
+# Save current state of member groups
+sub WriteMemberGroupsTxt {
+	fopen ( *GRP, ">$vardir/membergroups.txt", 1 );
+	print GRP     "\nuse utf8;\n\n";
+	print GRP map "\$Group{'$_'} = '$Group{$_}';\n",   keys %Group;
+	print GRP map "\$NoPost{'$_'} = '$NoPost{$_}';\n", keys %NoPost;
+	print GRP map "\$Post{'$_'} = '$Post{$_}';\n",     keys %Post;
+	print GRP     "\n1;";
+	fclose ( *GRP );
+}
+
 sub EditMemberGroups {
 	&is_admin_or_gmod;
 	my ($MemStatAdmin, $MemStarNumAdmin, $MemStarPicAdmin, $MemTypeColAdmin, $noshowAdmin, $viewpermsAdmin, $topicpermsAdmin, $replypermsAdmin, $pollpermsAdmin, $attachpermsAdmin) = split(/\|/, $Group{"Administrator"});
@@ -135,21 +148,7 @@ sub EditMemberGroups {
 	foreach (sort { $a <=> $b } keys %NoPost) {
 		if (!$_) {
 			delete $NoPost{$_};
-			fopen(FILE, ">$vardir/membergroups.txt", 1);
-			foreach my $key (keys %Group) {
-				my $value = $Group{$key};
-				print FILE qq~\$Group{'$key'} = '$value';\n~;
-			}
-			foreach my $key (keys %NoPost) {
-				my $value = $NoPost{$key};
-				print FILE qq~\$NoPost{'$key'} = '$value';\n~;
-			}
-			foreach my $key (keys %Post) {
-				my $value = $Post{$key};
-				print FILE qq~\$Post{'$key'} = '$value';\n~;
-			}
-			print FILE qq~\n1;~;
-			fclose(FILE);
+			WriteMemberGroupsTxt ();
 			next;
 		}
 		($title, $stars, $starpic, $color, $noshow, $viewperms, $topicperms, $replyperms, $pollperms, $attachperms) = split(/\|/, $NoPost{$_});
@@ -210,21 +209,7 @@ sub EditMemberGroups {
 	foreach (sort { $b <=> $a } keys %Post) {
 		if (!$_) {
 			delete $Post{$_};
-			fopen(FILE, ">$vardir/membergroups.txt", 1);
-			foreach my $key (keys %Group) {
-				my $value = $Group{$key};
-				print FILE qq~\$Group{'$key'} = '$value';\n~;
-			}
-			foreach my $key (keys %NoPost) {
-				my $value = $NoPost{$key};
-				print FILE qq~\$NoPost{'$key'} = '$value';\n~;
-			}
-			foreach my $key (keys %Post) {
-				my $value = $Post{$key};
-				print FILE qq~\$Post{'$key'} = '$value';\n~;
-			}
-			print FILE qq~\n1;~;
-			fclose(FILE);
+			WriteMemberGroupsTxt ();
 			next;
 		}
 		my ($title, $stars, $starpic, $color, $noshow, $viewperms, $topicperms, $replyperms, $pollperms, $attachperms) = split(/\|/, $Post{$_});
@@ -631,23 +616,7 @@ sub editAddGroup2() {
 	}
 
 	# Write new data to the file.
-	fopen(FILE, ">$vardir/membergroups.txt", 1);
-	foreach my $key (keys %Group) {
-		my $value = $Group{$key};
-		print FILE qq~\$Group{'$key'} = '$value';\n~;
-	}
-
-	foreach my $key (keys %NoPost) {
-		my $value = $NoPost{$key};
-		print FILE qq~\$NoPost{'$key'} = '$value';\n~;
-	}
-
-	foreach my $key (keys %Post) {
-		my $value = $Post{$key};
-		print FILE qq~\$Post{'$key'} = '$value';\n~;
-	}
-	print FILE qq~\n1;~;
-	fclose(FILE);
+	WriteMemberGroupsTxt ();
 	if ($newpostdep) { &MemberIndex("rebuild"); }
 	$yySetLocation = qq~$adminurl?action=modmemgr~;
 	&redirectexit;
@@ -681,21 +650,7 @@ sub deleteGroup() {
 	}
 
 	# Write new data to the file.
-	fopen(FILE, ">$vardir/membergroups.txt", 1);
-	foreach my $key (keys %Group) {
-		my $value = $Group{$key};
-		print FILE qq~\$Group{'$key'} = '$value';\n~;
-	}
-	foreach my $key (keys %NoPost) {
-		my $value = $NoPost{$key};
-		print FILE qq~\$NoPost{'$key'} = '$value';\n~;
-	}
-	foreach my $key (keys %Post) {
-		my $value = $Post{$key};
-		print FILE qq~\$Post{'$key'} = '$value';\n~;
-	}
-	print FILE qq~\n1;~;
-	fclose(FILE);
+	WriteMemberGroupsTxt ();
 	&MemberIndex("rebuild");
 	$yySetLocation = qq~$adminurl?action=modmemgr~;
 	&redirectexit;

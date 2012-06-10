@@ -1,5 +1,7 @@
 ### Gmod Releated Setttings ###
 
+use utf8;
+
 $allow_gmod_admin = "on"; #
 $allow_gmod_profile = ""; #
 
