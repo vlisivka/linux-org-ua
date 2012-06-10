@@ -202,6 +202,50 @@ sub sizefont {
 
 					highlight::CodeGenerator::deleteInstance ( $gen );
 				};
+			} else {
+			# try to fall back to pure-perl kate highlighter
+			eval "use Syntax::Highlight::Engine::Kate";
+			if ( not $@ ) {
+				eval q{
+					my $gen = Syntax::Highlight::Engine::Kate -> new (
+						substitutions => {
+							'<' => '&lt;',
+							'>' => '&gt;',
+							'&' => '&amp;',
+							'"' => '&quot;',
+						},
+						format_table => {
+							Normal       => ["", ""],
+							Comment      => ["<span class=\"hl com\">", "</span>"], # also have slc
+							DecVal       => ["<span class=\"hl num\">", "</span>"],
+							Float        => ["<span class=\"hl num\">", "</span>"],
+							BaseN        => ["<span class=\"hl num\">", "</span>"],
+							Operator     => ["<span class=\"hl opt\">", "</span>"],
+							Char         => ["<span class=\"hl str\">", "</span>"],
+							String       => ["<span class=\"hl str\">", "</span>"],
+							BString      => ["<span class=\"hl str\">", "</span>"], # wtf?
+							IString      => ["<span class=\"hl pps\">", "</span>"], # preproc. string, interpol. string: wtf?
+							Others       => ["<span class=\"hl ppc\">", "</span>"], # preprocessor
+							RegionMarker => ["<span class=\"hl lin\">", "</span>"], # wtf RM? line number
+							Reserved     => ["<span class=\"hl kwa\">", "</span>"], # keyword 1
+							Keyword      => ["<span class=\"hl kwa\">", "</span>"], # ditto
+							Variable     => ["<span class=\"hl kwb\">", "</span>"], # keyword 2
+							Function     => ["<span class=\"hl kwc\">", "</span>"], # keyword 3
+							DataType     => ["<span class=\"hl kwd\">", "</span>"], # keyword 4
+							Warning      => ["<span class=\"hl esc\">", "</span>"], # escape :(
+							Error        => ["<span class=\"hl esc\">", "</span>"], # ditto
+							Alert        => ["<span class=\"hl slc\">", "</span>"], # single line comment :/
+						} );
+					# $lang is guaranteed to contain only alphanumeric and underscore
+					my ( $mod ) = grep /^$lang$/i, $gen -> languageList ();
+					if ( $mod ) {
+						$gen -> language ( $mod );
+						&FromHTML ( $code );
+						$code =~ s/\&#(\d+);/ chr ( $1 ) /iesg;
+						$code = $gen -> highlightText ( $code );
+					}
+				}
+			}
 			}
 		}
 
