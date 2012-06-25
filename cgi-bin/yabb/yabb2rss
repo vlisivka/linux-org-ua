@@ -125,7 +125,7 @@ for my $group(@groups)
  
  <image>
   <title>linux.org.ua</title>
-  <url>http://linux.org.ua/lambada-icons/linux-org-ua.gif</url>
+  <url>http://linux.org.ua/images/linux-org-ua.gif</url>
   <link>$yabburl?board=$group</link>
   <width>88</width>
   <height>31</height>
