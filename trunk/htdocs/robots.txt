@@ -1,0 +1,8 @@
+User-agent: googlebot
+Disallow: /cgi-bin/yabb/YaBB.pl?action=*
+
+User-agent: *
+Crawl-delay: 2
+Disallow: /cgi-bin/yabb/YaBB.pl?action=
+
+
