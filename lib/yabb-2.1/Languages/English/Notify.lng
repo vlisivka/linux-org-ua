@@ -16,8 +16,8 @@
 
 %notify_txt = (
 '114' => "or",
-'115' => "Yes",
-'116' => "No",
+'Notify' => "Notify",
+'Do not notify' => "Do not notify",
 '117' => "Would you like to deactivate Notification on this topic\?",
 '118' => "Topic Notification",
 '119' => "There are no topics with Notification marked!",
