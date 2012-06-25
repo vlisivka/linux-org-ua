@@ -1633,9 +1633,6 @@ sub Refcontrol2 {
 sub AddMember {
 	&is_admin_or_gmod;
 	LoadLanguage("Register");
-	if ($regcheck) {
-		&validation_code;
-	}
 	$yymain .= qq~
 <form action="$adminurl?action=addmember2" method="post" name="creator"> 
 <table align="center" border="0" cellspacing="1" cellpadding="3" class="bordercolor">
@@ -1669,18 +1666,6 @@ sub AddMember {
 	</tr><tr>
 		<td width="30%" class="windowbg"><b>$register_txt{'82'}:</b></td>
 		<td width="70%" class="windowbg"><input type="password" maxlength="30" name="passwrd2" size="30" /></td>
-	</tr>
-~;
-	}
-
-	if ($regcheck) {
-		$yymain .= qq~
-	<tr>
-		<td width="30%" class="windowbg"><b>$floodtxt{'1'}:</b></td>
-		<td width="70%" class="windowbg">$showcheck</td>
-	</tr><tr>
-		<td width="30%" class="windowbg"><b>$floodtxt{'3'}:</b></td>
-		<td width="70%" class="windowbg"><input type="text" maxlength="30" name="verification" id="verification" size="30" /></td>
 	</tr>
 ~;
 	}
@@ -1733,22 +1718,6 @@ sub AddMember2 {
 	&admin_fatal_error("($member{'username'}) $register_txt{'76'}")                     if ($member{'email'} eq "");
 	&admin_fatal_error("($member{'username'}) $register_txt{'100'}")                    if (-e ("$memberdir/$member{'username'}.vars"));
 	&admin_fatal_error("$register_txt{'1'}")                                            if ($member{'username'} eq $member{'passwrd1'});
-
-	if ($regcheck) {
-		&admin_fatal_error("$floodtxt{'4'}") if ($member{'verification'} eq '');
-		&admin_fatal_error("$register_txt{'240'} $floodtxt{'3'} $register_txt{'241'}") if ($member{'verification'} !~ /\A[0-9A-Za-z]+\Z/);
-
-		# Trying to figure out the mess we made while encrypting verification
-		$lastvalue        = 13;
-		$verificationtest = "";
-		for ($n = 0; $n < length "$member{'regdate'}"; $n++) {
-			$value = (substr("$member{'regdate'}", $n, 1)) + $lastvalue + 1;
-			$letter = substr("$member{'_session_id_'}", $value, 1);
-			$lastvalue = $value;
-			$verificationtest .= qq~$letter~;
-		}
-		&admin_fatal_error("$floodtxt{'4'}") if ($verificationtest ne $member{'verification'});
-	}
 
 	if ($emailpassword) {
 		srand();
