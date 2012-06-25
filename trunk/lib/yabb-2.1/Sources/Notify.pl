@@ -190,9 +190,9 @@ sub Notify {
 		<td class="windowbg" align="center"><br />
 	~;
 	if (exists $thethread{$username}) {
-		$yymain .= qq~$notify_txt{'117'}<br /><br /><b><a href="$scripturl?action=notify3;thread=$thread/$start" style="font-weight: bold;">$notify_txt{'115'}</a> - <a href="$scripturl?num=$thread/$start" style="font-weight: bold;">$notify_txt{'116'}</a></b>~;
+		$yymain .= qq~$notify_txt{'117'}<br /><br /><b><a href="$scripturl?action=notify3;thread=$thread/$start" style="font-weight: bold;">$notify_txt{'Do not notify'}</a> - <a href="$scripturl?num=$thread/$start" style="font-weight: bold;">$notify_txt{'Notify'}</a></b>~;
 	} else {
-		$yymain .= qq~$maintxt{'126'}<br /><br /><b><a href="$scripturl?action=notify2;thread=$thread/$start" style="font-weight: bold;">$notify_txt{'115'}</a> - <a href="$scripturl?num=$thread/$start" style="font-weight: bold;">$notify_txt{'116'}</a></b>~;
+		$yymain .= qq~$maintxt{'126'}<br /><br /><b><a href="$scripturl?action=notify2;thread=$thread/$start" style="font-weight: bold;">$notify_txt{'Notify'}</a> - <a href="$scripturl?num=$thread/$start" style="font-weight: bold;">$notify_txt{'Do not notify'}</a></b>~;
 	}
 	$yymain .= qq~
 		</td>
