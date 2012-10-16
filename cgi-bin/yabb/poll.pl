@@ -42,7 +42,7 @@ if($id>0)
 
 
 print <<FORM;
-<form name="poll" method="post" action="/cgi-bin/yabb/YaBB.pl?board=polls;action=vote;num=$id" style="display: inline; margin:0;">
+<form name="poll" method="post" action="/cgi-bin/yabb/YaBB.pl?action=vote;board=polls;num=$id" style="display: inline; margin:0;">
 <span class="voteQuestion">@{[parseBBCode($question)]}</span>
 <input type="submit" value="голосую" class="voteButton" />
 <a class="voteResultsLink" href="/cgi-bin/yabb/YaBB.pl?num=$id">результат</a>
