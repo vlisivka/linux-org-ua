@@ -385,7 +385,7 @@ sub display_poll {
 		} else {
 			$lockpoll = qq~<a href="$scripturl?action=lockpoll;num=$pollnum" class="altlink">$img{'closepoll'}</a>~;
 		}
-		$modifypoll = qq~$menusep<a href="$scripturl?board=$currentboard;action=modify;message=Poll;thread=$pollnum" class="altlink">$img{'modifypoll'}</a>~;
+		$modifypoll = qq~$menusep<a href="$scripturl?action=modify;board=$currentboard;message=Poll;thread=$pollnum" class="altlink">$img{'modifypoll'}</a>~;
 		$deletepoll = qq~$menusep<a href="javascript:document.removepoll.submit();" class="altlink" onclick="return confirm('$polltxt{'44'}')">$img{'deletepoll'}</a>~;
 		if ($iamadmin) { $displayvoters = qq~<a href="$scripturl?action=showvoters;num=$pollnum">$img{'viewvotes'}</a>~; }
 		if ($hide_results) {

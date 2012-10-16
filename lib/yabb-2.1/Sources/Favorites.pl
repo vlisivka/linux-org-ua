@@ -81,13 +81,13 @@ sub Favorites {
 	$colspan = 7;
 
 	if (!$iamguest) {
-		$markalllink = qq~<a href="$scripturl?board=$INFO{'board'};action=markasread">$img{'markboardread'}</a>~;
+		$markalllink = qq~<a href="$scripturl?action=markasread;board=$INFO{'board'}">$img{'markboardread'}</a>~;
 	}
 	if (&AccessCheck($currentboard, 1) eq "granted") {
-		$postlink = qq~<a href="$scripturl?board=$INFO{'board'};action=post;title=StartNewTopic">$img{'newthread'}</a>~;
+		$postlink = qq~<a href="$scripturl?action=post;board=$INFO{'board'};title=StartNewTopic">$img{'newthread'}</a>~;
 	}
 	if (&AccessCheck($currentboard, 3) eq "granted") {
-		$polllink = qq~<a href="$scripturl?board=$INFO{'board'};action=post;title=CreatePoll">$img{'createpoll'}</a>~;
+		$polllink = qq~<a href="$scripturl?action=post;board=$INFO{'board'};title=CreatePoll">$img{'createpoll'}</a>~;
 	}
 
 	# Begin printing the message index for current board.
@@ -192,7 +192,7 @@ sub Favorites {
 			$pages .= qq~ <a href="$scripturl?num=$mnum/$tmpb#$tmpb">$tmpa</a>~;
 			$pages .= qq~ <a href="$scripturl?num=$mnum/$j#$j">$k</a>~;
 			$pages .= qq~ <a href="$scripturl?num=$mnum/$i#$i">$endpage</a>~;
-			$pages = qq~<br /><span class="small">&#171; $messageindex_txt{'139'} $pages <a href="$cripturl;num=$mnum;start=all">$pidtxt{'01'}</a> &#187;</span>~;
+			$pages = qq~<br /><span class="small">&#171; $messageindex_txt{'139'} $pages <a href="$scripturl;num=$mnum;start=all">$pidtxt{'01'}</a> &#187;</span>~;
 		} elsif ($mreplies + 1 > $maxmessagedisplay) {
 			$tmpa = 1;
 			for ($tmpb = 0; $tmpb < $mreplies + 1; $tmpb += $maxmessagedisplay) {
@@ -277,7 +277,7 @@ sub Favorites {
 	<img src="$imagesdir/stickylock.gif" alt="" /> $messageindex_txt{'780'}
 ~;
 
-	$formstart = qq~<form name="multiremfav" action="$scripturl?board=$currentboard;action=multiremfav" method="post" style="display: inline">~;
+	$formstart = qq~<form name="multiremfav" action="$scripturl?action=multiremfav;board=$currentboard" method="post" style="display: inline">~;
 	$formend   = qq~<input type="hidden" name="allpost" value="$INFO{'start'}" /></form>~;
 
 	&LoadAccess;

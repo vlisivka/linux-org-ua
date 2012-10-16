@@ -910,16 +910,16 @@ sub RecentPosts {
 		if ($tstate !~ /l/) {
 			if ( $notify ) {
 				$yymain .= qq~
-				<a href="$scripturl?board=$board;action=post;num=$tnum;title=PostReply">$img{'reply'}</a>$menusep
-				<a href="$scripturl?board=$board;action=post;num=$tnum;quote=$c;title=PostReply">$img{'recentquote'}</a>$menusep
-				<a href="$scripturl?board=$board;action=notify;thread=$tnum">$img{'notify'}</a> &nbsp;~;
+				<a href="$scripturl?action=post;board=$board;num=$tnum;title=PostReply">$img{'reply'}</a>$menusep
+				<a href="$scripturl?action=post;board=$board;num=$tnum;quote=$c;title=PostReply">$img{'recentquote'}</a>$menusep
+				<a href="$scripturl?action=notify;board=$board;thread=$tnum">$img{'notify'}</a> &nbsp;~;
 			} else {
 				$yymain .= qq~
-				<a href="$scripturl?board=$board;action=post;num=$tnum;title=PostReply">$img{'reply'}</a>$menusep
-				<a href="$scripturl?board=$board;action=post;num=$tnum;quote=$c;title=PostReply">$img{'recentquote'}</a> &nbsp;~;
+				<a href="$scripturl?action=post;board=$board;num=$tnum;title=PostReply">$img{'reply'}</a>$menusep
+				<a href="$scripturl?action=post;board=$board;num=$tnum;quote=$c;title=PostReply">$img{'recentquote'}</a> &nbsp;~;
 			}
 		} elsif ( $notify ) {
-				$yymain .= qq~<a href="$scripturl?board=$board;action=notify;thread=$tnum">$img{'notify'}</a> &nbsp;~;
+				$yymain .= qq~<a href="$scripturl?action=notify;board=$board;thread=$tnum">$img{'notify'}</a> &nbsp;~;
 		}
 		$yymain .= qq~</td>
 	</tr>

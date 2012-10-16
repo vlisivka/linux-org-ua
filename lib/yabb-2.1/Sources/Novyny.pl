@@ -42,11 +42,11 @@ sub Novyny {
 	our ($message, $yyYaBBCloaded);
 	if (!$yyYaBBCloaded) { require "$sourcedir/YaBBC.pl"; }
 
-	my $thumbsurl = '/thumbs';
-	my $newsboard = 'novyny';
+	my $thumbsurl    = '/thumbs';
+	my $newsboard    = 'novyny';
 	my $maxshowpages = 7;
-	my $display = 15;
-	my $start = 0;
+	my $display      = 15;
+	my $start        = 0;
 
 	if (exists $INFO{'board'} && exists $board{$INFO{'board'}}) {
 		$newsboard = $INFO{'board'};
@@ -54,7 +54,7 @@ sub Novyny {
 
 	if (exists $INFO{'display'} && $INFO{'display'} !~ /\D/) {
 		$display = $INFO{'display'};
-		$display = 5 if ($display < 5);
+		$display = 5  if ($display < 5);
 		$display = 50 if ($display > 50);
 	}
 
@@ -62,7 +62,7 @@ sub Novyny {
 		$start = $INFO{'start'};
 	}
 
-	my %ignore = ('recyclebin' => 1, 'adm-requests' => 1, 'test_ph' => 1, 'news' => 1, 'problems' => 1, $newsboard => 1);
+	my %ignore      = ('recyclebin' => 1, 'adm-requests' => 1, 'test_ph' => 1, 'news' => 1, 'problems' => 1, $newsboard => 1);
 	my $sidedisplay = 3;
 	my $sideimages;
 
@@ -88,8 +88,9 @@ sub Novyny {
 	my @novyny = reverse sort grep /\|[^m\|]*?$/, <NOVYNY>;
 	fclose (*NOVYNY);
 
-	$start = $display < $#novyny ? $#novyny - $display : 0
-		if ($start > $#novyny);
+	if ($start > $#novyny) {
+		$start = $display < $#novyny ? $#novyny - $display : 0;
+	}
 
 	my $end = ($#novyny > $start + $display) ? $start + $display - 1 : $#novyny;
 
@@ -125,7 +126,7 @@ sub Novyny {
 
 		my $item = $novynynewsitem;
 		$item =~ s~<novyny news topic>~<a href="$scripturl?num=$tid">$topic</a>~sig;
-		$item =~ s~<novyny news icon>~<img src="$imagesdir/$icon.gif" alt="*" />~sig; #/
+		$item =~ s~<novyny news icon>~<img src="$imagesdir/$icon.gif" alt="*" />~sig;
 		$item =~ s~<novyny news author>~$unick~sig;
 		$item =~ s~<novyny news start>~$startdate~sig;
 		$item =~ s~<novyny news replies>~$replieslink~sig;
@@ -189,7 +190,7 @@ sub Novyny {
 			my ($tid, $topic, undef, undef, undef, $replies, undef, $icon, $status)
 					= split /\|/, $_;
 		
-			next if ($status =~ /m/);
+			next if ( defined $status && $status =~ /m/);
 
 			$topic = &Censor ($topic);
 
@@ -217,6 +218,7 @@ sub Novyny {
 	my $nyimages = '';
 
 	fopen (*ATT, "<$vardir/attachments.txt");
+	# FIXME: fails if not enough images
 	my @images = (sort {(split /\|/, $b)[6] <=> (split /\|/, $a)[6]} grep /\.(gif|jpg|jpeg|png)$/i, <ATT>)[0..$sideimages-1];
 	fclose (*ATT);
 	chomp @images;
@@ -235,83 +237,88 @@ sub Novyny {
 
 	## POLL ##
 
+	# FIXME
+	my $nypoll = '';
+
 	opendir  POLLIST, $datadir;
 	my $poll = pop @{[sort grep (/\.poll$/, readdir POLLIST)]};
 	closedir POLLIST;
+	
+	if ( $poll ) {
+		my $pollnum  = substr ($poll, 0, length ($poll) - 5);
+		my $hasvoted = 0;
 
-	my $pollnum  = substr ($poll, 0, length ($poll) - 5);
-	my $hasvoted = 0;
+		fopen (*POLL, "<$datadir/$poll");
+		my ($question, $locked, undef, undef, undef, undef, $guestvote, undef, $multivote, undef, undef, $comment, undef)
+					= split /\|/, <POLL>;
 
-	fopen (*POLL, "<$datadir/$poll");
-	my ($question, $locked, undef, undef, undef, undef, $guestvote, undef, $multivote, undef, undef, $comment, undef)
-				= split /\|/, <POLL>;
-
-	if ($locked || ($iamguest && !$guestvote)) {
-		$hasvoted = 1;
-	} else {
-		fopen (*POLLED, "<$datadir/$pollnum.polled");
-		while (<POLLED>) {
-			my ($ip, $uname, undef) = split /\|/, $_;
-			if (($ip eq $user_ip && $iamguest) || (!$iamguest && lc $uname eq lc $username)) {
-				$hasvoted = 1;
-				last;
+		if ($locked || ($iamguest && !$guestvote)) {
+			$hasvoted = 1;
+		} else {
+			fopen (*POLLED, "<$datadir/$pollnum.polled");
+			while (<POLLED>) {
+				my ($ip, $uname, undef) = split /\|/, $_;
+				if (($ip eq $user_ip && $iamguest) || (!$iamguest && lc $uname eq lc $username)) {
+					$hasvoted = 1;
+					last;
+				}
 			}
+			fclose (*POLLED);
 		}
-		fclose (*POLLED);
-	}
 
-	my $nypollopts = '';
-	if ($hasvoted) {
-		my $max = 1;
-		my @poll = <POLL>;
-		foreach (@poll) {
-			my ($voted, undef) = split /\|/, $_;
-			$max = $voted if ($voted > $max);
-		}
-		foreach (@poll) {
-			chomp;
-			my ($voted, $variant) = split /\|/, $_;
-			my $width = int(100 * $voted / $max);
-
-			my $item = $novynypolloption;
-			$item =~ s~<novyny poll variant>~$variant~sig; 
-			$item =~ s~<novyny poll control>~<img src="$imagesdir/poll_left.gif" alt="[ " /><img src="$imagesdir/poll_middle.gif" height="12" width="$width" alt="$voted" /><img src="$imagesdir/poll_right.gif" alt=" ]" />~is; #"
-			$nypollopts .= $item;
-		}
-	} else {
-		$nypollopts = qq~<form action="$scripturl?action=vote;num=$pollnum" method="post">~;
-
-		my $i = 0;
-		while (<POLL>) {
-			chomp;
-			my (undef, $variant) = split /\|/, $_;
-
-			my $item = $novynypolloption;
-			$item =~ s~<novyny poll variant>~$variant~sig; 
-			if ($multivote) {
-				$item =~ s~<novyny poll control>~<input type="checkbox" name="option$i" value="$i" />~is; #/
-			} else {
-				$item =~ s~<novyny poll control>~<input type="radio" name="option" value="$i" />~is; #/
+		my $nypollopts = '';
+		if ($hasvoted) {
+			my $max = 1;
+			my @poll = <POLL>;
+			foreach (@poll) {
+				my ($voted, undef) = split /\|/, $_;
+				$max = $voted if ($voted > $max);
 			}
-			$nypollopts .= $item;
-			$i++;
+			foreach (@poll) {
+				chomp;
+				my ($voted, $variant) = split /\|/, $_;
+				my $width = int(100 * $voted / $max);
+
+				my $item = $novynypolloption;
+				$item =~ s~<novyny poll variant>~$variant~sig; 
+				$item =~ s~<novyny poll control>~<img src="$imagesdir/poll_left.gif" alt="[ " /><img src="$imagesdir/poll_middle.gif" height="12" width="$width" alt="$voted" /><img src="$imagesdir/poll_right.gif" alt=" ]" />~is; #"
+				$nypollopts .= $item;
+			}
+		} else {
+			$nypollopts = qq~<form action="$scripturl?action=vote;num=$pollnum" method="post">~;
+
+			my $i = 0;
+			while (<POLL>) {
+				chomp;
+				my (undef, $variant) = split /\|/, $_;
+
+				my $item = $novynypolloption;
+				$item =~ s~<novyny poll variant>~$variant~sig; 
+				if ($multivote) {
+					$item =~ s~<novyny poll control>~<input type="checkbox" name="option$i" value="$i" />~is; #/
+				} else {
+					$item =~ s~<novyny poll control>~<input type="radio" name="option" value="$i" />~is; #/
+				}
+				$nypollopts .= $item;
+				$i++;
+			}
+
+			$nypollopts .= qq~
+				<input type="submit" value="$novyny_txt{'vote_butt'}" />
+			</form>~;
 		}
+		fclose (*POLL);
 
-		$nypollopts .= qq~
-			<input type="submit" value="$novyny_txt{'vote_butt'}" />
-		</form>~;
+		$question  = qq~[url=$scripturl?num=$pollnum]$question\[/url\]~;
+		$question .= qq~ [i]$comment\[/i\]~ if ($comment ne '');
+		$message   = &Censor($question);
+		&DoUBBC;
+
+		$nypoll = $novynypoll;
+		$nypoll =~ s~<novyny poll question>~$message~sig;
+		$nypoll =~ s~<novyny poll variants>~$nypollopts~is;
+		&ToChars ($nypoll);
 	}
-	fclose (*POLL);
-
-	$question  = qq~[url=$scripturl?num=$pollnum]$question\[/url\]~;
-	$question .= qq~ [i]$comment\[/i\]~ if ($comment ne '');
-	$message   = &Censor($question);
-	&DoUBBC;
-
-	my $nypoll = $novynypoll;
-	$nypoll =~ s~<novyny poll question>~$message~sig;
-	$nypoll =~ s~<novyny poll variants>~$nypollopts~is;
-	&ToChars ($nypoll);
 
 	## LOGIN ##
 
@@ -326,13 +333,10 @@ sub Novyny {
 	
 	## FOOT ##
 
-	my $nyfoot = q~
-	<a href="$scripturl?board=$newsboard;action=post;title=StartNewTopic">[Add news]</a>
+	my $nyfoot = qq~
+	<a href="$scripturl?action=post;board=$newsboard;title=StartNewTopic">[Add news]</a>
 	<a href="yabb2rss?group=$newsboard">[RSS]</a>
 	<a href="yabb2rss?group=$newsboard&body=yes">[RSS/FULL]</a>
-	<!-- here go two js links to add sidebar, dunno how it works... -->
-	<a href='http://linux.org.ua/rss/linux.org.ua-short.rss.html' rel="sidebar">[Sidebar(Opera)]</a>
-	<a href='http://linux.org.ua/rss/linux.org.ua.rss.html' rel="sidebar">[Sidebar(Opera)/FULL]</a>
 	<a class="blind" href="http://www.tsua.net"><img style="border:0;width:88px;height:31px" src="/images/tsua.gif" alt="Hosted by TSUA" title="Hosted by TSUA" /></a>~;
 
 	## MAIN ##

@@ -91,7 +91,7 @@ sub MessageIndex {
 
 		if ($usermessagepage == 1 || $iamguest) {
 			$pagetxtindexst = qq~<span class="small" style="float: left; height: 21px; margin: 0px; margin-top: 2px;">~;
-			if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?board=$INFO{'board'};start=$start;action=messagepagedrop"><img src="$imagesdir/index_togl.gif" border="0" alt="$messageindex_txt{'19'}" style="vertical-align: middle;" /></a> $messageindex_txt{'139'}: ~; }
+			if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?action=messagepagedrop;board=$INFO{'board'};start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$messageindex_txt{'19'}" style="vertical-align: middle;" /></a> $messageindex_txt{'139'}: ~; }
 			else { $pagetxtindexst .= qq~<img src="$imagesdir/index_togl.gif" border="0" alt="" style="vertical-align: middle;" /> $messageindex_txt{'139'}: ~; }
 			if ($startpage > 0)          { $pagetxtindex = qq~<a href="$scripturl?board=$currentboard/0" style="font-weight: normal;">1</a>&nbsp;...&nbsp;~; }
 			if ($startpage == $maxindex) { $pagetxtindex = qq~<a href="$scripturl?board=$currentboard/0" style="font-weight: normal;">1</a>&nbsp;~; }
@@ -107,7 +107,7 @@ sub MessageIndex {
 			$pageindex2 = $pageindex1;
 		} else {
 			$pagedropindex1 = qq~<span style="float: left; width: 320px; margin: 0px; margin-top: 2px; border: 0px;">~;
-			$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?board=$INFO{'board'};start=$start;action=messagepagetext"><img src="$imagesdir/index_togl.gif" border="0" alt="$messageindex_txt{'19'}" /></a></span>~;
+			$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?action=messagepagetext;board=$INFO{'board'};start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$messageindex_txt{'19'}" /></a></span>~;
 			$pagedropindex2 = $pagedropindex1;
 			$tstart         = $start;
 			if (substr($INFO{'start'}, 0, 3) eq "all") { ($tstart, $start) = split(/\-/, $INFO{'start'}); }
@@ -320,7 +320,7 @@ sub MessageIndex {
 	}
 
 	if (!$iamguest) {
-		$markalllink = qq~$menusep<a href="$scripturl?board=$INFO{'board'};action=markasread">$img{'markboardread'}</a>~;
+		$markalllink = qq~$menusep<a href="$scripturl?action=markasread;board=$INFO{'board'}">$img{'markboardread'}</a>~;
 		if ($enable_notification) {
 			$notify_board = qq~$menusep<a href="$scripturl?action=boardnotify;board=$INFO{'board'}">$img{'notify'}</a>~;
 		} else {
@@ -329,10 +329,10 @@ sub MessageIndex {
 	}
 
 	if (&AccessCheck($currentboard, 1) eq "granted") {
-		$postlink = qq~$menusep<a href="$scripturl?board=$INFO{'board'};action=post;title=StartNewTopic">$img{'newthread'}</a>~;
+		$postlink = qq~$menusep<a href="$scripturl?action=post;board=$INFO{'board'};title=StartNewTopic">$img{'newthread'}</a>~;
 	}
 	if (&AccessCheck($currentboard, 3) eq "granted") {
-		$polllink = qq~$menusep<a href="$scripturl?board=$INFO{'board'};action=post;title=CreatePoll">$img{'createpoll'}</a>~;
+		$polllink = qq~$menusep<a href="$scripturl?action=post;board=$INFO{'board'};title=CreatePoll">$img{'createpoll'}</a>~;
 	}
 
 	if ((($iamadmin && $adminview == 3) || ($iamgmod && $gmodview == 3) || ($iammod && $modview == 3)) && $sessionvalid == 1) {
@@ -718,7 +718,7 @@ $yabbadminicons .= qq~
 	}
 
 	if ((($iamadmin && $adminview >= 2) || ($iamgmod && $gmodview >= 2) || ($iammod && $modview >= 2 && !$iamadmin && !$iamgmod)) && $sessionvalid == 1) {
-		$formstart = qq~<form name="multiadmin" action="$scripturl?board=$currentboard;action=multiadmin" method="post" style="display: inline">~;
+		$formstart = qq~<form name="multiadmin" action="$scripturl?action=multiadmin;board=$currentboard" method="post" style="display: inline">~;
 		$formend   = qq~<input type="hidden" name="allpost" value="$INFO{'start'}" /></form>~;
 		$messageindex_template =~ s/<yabb modupdate>/$formstart/g;
 		$messageindex_template =~ s/<yabb modupdateend>/$formend/g;

@@ -225,7 +225,7 @@ sub Display {
 
 		if ($userthreadpage == 1 || $iamguest) {
 			$pagetxtindexst = qq~<span class="small" style="float: left; height: 21px; margin: 0px; margin-top: 2px;">~;
-			if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?num=$viewnum;start=$start;action=threadpagedrop"><img src="$imagesdir/index_togl.gif" border="0" alt="$display_txt{'19'}" style="vertical-align: middle;" /></a> $display_txt{'139'}: ~; }
+			if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?action=threadpagedrop;num=$viewnum;start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$display_txt{'19'}" style="vertical-align: middle;" /></a> $display_txt{'139'}: ~; }
 			else { $pagetxtindexst .= qq~<img src="$imagesdir/index_togl.gif" border="0" alt="" style="vertical-align: middle;" /> $display_txt{'139'}: ~; }
 			if ($startpage > 0) { $pagetxtindex = qq~<a href="$scripturl?num=$viewnum/0" style="font-weight: normal;">1</a>&nbsp;...&nbsp;~; }
 			if ($startpage == $maxmessagedisplay) { $pagetxtindex = qq~<a href="$scripturl?num=$viewnum/0" style="font-weight: normal;">1</a>&nbsp;~; }
@@ -240,7 +240,7 @@ sub Display {
 			$pageindex2 = $pageindex1;
 		} else {
 			$pagedropindex1 = qq~<span style="float: left; width: 320px; margin: 0px; margin-top: 2px; border: 0px;">~;
-			$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?num=$viewnum;start=$start;action=threadpagetext"><img src="$imagesdir/index_togl.gif" border="0" alt="$display_txt{'19'}" /></a></span>~;
+			$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?action=threadpagetext;num=$viewnum;start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$display_txt{'19'}" /></a></span>~;
 			$pagedropindex2 = $pagedropindex1;
 			$tstart         = $start;
 			if (substr($INFO{'start'}, 0, 3) eq "all") { ($tstart, $start) = split(/\-/, $INFO{'start'}); }
@@ -607,12 +607,12 @@ sub Display {
 				$template_quote = qq~$menusep<a href="$scripturl?action=post;num=$viewnum;quote=$counter;title=PostReply">$img{'replyquote'}</a>~;
 			}
 			if ($iammod || $iamadmin || $iamgmod || ($username eq $musername && !$iamguest && !$exmem && $nomodallowed == 0) && $sessionvalid == 1) {
-				$template_modify = qq~$menusep<a href="$scripturl?board=$currentboard;action=modify;message=$counter;thread=$viewnum">$img{'modify'}</a>~;
+				$template_modify = qq~$menusep<a href="$scripturl?action=modify;board=$currentboard;message=$counter;thread=$viewnum">$img{'modify'}</a>~;
 			} else {
 				$template_modify = "";
 			}
 			if ($counter > 0 && ($iammod || $iamadmin || $iamgmod) && $sessionvalid == 1) {
-				$template_split = qq~$menusep<a href="$scripturl?board=$currentboard;action=split2;thread=$viewnum;postid=$counter">$img{'admin_split'}</a>~;
+				$template_split = qq~$menusep<a href="$scripturl?action=split2;board=$currentboard;thread=$viewnum;postid=$counter">$img{'admin_split'}</a>~;
 			}
 			if ($iammod || $iamadmin || $iamgmod || ($username eq $musername && !$iamguest && !$exmem && $nodelallowed == 0) && $sessionvalid == 1) {
 #				$template_delete = qq~$menusep<span style="cursor: pointer; cursor: hand;" onclick="uncheckAllBut($counter);">$img{'delete'}</span>~;
@@ -806,7 +806,7 @@ sub Display {
 		$template_remove = qq~$menusep<a href="javascript:document.removethread.submit();" onclick="return confirm('$display_txt{'162'}')"> $img{'admin_rem'}</a>~;
 
 		# board=$currentboard is necessary for splicing DO NOT REMOVE!
-		$template_splice = qq~$menusep<a href="$scripturl?board=$currentboard;action=splice;thread=$viewnum">$img{'admin_splice'}</a>~;
+		$template_splice = qq~$menusep<a href="$scripturl?action=splice;board=$currentboard;thread=$viewnum">$img{'admin_splice'}</a>~;
 
 		$template_lock   = qq~$menusep<a href="$scripturl?action=lock;thread=$viewnum">$img{'admin_lock'}</a>~;
 		$template_hide   = qq~$menusep<a href="$scripturl?action=hide;thread=$viewnum">$img{'hide'}</a>~;
@@ -889,7 +889,7 @@ sub Display {
 		</form>~;
 
 	}
-	$formstart .= qq~<form name="multidel" action="$scripturl?board=$currentboard;action=multidel;thread=$viewnum/$start" method="post" style="display: inline">~;
+	$formstart .= qq~<form name="multidel" action="$scripturl?action=multidel;board=$currentboard;thread=$viewnum/$start" method="post" style="display: inline">~;
 	$formend = qq~</form>~;
 
 	$display_template =~ s/<yabb multistart>/$formstart/g;

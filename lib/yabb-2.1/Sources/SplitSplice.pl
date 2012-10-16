@@ -230,7 +230,7 @@ sub Splice {
         </tr><tr>
           <td class="windowbg" align="center"><font size="2">
             <script language="JavaScript1.2" src="$ubbcjspath" type="text/javascript"></script>
-            <form action="$scripturl?board=$currentboard;action=splice2;thread=$INFO{'thread'}" method="POST" name="split" onSubmit="return submitproc()"><br />
+            <form action="$scripturl?action=splice2;board=$currentboard;thread=$INFO{'thread'}" method="POST" name="split" onSubmit="return submitproc()"><br />
             <b>$sstxt{'103'}:</b> <select name="newthreadid">
 		$threadlist
             </select>
