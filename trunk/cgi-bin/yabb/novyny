@@ -50,7 +50,7 @@ for my $line(@posts)
   my ($subject2,$userName2,$userEmail2,$date,$login2,$icon2,$attach,$ip,$body,$ns,$mlm,$mlmb,$msf,$mfn)=split('\|',$firstMessage,11);
   my $dateStr=ukrDate($ctime);
   $body=parseBBCode($body);
-  $body=~s{(<br />\s*)*<hr />(.*)$}{"<br /><a href=\"YaBB.pl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
+  $body=~s{(<br />\s*)*<hr />(.*)$}{"<br /><a href=\"YaBB.pl?num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
 
   $replies.=' '.plural($replies,"коментар","коментарі","коментарів"); 
 
@@ -65,7 +65,7 @@ $dateStr
 </td></tr></table>
 <div class="msgBody">$body</div>
 <table class="msgFooter"><tr><td class="msgComments" align="left">
-<a href="YaBB.pl?num=$ctime">$replies</a>
+<a href="YaBB.pl?num=$ctime/1#1">$replies</a>
 <a href="YaBB.pl?action=post;num=$ctime;title=PostReply">Додати</a>
 </td><td class="msgAuthor" align="right">
 повідомив: <a href="YaBB.pl?action=viewprofile;username=$login">$userName</a>
