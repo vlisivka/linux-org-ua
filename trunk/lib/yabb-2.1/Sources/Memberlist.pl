@@ -322,7 +322,7 @@ sub buildIndex {
 
 			if ($usermemberpage == 1 || $iamguest) {
 				$pagetxtindexst = qq~<span class="small" style="float: left; height: 21px; margin: 0px; margin-top: 2px;">~;
-				if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?sort=$FORM{'sortform'};letter=$letter;start=$start;action=memberpagedrop"><img src="$imagesdir/index_togl.gif" border="0" alt="$ml_txt{'19'}" style="vertical-align: middle;" /></a> $ml_txt{'139'}: ~; }
+				if (!$iamguest) { $pagetxtindexst .= qq~<a href="$scripturl?action=memberpagedrop;sort=$FORM{'sortform'};letter=$letter;start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$ml_txt{'19'}" style="vertical-align: middle;" /></a> $ml_txt{'139'}: ~; }
 				else { $pagetxtindexst .= qq~<img src="$imagesdir/xx.gif" border="0" alt="" style="vertical-align: middle;" /> $ml_txt{'139'}: ~; }
 				if ($startpage > 0) { $pagetxtindex = qq~<a href="$scripturl?action=ml;sort=$FORM{'sortform'};letter=$letter" style="font-weight: normal;">1</a>&nbsp;...&nbsp;~; }
 				if ($startpage == $MembersPerPage) { $pagetxtindex = qq~<a href="$scripturl?action=ml;sort=$FORM{'sortform'};letter=$letter" style="font-weight: normal;">1</a>&nbsp;~; }
@@ -337,7 +337,7 @@ sub buildIndex {
 				$pageindex2 = qq~$pagetxtindexst$pagetxtindex</span>~;
 			} else {
 				$pagedropindex1 = qq~<span style="float: left; width: 320px; margin: 0px; margin-top: 2px; border: 0px;">~;
-				$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?sort=$FORM{'sortform'};letter=$letter;start=$start;action=memberpagetext"><img src="$imagesdir/index_togl.gif" border="0" alt="$ml_txt{'19'}" /></a></span>~;
+				$pagedropindex1 .= qq~<span style="float: left; height: 21px; margin: 0; margin-right: 4px;"><a href="$scripturl?action=memberpagetext;sort=$FORM{'sortform'};letter=$letter;start=$start"><img src="$imagesdir/index_togl.gif" border="0" alt="$ml_txt{'19'}" /></a></span>~;
 				$pagedropindex2 = $pagedropindex1;
 				$tstart         = $start;
 				if (substr($INFO{'start'}, 0, 3) eq "all") { ($tstart, $start) = split(/\-/, $INFO{'start'}); }

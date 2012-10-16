@@ -389,7 +389,7 @@ sub plushSearch2 {
 		&wrap2;
 
 		if ($enable_notification) {
-			$notify = qq~$menusep<a href="$scripturl?board=$board;action=notify;thread=$tnum/$msgnum#$msgnum">$img{'notify'}</a>~;
+			$notify = qq~$menusep<a href="$scripturl?action=notify;board=$board;thread=$tnum/$msgnum#$msgnum">$img{'notify'}</a>~;
 		}
 		&ToChars($msub);
 		&ToChars($message);
@@ -413,7 +413,7 @@ sub plushSearch2 {
     <td align="right" colspan="2" class="catbg">&nbsp;
 ~;
 		if ($tstate != 1) {
-			$yymain .= qq~<a href="$scripturl?board=$board;action=post;num=$tnum/$msgnum#$msgnum;title=PostReply">$img{'reply'}</a>$menusep<a href="$scripturl?board=$board;action=post;num=$tnum;quote=$msgnum;title=PostReply">$img{'recentquote'}</a>$notify &nbsp;~;
+			$yymain .= qq~<a href="$scripturl?action=post;board=$board;num=$tnum/$msgnum#$msgnum;title=PostReply">$img{'reply'}</a>$menusep<a href="$scripturl?action=post;board=$board;num=$tnum;quote=$msgnum;title=PostReply">$img{'recentquote'}</a>$notify &nbsp;~;
 		}
 		$yymain .= qq~
     </td>

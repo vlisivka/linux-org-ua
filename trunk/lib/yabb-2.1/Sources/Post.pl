@@ -303,8 +303,8 @@ return true
 	if ($INFO{'adminim'} || $INFO{'action'} eq "imgroups") {
 		$yymain .= qq~<form action="$scripturl?action=imgroups" method="post" name="postmodify" onsubmit="return submitproc()">~;
 	} else {
-		if($curnum) { $thecurboard = qq~num=$curnum\;action=$destination~; }
-		else { $thecurboard = qq~board=$currentboard\;action=$destination~; }
+		if($curnum) { $thecurboard = qq~action=$destination;num=$curnum~; }
+		else { $thecurboard = qq~action=$destination;board=$currentboard~; }
 		if (&AccessCheck($currentboard, 4) eq "granted" && $allowattach && ${$uid.$currentboard}{'attperms'} == 1) {
 			$yymain .= qq~<form action="$scripturl?$thecurboard" method="post" name="postmodify" enctype="multipart/form-data" onsubmit="if(!checkForm(this)) {return false} else {return submitproc()}">~;
 		} else {

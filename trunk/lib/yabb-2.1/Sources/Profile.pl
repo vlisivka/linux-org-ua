@@ -1982,7 +1982,7 @@ sub usersrecentposts {
 		&ToChars($msub);
 		&ToChars($message);
 		&ToChars($boardname{$board});
-		if ($enable_notification) { $notify = qq~$menusep<a href="$scripturl?board=$board;action=notify;thread=$tnum/$c">$img{'notify'}</a>~; }
+		if ($enable_notification) { $notify = qq~$menusep<a href="$scripturl?action=notify;board=$board;thread=$tnum/$c">$img{'notify'}</a>~; }
 		$mdate = timeformat($mdate);
 
 		# Get the class of this thread, based on lock status and number of replies.
