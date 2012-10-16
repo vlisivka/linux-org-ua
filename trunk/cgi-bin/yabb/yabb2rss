@@ -8,7 +8,6 @@
 # * handle unclosed html tags (<a>[cut]</a>)
 
 use strict;
-use locale;
 use utf8;
 
 use DateTime;
@@ -188,7 +187,7 @@ for my $line(@posts)
 #    $body =~ s/\[ch(\d{3,})\]/&#$1;/sig;
 
     # Обрізаєм повідомлення після горизонтальної лінійки
-    $body=~s{(<br />)?<hr />(.*)$}{"<br /><a href=\"$yabburl?board=$group;action=display;num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
+    $body=~s{(<br />)?<hr />(.*)$}{"<br /><a href=\"$yabburl?num=$ctime\" class=\"tail\">...(".length($2)." ".plural(length($2),"символ","символи","символів").").</a>"}se;
 
     
     #Просять взяти тіло повідомлення в лапки, як по стандарту
@@ -197,9 +196,9 @@ for my $line(@posts)
     print <<ITEM;
 <item>
  <title>$subject</title>
- <link>$yabburl?board=$group;action=display;num=$ctime</link>
- <guid>$yabburl?board=$group;num=$ctime/0</guid>
- <comments>$yabburl?board=$group;action=post;num=$ctime;title=PostReply</comments>
+ <link>$yabburl?num=$ctime</link>
+ <guid>$yabburl?num=$ctime/0</guid>
+ <comments>$yabburl?action=post;num=$ctime;title=PostReply</comments>
  <pubDate>$date</pubDate>
  <description>$body</description>
 </item>
@@ -209,9 +208,9 @@ ITEM
     print <<ITEM;
 <item>
  <title>$subject</title>
- <link>$yabburl?board=$group;action=display;num=$ctime</link>
- <guid>$yabburl?board=$group;num=$ctime</guid>
- <comments>$yabburl?board=$group;action=post;num=$ctime;title=PostReply</comments>
+ <link>$yabburl?num=$ctime</link>
+ <guid>$yabburl?num=$ctime</guid>
+ <comments>$yabburl?action=post;num=$ctime;title=PostReply</comments>
  <pubDate>$date</pubDate>
 </item>
 ITEM
