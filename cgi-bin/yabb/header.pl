@@ -87,14 +87,13 @@ urchinTracker();
 </div>
 
 <div class="links" align="center">
-<!-- :<a class="toplink" href="/">новини</a>: -->
-<!-- :<a class="toplink" href="/cgi-bin/ispell/spell">правопис</a>: -->
 :<a class="toplink" href="http://docs.linux.org.ua" style="cursor:help;" title="">документація</a>:
-<!-- :<a class="toplink" href="/cgi-bin/yabb/YaBB.pl">форум</a>: -->
+:<a class="toplink" href="/cgi-bin/yabb/YaBB.pl">форум</a>:
 :<a class="toplink" href="http://dict.linux.org.ua/">англ.-укр. словник</a>:
 :<a class="toplink" href="http://www.slovnyk.net/">тлумачний словник</a>:
-<!-- :<a class="toplink" href="http://pere.slovnyk.org.ua/">перекладачка</a>: -->
+:<a class="toplink" href="http://www.pere.org.ua/">перекладачка</a>:
 :<a class="toplink" href="/cgi-bin/yabb/YaBB.pl?action=newmesg">нове на форумі</a>:
+:<a class="toplink" href="/cgi-bin/yabb/YaBB.pl?action=recent;display=50">останні повідомлення</a>:
 </div>
 <div class="vote" align="center">
 HEADER
