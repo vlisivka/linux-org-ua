@@ -54,13 +54,7 @@ urchinTracker();
 <table border="0" width="100%"><tr>
 <td align="left">@{[ukrDate(time)]}</td>
 <td align="center">
-
-<span class="orfomsg" title="Відмітьте текст та натисніть Ctrl-Enter.">
-На сайті працює система <acronym title="Система повідомлення про орфографічні помилки.&#10; Відмітьте текст та натисніть Ctrl-Enter.">Орфо</acronym>.
-</span>
-<!-- Скрипт для Orfo - я його сховав, щоб не розповзався дизайн -->
-<div style="display:none;"><script type="text/javascript" src="/orfo/orfo.js"></script></div>
-
+&nbsp;
 </td>
 <td align="right">
 <form action="http://www.google.com.ua/cse" id="cse-search-box">
