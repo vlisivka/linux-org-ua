@@ -44,7 +44,7 @@ print <<FOOTER;
 
 <hr class="clearer" />
 <div class="bottomLinks" align="center">
-<a href="YaBB.pl?board=stagging;action=post;title=%F0%CF%DE%C1%D4%C9+%CE%CF%D7%D5+%D4%C5%CD%D5">[Додати]</a>
+<a href="YaBB.pl?action=post;board=stagging;title=StartNewTopic">[Додати]</a>
 <a href="yabb2rss?group=$group">[RSS]</a>
 <a href="yabb2rss?group=$group&amp;body=yes">[RSS/FULL]</a>
 <!-- <a href='#' onclick='javascript:try{window.sidebar.addPanel("Linux.org.ua news","http://linux.org.ua/cgi-bin/yabb/yabb2rss?group=$group&amp;group=news","http://linux.org.ua/cgi-bin/yabb/novyny");}catch(e){alert("Mozilla or Netscape6 required!")};return false;'>[Sidebar]</a>
