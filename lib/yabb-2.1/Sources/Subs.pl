@@ -120,7 +120,7 @@ sub header {
 	}
 	$params{'-charset'} = "; charset=$params{'-charset'}" if $params{'-charset'};
 	$params{'Content-Encoding'} = "Content-Encoding: $params{'Content-Encoding'}\n" if $params{'Content-Encoding'};
-	$ret .= "$params{'Content-Encoding'}Content-Type: text/html$params{'-charset'}\r\n\r\n";
+	$ret .= "$params{'Content-Encoding'}Content-Type: text/html; charset=utf-8\r\n\r\n";
 	return $ret;
 }
 
@@ -1444,7 +1444,7 @@ sub referer_check {
 }
 
 sub Dereferer {
-	print "Content-Type: text/html\n\n";
+	print "Content-Type: text/html; charset=utf-8\n\n";
 	$refresh = qq~<html>\n<head>\n</head>\n<body Onload = document.location="$INFO{'url'}" target="_top">\n<font face="Arial" size="2">$dereftxt{'1'}</font>\n</body></html>\n~;
 	print $refresh;
 	exit;
@@ -1462,7 +1462,7 @@ sub MailTo {
 	} else {
 		fatal_error("$ml_txt{'801'}");
 	}
-	print "Content-Type: text/html\n\n";
+	print "Content-Type: text/html; charset=utf-8\n\n";
 	$refresh = qq~<html>\n<head>\n
 	<script>
 		var tik=0
