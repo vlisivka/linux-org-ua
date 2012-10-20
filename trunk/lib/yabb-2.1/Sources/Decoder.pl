@@ -64,8 +64,8 @@ sub write_captcha_log_entry {
 	fopen (*LOG, "+<$vardir/captcha.log") or return undef;
 	my @log;
 	while (<LOG>) {
-		my ($ip, $uname, $timestamp) = split /\|/o;
-		if (($user_ip ne $ip or $username ne $uname) and $timestamp + 15 * 60 > $date) {
+		my ($ip, $uname, $timestamp) = split /\|/o;		
+		if ( $timestamp and ( ($user_ip ne $ip or $username ne $uname) and $timestamp + 15 * 60 > $date)) {
 			push @log, $_;
 		}
 	}
